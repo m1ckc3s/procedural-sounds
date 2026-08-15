@@ -458,5 +458,234 @@
       "release": 0.04
     },
     "gain": 0.16
+  },
+  {
+    "layers": [
+      {
+        "source": {
+          "type": "sine",
+          "frequency": {
+            "start": 1456.279,
+            "end": 1302.469
+          },
+          "fm": {
+            "depth": 151,
+            "ratio": 2.452
+          }
+        },
+        "envelope": {
+          "attack": 0.005,
+          "decay": 0.079,
+          "sustain": 0,
+          "release": 0,
+          "curve": "ramp"
+        },
+        "gain": 0.203,
+        "filter": {
+          "type": "bandpass",
+          "frequency": 1113,
+          "Q": 2.949,
+          "envelope": {
+            "attack": 0.004,
+            "peak": 6820,
+            "decay": 0.276
+          }
+        }
+      },
+      {
+        "source": {
+          "type": "sine",
+          "frequency": {
+            "start": 971.949,
+            "end": 869.295
+          }
+        },
+        "envelope": {
+          "attack": 0.005,
+          "decay": 0.079,
+          "sustain": 0,
+          "release": 0,
+          "curve": "ramp"
+        },
+        "gain": 0.107,
+        "delay": 0.023,
+        "filter": {
+          "type": "lowpass",
+          "frequency": 2510.298421598117,
+          "Q": 2.0717735516651428
+        }
+      }
+    ]
+  },
+  {
+    "source": {
+      "type": "sine",
+      "frequency": {
+        "start": 720,
+        "end": 360
+      }
+    },
+    "envelope": {
+      "attack": 0.002,
+      "decay": 0.08,
+      "sustain": 0,
+      "release": 0.025
+    },
+    "gain": 0.12,
+    "filter": {
+      "type": "lowpass",
+      "frequency": 1413.5381452319937,
+      "Q": 3.0540309085288526
+    }
+  },
+  {
+    "source": {
+      "type": "sine",
+      "frequency": {
+        "start": 1000,
+        "end": 2000
+      }
+    },
+    "envelope": {
+      "attack": 0,
+      "decay": 0.018,
+      "sustain": 0,
+      "release": 0.005
+    },
+    "gain": 0.09
+  },
+  {
+    "layers": [
+      {
+        "source": {
+          "type": "sine",
+          "frequency": {
+            "start": 552.815,
+            "end": 737.919
+          }
+        },
+        "envelope": {
+          "attack": 0.003,
+          "decay": 0.174,
+          "sustain": 0,
+          "release": 0,
+          "curve": "ramp"
+        },
+        "gain": 0.148
+      },
+      {
+        "source": {
+          "type": "sine",
+          "frequency": {
+            "start": 1475.838,
+            "end": 985.004
+          }
+        },
+        "envelope": {
+          "attack": 0.003,
+          "decay": 0.162,
+          "sustain": 0,
+          "release": 0,
+          "curve": "ramp"
+        },
+        "gain": 0.049,
+        "delay": 0.052
+      }
+    ]
+  },
+  {
+    "source": {
+      "type": "sine",
+      "frequency": {
+        "start": 339.225,
+        "end": 678.449
+      }
+    },
+    "envelope": {
+      "attack": 0.004,
+      "decay": 0.112,
+      "sustain": 0,
+      "release": 0,
+      "curve": "ramp"
+    },
+    "gain": 0.188,
+    "effects": [
+      {
+        "type": "delay",
+        "delay": 0.083,
+        "feedback": 0.194,
+        "wet": 0.194,
+        "lowpass": 3921
+      }
+    ],
+    "filter": {
+      "type": "lowpass",
+      "frequency": 714.2349904865259,
+      "Q": 5.32695814004476
+    }
+  },
+  {
+    "source": {
+      "type": "sine",
+      "frequency": {
+        "start": 350,
+        "end": 800
+      }
+    },
+    "envelope": {
+      "attack": 0,
+      "decay": 0.1,
+      "sustain": 0,
+      "release": 0.03
+    },
+    "gain": 0.06,
+    "filter": {
+      "type": "lowpass",
+      "frequency": 1381.3596200582256,
+      "Q": 2.757511640321647
+    }
+  },
+  {
+    "layers": [
+      {
+        "source": {
+          "type": "sine",
+          "frequency": 426.77
+        },
+        "envelope": {
+          "attack": 0.002,
+          "decay": 0.065,
+          "sustain": 0,
+          "release": 0.013,
+          "curve": "ramp"
+        },
+        "gain": 0.172,
+        "filter": {
+          "type": "lowpass",
+          "frequency": 1242.922314960258,
+          "Q": 2.4736576158375247
+        }
+      },
+      {
+        "source": {
+          "type": "sine",
+          "frequency": 853.539
+        },
+        "envelope": {
+          "attack": 0.002,
+          "decay": 0.093,
+          "sustain": 0,
+          "release": 0.019,
+          "curve": "ramp"
+        },
+        "gain": 0.184,
+        "delay": 0.065,
+        "filter": {
+          "type": "lowpass",
+          "frequency": 2185.0314975521214,
+          "Q": 2.018208843518677
+        }
+      }
+    ]
   }
 ]

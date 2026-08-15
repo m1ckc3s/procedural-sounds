@@ -2369,8 +2369,7 @@
   ],
   "pool/notification/23": [
     "notification",
-    "success",
-    "transition"
+    "success"
   ],
   "pool/success/213": [
     "success"
@@ -2379,7 +2378,6 @@
     "success"
   ],
   "pool/unsorted/166": [
-    "transition",
     "notification"
   ],
   "pool/success/214": [
@@ -2425,7 +2423,29 @@
     "warning"
   ],
   "pool/unsorted/173": [
+    "tap"
+  ],
+  "pool/transition/12": [
+    "transition"
+  ],
+  "pool/transition/13": [
+    "tap",
+    "transition"
+  ],
+  "pool/transition/14": [
     "transition",
     "tap"
+  ],
+  "pool/transition/15": [
+    "transition"
+  ],
+  "pool/transition/16": [
+    "transition"
+  ],
+  "pool/transition/17": [
+    "transition"
+  ],
+  "pool/transition/18": [
+    "transition"
   ]
 }
