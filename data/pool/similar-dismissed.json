@@ -512,5 +512,8 @@
   "pool/tap/12|pool/tap/7",
   "pool/success/204|pool/unsorted/150",
   "pool/notification/21|pool/success/189",
-  "pool/success/205|pool/unsorted/163"
+  "pool/success/205|pool/unsorted/163",
+  "seed-f/bubble-switch|soft/page-enter",
+  "recent/toggle-on|seed-d/toggle",
+  "pool/error/14|seed-d/error"
 ]

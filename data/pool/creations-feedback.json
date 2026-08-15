@@ -36,7 +36,7 @@
   "success": {
     "reshape-envelope": {
       "k": 5,
-      "d": 9
+      "d": 10
     },
     "transpose-wide": {
       "k": 11,
@@ -52,7 +52,7 @@
     },
     "add-harmonic": {
       "k": 7,
-      "d": 10
+      "d": 11
     },
     "curve-flip": {
       "k": 8,
@@ -126,7 +126,7 @@
   "notification": {
     "retime-layers": {
       "k": 3,
-      "d": 4
+      "d": 14
     },
     "add-harmonic": {
       "k": 0,
@@ -134,19 +134,19 @@
     },
     "curve-flip": {
       "k": 2,
-      "d": 5
+      "d": 12
     },
     "transpose-wide": {
       "k": 1,
-      "d": 5
+      "d": 12
     },
     "add-shimmer": {
       "k": 1,
-      "d": 5
+      "d": 12
     },
     "reshape-envelope": {
       "k": 2,
-      "d": 4
+      "d": 14
     }
   },
   "warning": {

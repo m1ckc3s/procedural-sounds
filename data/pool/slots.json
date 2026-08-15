@@ -621,8 +621,7 @@
     "tap"
   ],
   "pool/tap/13": [
-    "transition",
-    "tap"
+    "transition"
   ],
   "pool/hover/14": [
     "hover"
@@ -977,8 +976,7 @@
     "misc"
   ],
   "pool/unsorted/51": [
-    "notification",
-    "success"
+    "notification"
   ],
   "pool/unsorted/52": [
     "error"
@@ -1170,7 +1168,6 @@
     "warning"
   ],
   "pool/unsorted/102": [
-    "success",
     "notification"
   ],
   "pool/unsorted/103": [],
@@ -2399,7 +2396,6 @@
     "notification"
   ],
   "pool/unsorted/168": [
-    "success",
     "notification",
     "warning"
   ],
@@ -2414,9 +2410,6 @@
     "success"
   ],
   "pool/unsorted/171": [
-    "tap",
-    "transition",
-    "success",
     "notification"
   ],
   "pool/unsorted/172": [

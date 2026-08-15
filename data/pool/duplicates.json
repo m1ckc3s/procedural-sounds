@@ -188,5 +188,7 @@
   "pool/notification/19",
   "pool/notification/20",
   "pool/success/216",
-  "pool/success/215"
+  "pool/success/215",
+  "pool/warning/7",
+  "seed-d/toggle"
 ]
