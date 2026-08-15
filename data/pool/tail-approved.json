@@ -1,0 +1,86 @@
+{
+  "seed-c/sparkle": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "core/toggle-on": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "pool/tap/18": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "pool/tap/24": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "pool/tap/13": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "pool/tap/10": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "pool/tap/34": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "pool/tap/20": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "pool/transition/10": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "pool/tap/46": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "pool/success/73": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "pool/hover/20": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "pool/success/87": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "pool/tap/12": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "pool/tap/40": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "crisp/toggle-on": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "seed-c/release": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "seed-c/scan": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "pool/notification/10": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "core/toggle-off": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  },
+  "pool/success/187": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600
+  }
+}

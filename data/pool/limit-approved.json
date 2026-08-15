@@ -1,0 +1,40 @@
+{
+  "playful/swoosh": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600,
+    "sawOpenLowpassHz": 3700,
+    "maxFilterQ": 12,
+    "noiseBandCeilingHz": 6000,
+    "maxFmDepth": 350,
+    "harshFloorHz": 320,
+    "absoluteCeilingHz": 3500
+  },
+  "pool/success/81": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600,
+    "sawOpenLowpassHz": 3700,
+    "maxFilterQ": 12,
+    "noiseBandCeilingHz": 6000,
+    "maxFmDepth": 350,
+    "harshFloorHz": 320
+  },
+  "pool/success/100": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600,
+    "sawOpenLowpassHz": 3700,
+    "maxFilterQ": 12,
+    "noiseBandCeilingHz": 6000,
+    "maxFmDepth": 350,
+    "harshFloorHz": 320
+  },
+  "seed-c/sparkle": {
+    "sineCeilingHz": 1500,
+    "harshCeilingHz": 600,
+    "sawOpenLowpassHz": 3700,
+    "maxFilterQ": 12,
+    "noiseBandCeilingHz": 6000,
+    "maxFmDepth": 350,
+    "harshFloorHz": 320,
+    "absoluteCeilingHz": 3500
+  }
+}

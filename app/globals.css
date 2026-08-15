@@ -1,0 +1,424 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.922 0 0);
+  --sidebar-primary-foreground: oklch(0.205 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-geist-sans);
+}
+
+/* Purely numeric --shadow-N keys never become utilities in Tailwind v4 (the
+   numeric slot is bare-value parsing), so these are plain vars + @utility. */
+:root {
+  --shadow-100: 0 2px 8px rgba(0, 0, 0, .06);
+  --shadow-200: 0 2px 8px rgba(0, 0, 0, .12);
+  --shadow-300: 0 4px 16px rgba(0, 0, 0, .16);
+  --shadow-400: 0 8px 32px rgba(0, 0, 0, .24);
+}
+@utility shadow-100 {
+  box-shadow: var(--shadow-100);
+}
+@utility shadow-200 {
+  box-shadow: var(--shadow-200);
+}
+@utility shadow-300 {
+  box-shadow: var(--shadow-300);
+}
+@utility shadow-400 {
+  box-shadow: var(--shadow-400);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@keyframes intensity-label-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes stage-press {
+  0%, 100% { transform: scale(1); }
+  35% { transform: scale(0.9); }
+}
+@keyframes stage-ring {
+  0% { transform: scale(0.6); opacity: 0.7; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+@keyframes stage-sonic {
+  0% { transform: scale(0.7); opacity: 0.45; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+@keyframes stage-burst {
+  0% { transform: translate(-2px, -2px) rotate(0deg); opacity: 1; }
+  70% { opacity: 1; }
+  100% { transform: translate(var(--dx), var(--dy)) rotate(var(--rot)); opacity: 0; }
+}
+/* Radial streak. rotate-then-translateX sends the bar out along its own axis, so one
+   keyframe serves every angle and only --a changes per line. */
+@keyframes stage-streak {
+  0% { transform: rotate(var(--a)) translateX(var(--r0)) scaleX(0.25); opacity: 0; }
+  18% { opacity: 1; }
+  100% { transform: rotate(var(--a)) translateX(var(--r1)) scaleX(1); opacity: 0; }
+}
+/* Projectile motion decomposes into independent x and y, so the confetti does too: one
+   nested element per axis. That is what buys real physics over a single keyframe. A shared
+   keyframe forces every piece through the SAME normalized arc (same apex fraction, same
+   landing moment) and only scales it, which is what reads as cheap no matter how the
+   distances are randomized. Split, each piece gets its own apex TIME: a hard low throw peaks
+   early and is still falling while a lofted one is barely cresting.
+   x: constant velocity bled off by drag (ease-out).
+   y: rise decelerating to a stop, then fall accelerating, each with its own duration. */
+@keyframes confetti-drift {
+  to { transform: translateX(var(--dx)); }
+}
+@keyframes confetti-rise {
+  to { transform: translateY(var(--rise)); }
+}
+@keyframes confetti-fall {
+  to { transform: translateY(var(--fall)); }
+}
+/* Tumble with no perspective on purpose: rotateY squashes the paper to edge-on and back,
+   which is exactly how real confetti flickers. Perspective would cost a 3D layer per piece
+   for a effect the flattening already gives. */
+@keyframes confetti-tumble {
+  to { transform: rotate3d(var(--ax), var(--ay), 0.4, var(--spin)); }
+}
+@keyframes confetti-fade {
+  0%, 76% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes stage-shine {
+  0% { transform: translateX(-130%) skewX(-18deg); }
+  100% { transform: translateX(230%) skewX(-18deg); }
+}
+@keyframes stage-bubble {
+  0% { transform: translateY(10px) scale(0.2); opacity: 0; }
+  45% { transform: translateY(-2px) scale(1.06); opacity: 1; }
+  70% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+/* Older bubbles slide up and dim as a new one lands, so a spam run reads as a thread
+   filling rather than one bubble restarting. */
+@keyframes stage-bubble-age {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-4px) scale(0.94); opacity: 0.45; }
+}
+@keyframes stage-cursor {
+  0% { transform: translate(70px, 54px); opacity: 0; }
+  25% { opacity: 1; }
+  60% { transform: translate(0, 0) scale(1); }
+  72% { transform: translate(0, 0) scale(0.82); }
+  100% { transform: translate(0, 0) scale(1); opacity: 1; }
+}
+@keyframes stage-glow {
+  0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--foreground) 30%, transparent); }
+  100% { box-shadow: 0 0 0 14px transparent; }
+}
+@keyframes stage-collapse {
+  0% { transform: scale(1) translateY(0); opacity: 1; }
+  100% { transform: scale(0.04) translateY(110px); opacity: 0; }
+}
+@keyframes stage-expand {
+  0% { transform: scale(0.5) translateY(28px); opacity: 0; }
+  55% { opacity: 1; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+@keyframes stage-toast {
+  0% { transform: translateY(16px) scale(0.6); opacity: 0; }
+  55% { transform: translateY(-3px) scale(1.05); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes stage-draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes stage-shake {
+  0%, 100% { transform: translateX(0); }
+  12% { transform: translateX(-8px) rotate(-2deg); }
+  30% { transform: translateX(7px) rotate(2deg); }
+  48% { transform: translateX(-5px); }
+  66% { transform: translateX(4px); }
+  84% { transform: translateX(-2px); }
+}
+@keyframes stage-wobble {
+  0%, 100% { transform: rotate(0); }
+  20% { transform: rotate(-9deg); }
+  45% { transform: rotate(8deg); }
+  70% { transform: rotate(-5deg); }
+  88% { transform: rotate(3deg); }
+}
+@keyframes stage-bell {
+  0%, 100% { transform: rotate(0); }
+  15% { transform: rotate(-24deg); }
+  35% { transform: rotate(18deg); }
+  55% { transform: rotate(-12deg); }
+  75% { transform: rotate(6deg); }
+}
+@keyframes stage-badge-pop {
+  0% { transform: scale(0); }
+  70% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+@keyframes stage-orb-hit {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.25) rotate(10deg); }
+  60% { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
+@keyframes stage-orb-idle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+@keyframes stage-blink {
+  0%, 88%, 100% { transform: scaleY(1); }
+  92%, 96% { transform: scaleY(0.1); }
+}
+/* The eye language (squash, tilt, asymmetry, saccades) reads as emotion ONLY through
+   rotation direction: inner corners down = anger, outer corners down = sadness. Left and
+   right eyes therefore need mirrored keyframes, never one shared set. */
+@keyframes stage-saccade {
+  0%, 24%, 100% { transform: translateX(0); }
+  27%, 40% { transform: translateX(1.7px); }
+  44%, 57% { transform: translateX(0); }
+  61%, 74% { transform: translateX(-1.7px); }
+  78% { transform: translateX(0); }
+}
+/* Anger = both eyes pop tall, then squint down-and-INWARD. These rotations ADD to the
+   error face's resting mirrored lean (negative-left / positive-right), so the signs here
+   must match it or the fire would flatten the face instead of deepening it. */
+@keyframes stage-eye-glare-l {
+  0% { transform: none; }
+  12% { transform: scaleY(1.4); }
+  32%, 68% { transform: rotate(14deg) scaleY(0.42) translate(0.7px, 0.5px); }
+  100% { transform: none; }
+}
+@keyframes stage-eye-glare-r {
+  0% { transform: none; }
+  12% { transform: scaleY(1.4); }
+  32%, 68% { transform: rotate(-14deg) scaleY(0.42) translate(-0.7px, 0.5px); }
+  100% { transform: none; }
+}
+/* Worry = alert, then SCANNING: eyes go tall and dart left, then right, together. One
+   shared keyframe for both eyes. Never asymmetric scale and never a wink: one eye
+   shrinking while the other grows reads as mischief, not worry. */
+@keyframes stage-eye-alarm {
+  0% { transform: none; }
+  12%, 26% { transform: scaleY(1.45); }
+  34%, 48% { transform: translateX(-2.4px) scaleY(1.3); }
+  58%, 74% { transform: translateX(2.4px) scaleY(1.3); }
+  86% { transform: translateX(0) scaleY(1.1); }
+  100% { transform: none; }
+}
+/* Jelly squash for the blob body on a hit: squash wide, rebound tall, settle. */
+@keyframes stage-blob-jolt {
+  0%, 100% { transform: scale(1, 1); }
+  16% { transform: scale(1.07, 0.9); }
+  38% { transform: scale(0.94, 1.07); }
+  60% { transform: scale(1.03, 0.97); }
+  80% { transform: scale(0.99, 1.01); }
+}
+@keyframes stage-breathe {
+  0%, 100% { transform: scale(1, 1); }
+  50% { transform: scale(1.035, 0.965); }
+}
+@keyframes stage-bounce-x {
+  from { left: 0; }
+  to { left: calc(100% - 72px); }
+}
+@keyframes stage-bounce-y {
+  from { top: 0; }
+  to { top: calc(100% - 72px); }
+}
+
+/* Vendored surface/tabs tokens, ported with components/ui/tabs.tsx */
+:root {
+  --surface-1: #FAFAFA;
+  --surface-2: #FCFCFC;
+  --surface-3: #FFFFFF;
+  --surface-4: #FFFFFF;
+  --surface-5: #FFFFFF;
+  --surface-6: #FFFFFF;
+  --surface-7: #FFFFFF;
+  --surface-8: #FFFFFF;
+  --shadow-color: rgb(0 0 0 / 0.06);
+  --shadow-1: 0 0 0 1px var(--shadow-color);
+  --shadow-2: 0 0 0 1px var(--shadow-color), 0 1px 1px -0.5px var(--shadow-color);
+  --shadow-3: 0 0 0 1px var(--shadow-color), 0 1px 1px -0.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color);
+  --shadow-4: 0 0 0 1px var(--shadow-color), 0 1px 1px -0.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color);
+  --shadow-5: 0 0 0 1px var(--shadow-color), 0 1px 1px -0.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color);
+  --shadow-6: 0 0 0 1px var(--shadow-color), 0 1px 1px -0.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color), 0 24px 24px -12px var(--shadow-color);
+  --shadow-7: 0 0 0 1px var(--shadow-color), 0 1px 1px -0.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color), 0 24px 24px -12px var(--shadow-color), 0 48px 48px -24px var(--shadow-color);
+  --shadow-8: 0 0 0 1px var(--shadow-color), 0 1px 1px -0.5px var(--shadow-color), 0 3px 3px -1.5px var(--shadow-color), 0 6px 6px -3px var(--shadow-color), 0 12px 12px -6px var(--shadow-color), 0 24px 24px -12px var(--shadow-color), 0 48px 48px -24px var(--shadow-color), 0 96px 96px -48px var(--shadow-color);
+  --hover: rgba(0, 0, 0, 0.04);
+  --focus-ring: #6b97ff;
+  --overlay: 0 0 0;
+  /* Upstream's --accent (light-dark(#e5e5e5,#525252)); ours is shadcn near-white,
+     so the switch reads a dedicated token instead. */
+  --switch-track: #e5e5e5;
+}
+
+.dark {
+  --surface-1: #171717;
+  --surface-2: #1E1E1E;
+  --surface-3: #252525;
+  --surface-4: #2C2C2C;
+  --surface-5: #333333;
+  --surface-6: #3A3A3A;
+  --surface-7: #414141;
+  --surface-8: #484848;
+  --dm-hi-base: rgba(255,255,255,0.01);
+  --dm-hi-mid: rgba(255,255,255,0.02);
+  --dm-hi-high: rgba(255,255,255,0.04);
+  --dm-hi-peak: rgba(255,255,255,0.06);
+  --dm-ring-base: rgba(255,255,255,0.02);
+  --dm-ring-mid: rgba(255,255,255,0.04);
+  --dm-ring-high: rgba(255,255,255,0.06);
+  --dm-drop: rgba(0,0,0,0.18);
+  --shadow-1: inset 0 0 0 1px var(--dm-ring-base);
+  --shadow-2: inset 0 1px 0 0 var(--dm-hi-base), inset 0 0 0 1px var(--dm-ring-base), 0 1px 1px -0.5px var(--dm-drop);
+  --shadow-3: inset 0 1px 0 0 var(--dm-hi-mid), inset 0 0 0 1px var(--dm-ring-base), 0 0 0 1px rgba(0,0,0,0.12), 0 1px 1px -0.5px var(--dm-drop), 0 3px 3px -1.5px var(--dm-drop);
+  --shadow-4: inset 0 1px 0 0 var(--dm-hi-mid), inset 0 0 0 1px var(--dm-ring-mid), 0 0 0 1px rgba(0,0,0,0.14), 0 1px 1px -0.5px var(--dm-drop), 0 3px 3px -1.5px var(--dm-drop), 0 6px 6px -3px var(--dm-drop);
+  --shadow-5: inset 0 1px 0 0 var(--dm-hi-high), inset 0 0 0 1px var(--dm-ring-mid), 0 0 0 1px rgba(0,0,0,0.16), 0 1px 1px -0.5px var(--dm-drop), 0 3px 3px -1.5px var(--dm-drop), 0 6px 6px -3px var(--dm-drop), 0 12px 12px -6px var(--dm-drop);
+  --shadow-6: inset 0 1px 0 0 var(--dm-hi-high), inset 0 0 0 1px var(--dm-ring-high), 0 0 0 1px rgba(0,0,0,0.18), 0 1px 1px -0.5px var(--dm-drop), 0 3px 3px -1.5px var(--dm-drop), 0 6px 6px -3px var(--dm-drop), 0 12px 12px -6px var(--dm-drop), 0 24px 24px -12px var(--dm-drop);
+  --shadow-7: inset 0 1px 0 0 var(--dm-hi-peak), inset 0 0 0 1px var(--dm-ring-high), 0 0 0 1px rgba(0,0,0,0.20), 0 1px 1px -0.5px var(--dm-drop), 0 3px 3px -1.5px var(--dm-drop), 0 6px 6px -3px var(--dm-drop), 0 12px 12px -6px var(--dm-drop), 0 24px 24px -12px var(--dm-drop), 0 48px 48px -24px var(--dm-drop);
+  --shadow-8: inset 0 1px 0 0 var(--dm-hi-peak), inset 0 0 0 1px var(--dm-ring-high), 0 0 0 1px rgba(0,0,0,0.22), 0 1px 1px -0.5px var(--dm-drop), 0 3px 3px -1.5px var(--dm-drop), 0 6px 6px -3px var(--dm-drop), 0 12px 12px -6px var(--dm-drop), 0 24px 24px -12px var(--dm-drop), 0 48px 48px -24px var(--dm-drop), 0 96px 96px -48px var(--dm-drop);
+  --hover: rgba(255, 255, 255, 0.06);
+  --overlay: 255 255 255;
+  --switch-track: #525252;
+}
+
+@theme inline {
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-surface-4: var(--surface-4);
+  --color-surface-5: var(--surface-5);
+  --color-surface-6: var(--surface-6);
+  --color-surface-7: var(--surface-7);
+  --color-surface-8: var(--surface-8);
+  --shadow-surface-1: var(--shadow-1);
+  --shadow-surface-2: var(--shadow-2);
+  --shadow-surface-3: var(--shadow-3);
+  --shadow-surface-4: var(--shadow-4);
+  --shadow-surface-5: var(--shadow-5);
+  --shadow-surface-6: var(--shadow-6);
+  --shadow-surface-7: var(--shadow-7);
+  --shadow-surface-8: var(--shadow-8);
+  --color-hover: var(--hover);
+}
+/* The scope's stroke: three stops that repeat and slide along the line. Declared on :root,
+   NOT in @theme: Tailwind v4 tree-shakes theme vars that no utility class references, and
+   these are only ever read through an inline var(), so @theme silently dropped the first
+   one and the wave painted nothing. Same trap as --shadow-100. */
+:root {
+  --wave-1: oklch(0.62 0.2 285);
+  --wave-2: oklch(0.68 0.22 340);
+  --wave-3: oklch(0.79 0.16 65);
+}
+
+.dark {
+  --wave-1: oklch(0.7 0.19 285);
+  --wave-2: oklch(0.75 0.2 340);
+  --wave-3: oklch(0.85 0.15 65);
+}

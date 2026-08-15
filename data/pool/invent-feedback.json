@@ -1,0 +1,900 @@
+{
+  "tap": {
+    "hybrid": {
+      "k": 11,
+      "d": 17
+    },
+    "double-tick": {
+      "k": 11,
+      "d": 5
+    },
+    "clean-blip": {
+      "k": 3,
+      "d": 0
+    },
+    "air-whisper": {
+      "k": 0,
+      "d": 2
+    },
+    "tick-tock": {
+      "k": 0,
+      "d": 6
+    },
+    "chord-stab": {
+      "k": 0,
+      "d": 2
+    },
+    "g:ding-dong": {
+      "k": 0,
+      "d": 6
+    },
+    "resolve": {
+      "k": 0,
+      "d": 1
+    },
+    "g:pad": {
+      "k": 0,
+      "d": 1
+    },
+    "thud-ping": {
+      "k": 5,
+      "d": 0
+    },
+    "g:trill": {
+      "k": 0,
+      "d": 4
+    },
+    "g:roll": {
+      "k": 0,
+      "d": 2
+    },
+    "arpeggio": {
+      "k": 0,
+      "d": 3
+    },
+    "swoosh": {
+      "k": 0,
+      "d": 1
+    },
+    "descend-steps": {
+      "k": 0,
+      "d": 3
+    },
+    "g:formant": {
+      "k": 0,
+      "d": 1
+    },
+    "micro-blip": {
+      "k": 0,
+      "d": 1
+    },
+    "g:cascade": {
+      "k": 0,
+      "d": 5
+    },
+    "triple-deny": {
+      "k": 0,
+      "d": 6
+    },
+    "dissonant-pair": {
+      "k": 0,
+      "d": 2
+    },
+    "g:bounce": {
+      "k": 0,
+      "d": 2
+    },
+    "g:pair": {
+      "k": 0,
+      "d": 3
+    },
+    "stairs": {
+      "k": 0,
+      "d": 4
+    },
+    "g:tick-tock": {
+      "k": 0,
+      "d": 2
+    },
+    "strum": {
+      "k": 0,
+      "d": 2
+    },
+    "g:call-response": {
+      "k": 0,
+      "d": 4
+    },
+    "bell": {
+      "k": 0,
+      "d": 1
+    },
+    "g:duotone": {
+      "k": 0,
+      "d": 1
+    },
+    "g:harp": {
+      "k": 0,
+      "d": 2
+    },
+    "g:grace": {
+      "k": 0,
+      "d": 1
+    },
+    "g:crystal": {
+      "k": 0,
+      "d": 2
+    },
+    "double-ping": {
+      "k": 0,
+      "d": 5
+    },
+    "g:tri-rise": {
+      "k": 0,
+      "d": 1
+    },
+    "g:ripple": {
+      "k": 0,
+      "d": 4
+    },
+    "single-caution": {
+      "k": 0,
+      "d": 1
+    },
+    "g:thump-sparkle": {
+      "k": 1,
+      "d": 0
+    },
+    "double-low": {
+      "k": 0,
+      "d": 1
+    },
+    "g:glass": {
+      "k": 0,
+      "d": 1
+    },
+    "minor-alarm": {
+      "k": 0,
+      "d": 1
+    },
+    "head-shake": {
+      "k": 0,
+      "d": 2
+    },
+    "rising-ask": {
+      "k": 0,
+      "d": 1
+    },
+    "g:zip": {
+      "k": 1,
+      "d": 0
+    },
+    "g:bell": {
+      "k": 0,
+      "d": 1
+    },
+    "single-ding": {
+      "k": 0,
+      "d": 1
+    }
+  },
+  "notification": {
+    "two-note": {
+      "k": 6,
+      "d": 0
+    },
+    "hybrid": {
+      "k": 4,
+      "d": 4
+    },
+    "g:crystal": {
+      "k": 0,
+      "d": 2
+    },
+    "g:pair": {
+      "k": 1,
+      "d": 0
+    },
+    "g:echo-note": {
+      "k": 2,
+      "d": 0
+    },
+    "g:glass": {
+      "k": 0,
+      "d": 1
+    },
+    "minor-alarm": {
+      "k": 1,
+      "d": 0
+    },
+    "g:grace": {
+      "k": 1,
+      "d": 0
+    },
+    "air-whisper": {
+      "k": 0,
+      "d": 1
+    },
+    "g:duotone": {
+      "k": 0,
+      "d": 1
+    },
+    "triple-deny": {
+      "k": 0,
+      "d": 1
+    },
+    "single-caution": {
+      "k": 0,
+      "d": 1
+    },
+    "g:tick-tock": {
+      "k": 1,
+      "d": 0
+    },
+    "double-tick": {
+      "k": 1,
+      "d": 0
+    }
+  },
+  "warning": {
+    "minor-alarm": {
+      "k": 5,
+      "d": 0
+    },
+    "hybrid": {
+      "k": 13,
+      "d": 18
+    },
+    "double-ping": {
+      "k": 8,
+      "d": 0
+    },
+    "rising-ask": {
+      "k": 3,
+      "d": 0
+    },
+    "single-caution": {
+      "k": 4,
+      "d": 0
+    },
+    "double-tick": {
+      "k": 0,
+      "d": 1
+    },
+    "g:call-response": {
+      "k": 0,
+      "d": 1
+    }
+  },
+  "hover": {
+    "hybrid": {
+      "k": 85,
+      "d": 58
+    },
+    "air-whisper": {
+      "k": 7,
+      "d": 10
+    },
+    "micro-blip": {
+      "k": 16,
+      "d": 3
+    },
+    "g:call-response": {
+      "k": 0,
+      "d": 5
+    },
+    "rising-ask": {
+      "k": 0,
+      "d": 5
+    },
+    "g:whoosh": {
+      "k": 0,
+      "d": 2
+    },
+    "g:pair": {
+      "k": 0,
+      "d": 5
+    },
+    "descend-steps": {
+      "k": 0,
+      "d": 5
+    },
+    "swoosh": {
+      "k": 0,
+      "d": 3
+    },
+    "g:ripple": {
+      "k": 0,
+      "d": 5
+    },
+    "g:marimba": {
+      "k": 0,
+      "d": 1
+    },
+    "g:air": {
+      "k": 0,
+      "d": 1
+    },
+    "two-note": {
+      "k": 0,
+      "d": 3
+    },
+    "g:grace": {
+      "k": 0,
+      "d": 5
+    },
+    "g:glow": {
+      "k": 0,
+      "d": 2
+    },
+    "g:tri-rise": {
+      "k": 0,
+      "d": 3
+    },
+    "thud-ping": {
+      "k": 0,
+      "d": 5
+    },
+    "g:roll": {
+      "k": 0,
+      "d": 3
+    },
+    "g:cascade": {
+      "k": 0,
+      "d": 5
+    },
+    "double-ping": {
+      "k": 0,
+      "d": 5
+    },
+    "clean-blip": {
+      "k": 9,
+      "d": 5
+    },
+    "triple-deny": {
+      "k": 0,
+      "d": 5
+    },
+    "double-tick": {
+      "k": 0,
+      "d": 5
+    },
+    "g:knock-knock": {
+      "k": 0,
+      "d": 5
+    },
+    "minor-alarm": {
+      "k": 0,
+      "d": 5
+    },
+    "strum": {
+      "k": 0,
+      "d": 5
+    },
+    "tick-then-ding": {
+      "k": 0,
+      "d": 5
+    },
+    "tick-tock": {
+      "k": 0,
+      "d": 5
+    },
+    "g:tick-tock": {
+      "k": 0,
+      "d": 5
+    },
+    "g:ding-dong": {
+      "k": 0,
+      "d": 5
+    },
+    "chord-stab": {
+      "k": 0,
+      "d": 2
+    },
+    "g:formant": {
+      "k": 1,
+      "d": 2
+    },
+    "fall": {
+      "k": 0,
+      "d": 2
+    },
+    "double-low": {
+      "k": 0,
+      "d": 5
+    },
+    "g:trill": {
+      "k": 0,
+      "d": 5
+    },
+    "stairs": {
+      "k": 0,
+      "d": 5
+    },
+    "thock": {
+      "k": 1,
+      "d": 4
+    },
+    "g:glass": {
+      "k": 0,
+      "d": 2
+    },
+    "g:haptic": {
+      "k": 0,
+      "d": 4
+    },
+    "dissonant-pair": {
+      "k": 0,
+      "d": 2
+    },
+    "g:pluck": {
+      "k": 1,
+      "d": 6
+    },
+    "g:echo-note": {
+      "k": 0,
+      "d": 4
+    },
+    "g:boop": {
+      "k": 0,
+      "d": 2
+    },
+    "resolve": {
+      "k": 0,
+      "d": 3
+    },
+    "fall-settle": {
+      "k": 0,
+      "d": 4
+    },
+    "arpeggio": {
+      "k": 0,
+      "d": 4
+    },
+    "g:bounce": {
+      "k": 0,
+      "d": 2
+    },
+    "g:harp": {
+      "k": 0,
+      "d": 5
+    },
+    "single-caution": {
+      "k": 0,
+      "d": 2
+    },
+    "g:crystal": {
+      "k": 0,
+      "d": 5
+    },
+    "g:wood": {
+      "k": 0,
+      "d": 2
+    },
+    "head-shake": {
+      "k": 0,
+      "d": 5
+    },
+    "g:hollow": {
+      "k": 1,
+      "d": 2
+    },
+    "g:rise-bloom": {
+      "k": 0,
+      "d": 2
+    },
+    "glide": {
+      "k": 0,
+      "d": 2
+    },
+    "g:thump-sparkle": {
+      "k": 0,
+      "d": 2
+    },
+    "dull-knock": {
+      "k": 0,
+      "d": 1
+    },
+    "g:pop": {
+      "k": 0,
+      "d": 1
+    },
+    "g:duotone": {
+      "k": 0,
+      "d": 1
+    },
+    "g:liquid": {
+      "k": 0,
+      "d": 1
+    },
+    "mirror": {
+      "k": 0,
+      "d": 1
+    }
+  },
+  "success": {
+    "thud-ping": {
+      "k": 6,
+      "d": 7
+    },
+    "fall-settle": {
+      "k": 0,
+      "d": 6
+    },
+    "chord-stab": {
+      "k": 0,
+      "d": 8
+    },
+    "hybrid": {
+      "k": 32,
+      "d": 111
+    },
+    "strum": {
+      "k": 1,
+      "d": 11
+    },
+    "tick-then-ding": {
+      "k": 0,
+      "d": 5
+    },
+    "single-ding": {
+      "k": 0,
+      "d": 3
+    },
+    "arpeggio": {
+      "k": 25,
+      "d": 27
+    },
+    "bloom": {
+      "k": 0,
+      "d": 9
+    },
+    "g:glass": {
+      "k": 2,
+      "d": 20
+    },
+    "g:tri-rise": {
+      "k": 14,
+      "d": 26
+    },
+    "g:crystal": {
+      "k": 1,
+      "d": 14
+    },
+    "g:liquid": {
+      "k": 0,
+      "d": 6
+    },
+    "air-whisper": {
+      "k": 0,
+      "d": 1
+    },
+    "swoosh": {
+      "k": 0,
+      "d": 3
+    },
+    "g:bell": {
+      "k": 0,
+      "d": 5
+    },
+    "bell": {
+      "k": 0,
+      "d": 5
+    },
+    "g:thump-sparkle": {
+      "k": 0,
+      "d": 2
+    },
+    "g:glow": {
+      "k": 0,
+      "d": 2
+    },
+    "g:knock-knock": {
+      "k": 0,
+      "d": 2
+    },
+    "g:duotone": {
+      "k": 0,
+      "d": 5
+    },
+    "g:pad": {
+      "k": 0,
+      "d": 5
+    },
+    "g:trill": {
+      "k": 0,
+      "d": 2
+    },
+    "g:pair": {
+      "k": 0,
+      "d": 5
+    },
+    "g:roll": {
+      "k": 0,
+      "d": 3
+    },
+    "g:harp": {
+      "k": 1,
+      "d": 15
+    },
+    "g:echo-note": {
+      "k": 1,
+      "d": 2
+    },
+    "descend-steps": {
+      "k": 0,
+      "d": 2
+    },
+    "g:bounce": {
+      "k": 0,
+      "d": 5
+    },
+    "tick-tock": {
+      "k": 0,
+      "d": 2
+    },
+    "clean-blip": {
+      "k": 0,
+      "d": 4
+    },
+    "g:ripple": {
+      "k": 20,
+      "d": 33
+    },
+    "g:ding-dong": {
+      "k": 0,
+      "d": 6
+    },
+    "glide": {
+      "k": 0,
+      "d": 2
+    },
+    "two-note": {
+      "k": 2,
+      "d": 13
+    },
+    "double-ping": {
+      "k": 0,
+      "d": 2
+    },
+    "g:grace": {
+      "k": 0,
+      "d": 5
+    },
+    "micro-blip": {
+      "k": 0,
+      "d": 3
+    },
+    "g:cascade": {
+      "k": 0,
+      "d": 1
+    },
+    "single-caution": {
+      "k": 0,
+      "d": 2
+    },
+    "g:haptic": {
+      "k": 0,
+      "d": 5
+    },
+    "single-thud": {
+      "k": 0,
+      "d": 2
+    },
+    "stairs": {
+      "k": 0,
+      "d": 5
+    },
+    "double-low": {
+      "k": 0,
+      "d": 3
+    },
+    "g:pluck": {
+      "k": 0,
+      "d": 5
+    },
+    "g:marimba": {
+      "k": 1,
+      "d": 15
+    },
+    "double-tick": {
+      "k": 0,
+      "d": 5
+    },
+    "g:boop": {
+      "k": 1,
+      "d": 17
+    },
+    "g:call-response": {
+      "k": 0,
+      "d": 1
+    },
+    "triple-deny": {
+      "k": 0,
+      "d": 1
+    },
+    "sparkle-rise": {
+      "k": 12,
+      "d": 17
+    },
+    "coin": {
+      "k": 0,
+      "d": 5
+    },
+    "g:tick-tock": {
+      "k": 0,
+      "d": 5
+    },
+    "g:wood": {
+      "k": 0,
+      "d": 6
+    },
+    "g:hollow": {
+      "k": 0,
+      "d": 1
+    },
+    "g:dew": {
+      "k": 0,
+      "d": 6
+    },
+    "relay": {
+      "k": 27,
+      "d": 38
+    },
+    "cha-ching": {
+      "k": 0,
+      "d": 1
+    },
+    "g:zip": {
+      "k": 0,
+      "d": 4
+    },
+    "g:air": {
+      "k": 0,
+      "d": 2
+    },
+    "g:pop": {
+      "k": 0,
+      "d": 4
+    },
+    "thock": {
+      "k": 0,
+      "d": 1
+    },
+    "mirror": {
+      "k": 8,
+      "d": 11
+    },
+    "resolve": {
+      "k": 0,
+      "d": 2
+    },
+    "g:rise-bloom": {
+      "k": 0,
+      "d": 1
+    },
+    "lift": {
+      "k": 0,
+      "d": 2
+    }
+  },
+  "error": {
+    "triple-deny": {
+      "k": 1,
+      "d": 7
+    },
+    "descend-steps": {
+      "k": 3,
+      "d": 0
+    },
+    "double-low": {
+      "k": 4,
+      "d": 0
+    },
+    "hybrid": {
+      "k": 4,
+      "d": 8
+    },
+    "single-thud": {
+      "k": 0,
+      "d": 1
+    },
+    "fall": {
+      "k": 0,
+      "d": 1
+    },
+    "g:ding-dong": {
+      "k": 1,
+      "d": 0
+    },
+    "clean-blip": {
+      "k": 0,
+      "d": 1
+    },
+    "g:knock-knock": {
+      "k": 2,
+      "d": 0
+    },
+    "dissonant-pair": {
+      "k": 0,
+      "d": 1
+    },
+    "g:dew": {
+      "k": 0,
+      "d": 1
+    },
+    "g:bounce": {
+      "k": 0,
+      "d": 3
+    },
+    "g:liquid": {
+      "k": 1,
+      "d": 0
+    },
+    "g:trill": {
+      "k": 0,
+      "d": 1
+    },
+    "g:roll": {
+      "k": 0,
+      "d": 1
+    },
+    "g:wood": {
+      "k": 0,
+      "d": 1
+    },
+    "g:duotone": {
+      "k": 0,
+      "d": 1
+    },
+    "g:marimba": {
+      "k": 0,
+      "d": 1
+    },
+    "thock": {
+      "k": 0,
+      "d": 1
+    },
+    "swoosh": {
+      "k": 0,
+      "d": 1
+    }
+  },
+  "transition": {
+    "swoosh": {
+      "k": 0,
+      "d": 4
+    },
+    "g:roll": {
+      "k": 1,
+      "d": 1
+    },
+    "hybrid": {
+      "k": 3,
+      "d": 2
+    },
+    "g:rise-bloom": {
+      "k": 1,
+      "d": 7
+    },
+    "stairs": {
+      "k": 1,
+      "d": 0
+    },
+    "g:liquid": {
+      "k": 0,
+      "d": 1
+    },
+    "g:dew": {
+      "k": 0,
+      "d": 1
+    },
+    "micro-blip": {
+      "k": 0,
+      "d": 1
+    },
+    "g:ripple": {
+      "k": 0,
+      "d": 1
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "sineCeilingHz": 1500,
+  "harshCeilingHz": 600,
+  "harshFloorHz": 320,
+  "maxFmDepth": 350,
+  "noiseBandCeilingHz": 6000,
+  "maxFilterQ": 12,
+  "sawOpenLowpassHz": 3700,
+  "absoluteCeilingHz": 3500
+}

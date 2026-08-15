@@ -1,0 +1,2336 @@
+{
+  "soft/error": [
+    "tap"
+  ],
+  "core/page-enter": [
+    "tap"
+  ],
+  "seed-b-soft/navigation.forward": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "seed-b-soft/navigation.backward": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "seed-b-glass/notification.info": [
+    "tap"
+  ],
+  "core/page-exit": [
+    "tap"
+  ],
+  "crisp/success": [
+    "tap"
+  ],
+  "core/warning": [
+    "tap"
+  ],
+  "seed-e/success": [
+    "tap"
+  ],
+  "seed-e/error": [
+    "tap"
+  ],
+  "organic/copy": [
+    "tap"
+  ],
+  "seed-b-organic/overlay.open": [
+    "tap"
+  ],
+  "seed-b-organic/overlay.close": [
+    "tap"
+  ],
+  "soft/delete": [
+    "tap",
+    "transition"
+  ],
+  "seed-b-organic/navigation.forward": [
+    "tap"
+  ],
+  "seed-b-organic/navigation.backward": [
+    "tap"
+  ],
+  "crisp/notification": [
+    "tap",
+    "success"
+  ],
+  "seed-a-crisp/notify": [
+    "tap",
+    "success"
+  ],
+  "seed-a-glass/warning": [
+    "tap",
+    "success"
+  ],
+  "seed-b-glass/navigation.forward": [
+    "tap"
+  ],
+  "seed-b-glass/navigation.backward": [
+    "tap"
+  ],
+  "seed-a-soft/success": [
+    "tap",
+    "success"
+  ],
+  "soft/toggle-on": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "soft/toggle-off": [
+    "tap",
+    "notification"
+  ],
+  "soft/warning": [
+    "tap",
+    "success"
+  ],
+  "core/slide": [
+    "tap"
+  ],
+  "core/slide-up": [
+    "tap"
+  ],
+  "core/slide-down": [
+    "tap"
+  ],
+  "playful/error": [
+    "tap",
+    "transition",
+    "notification"
+  ],
+  "core/swoosh": [
+    "tap"
+  ],
+  "seed-a-soft/warning": [
+    "tap",
+    "success"
+  ],
+  "seed-a-glass/swoosh": [
+    "tap"
+  ],
+  "seed-b-aero/overlay.close": [
+    "tap"
+  ],
+  "seed-b-aero/overlay.open": [
+    "tap"
+  ],
+  "core/save": [
+    "tap",
+    "success"
+  ],
+  "seed-f/glass-switch": [
+    "tap",
+    "notification"
+  ],
+  "seed-b-organic/notification.info": [
+    "tap"
+  ],
+  "seed-b-glass/overlay.open": [
+    "tap"
+  ],
+  "seed-b-industrial/overlay.open": [
+    "tap"
+  ],
+  "seed-b-industrial/overlay.close": [
+    "tap"
+  ],
+  "playful/warning": [
+    "tap",
+    "transition",
+    "success",
+    "notification"
+  ],
+  "seed-b-industrial/notification.info": [
+    "tap"
+  ],
+  "seed-b-crisp/notification.info": [
+    "tap"
+  ],
+  "seed-a-crisp/success": [
+    "tap",
+    "hover"
+  ],
+  "crisp/error": [
+    "tap",
+    "hover",
+    "transition"
+  ],
+  "seed-b-crisp/overlay.open": [
+    "tap"
+  ],
+  "seed-b-crisp/overlay.close": [
+    "tap"
+  ],
+  "seed-a-soft/error": [
+    "tap",
+    "transition"
+  ],
+  "seed-f/lofi-click": [
+    "tap",
+    "transition",
+    "error"
+  ],
+  "soft/page-exit": [
+    "tap",
+    "notification"
+  ],
+  "seed-b-soft/overlay.collapse": [
+    "tap"
+  ],
+  "seed-b-soft/overlay.expand": [
+    "tap"
+  ],
+  "seed-d/warning": [
+    "tap"
+  ],
+  "seed-a-glass/error": [
+    "tap",
+    "transition"
+  ],
+  "seed-b-aero/navigation.forward": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "seed-b-aero/navigation.backward": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "seed-b-minimal/overlay.open": [
+    "tap"
+  ],
+  "seed-b-minimal/overlay.close": [
+    "tap"
+  ],
+  "seed-e/swipe": [
+    "tap"
+  ],
+  "seed-b-minimal/notification.info": [
+    "tap",
+    "success"
+  ],
+  "organic/hover": [
+    "tap"
+  ],
+  "soft/deselect": [
+    "tap",
+    "hover",
+    "notification"
+  ],
+  "seed-a-soft/swoosh": [
+    "tap",
+    "hover"
+  ],
+  "crisp/warning": [
+    "tap",
+    "hover"
+  ],
+  "soft/tap": [
+    "tap",
+    "hover"
+  ],
+  "seed-a-crisp/warning": [
+    "tap",
+    "hover"
+  ],
+  "soft/hover": [
+    "tap",
+    "hover"
+  ],
+  "soft/key-press": [
+    "tap",
+    "hover"
+  ],
+  "playful/tap": [
+    "hover"
+  ],
+  "seed-a-crisp/swoosh": [
+    "tap",
+    "hover"
+  ],
+  "seed-a-arcade/swoosh": [
+    "tap",
+    "hover"
+  ],
+  "seed-c/release": [
+    "tap"
+  ],
+  "seed-f/retro-hover": [
+    "tap",
+    "hover",
+    "transition"
+  ],
+  "seed-a-crisp/pop": [
+    "tap",
+    "hover",
+    "transition"
+  ],
+  "seed-a-glass/hover": [
+    "tap",
+    "hover"
+  ],
+  "seed-e/type": [
+    "tap",
+    "hover"
+  ],
+  "seed-f/mechanical-hover": [
+    "tap",
+    "hover",
+    "transition",
+    "error"
+  ],
+  "seed-b-crisp/navigation.forward": [
+    "hover",
+    "notification",
+    "tap"
+  ],
+  "seed-b-crisp/navigation.backward": [
+    "hover",
+    "notification",
+    "tap"
+  ],
+  "minimal/notification": [
+    "hover",
+    "tap"
+  ],
+  "playful/undo": [
+    "hover",
+    "notification",
+    "transition"
+  ],
+  "playful/pop": [
+    "hover",
+    "notification",
+    "transition"
+  ],
+  "core/boop": [
+    "hover",
+    "notification"
+  ],
+  "playful/toggle-on": [
+    "hover",
+    "notification"
+  ],
+  "playful/toggle-off": [
+    "hover",
+    "notification"
+  ],
+  "minimal/success": [
+    "hover",
+    "success"
+  ],
+  "seed-a-glass/pop": [
+    "hover",
+    "transition",
+    "tap"
+  ],
+  "seed-f/retro-click": [
+    "hover",
+    "error",
+    "tap"
+  ],
+  "seed-f/retro-switch": [
+    "hover",
+    "error",
+    "tap"
+  ],
+  "seed-f/thock-click": [
+    "hover",
+    "error",
+    "transition"
+  ],
+  "seed-f/thock-switch": [
+    "hover",
+    "error",
+    "transition"
+  ],
+  "core/command": [
+    "hover"
+  ],
+  "playful/copy": [
+    "hover"
+  ],
+  "seed-a-glass/toggle-on": [
+    "hover"
+  ],
+  "core/escape": [
+    "hover"
+  ],
+  "seed-a-glass/toggle-off": [
+    "hover"
+  ],
+  "seed-a-crisp/error": [
+    "hover",
+    "transition",
+    "tap"
+  ],
+  "seed-a-soft/pop": [
+    "hover",
+    "transition"
+  ],
+  "core/checkbox": [
+    "hover",
+    "transition"
+  ],
+  "crisp/toggle-on": [
+    "hover",
+    "tap"
+  ],
+  "crisp/toggle-off": [
+    "hover",
+    "tap"
+  ],
+  "core/copy": [
+    "hover"
+  ],
+  "crisp/copy": [
+    "hover"
+  ],
+  "core/sync": [
+    "hover",
+    "success"
+  ],
+  "seed-e/click": [
+    "hover",
+    "transition"
+  ],
+  "minimal/toggle-on": [
+    "hover"
+  ],
+  "minimal/toggle-off": [
+    "hover"
+  ],
+  "core/radio": [
+    "hover",
+    "transition"
+  ],
+  "minimal/copy": [
+    "hover"
+  ],
+  "seed-f/minecraft-switch": [
+    "hover"
+  ],
+  "seed-f/mechanical-switch": [
+    "hover"
+  ],
+  "seed-c/toggle": [
+    "hover",
+    "tap"
+  ],
+  "core/toggle-on": [
+    "hover"
+  ],
+  "core/toggle-off": [
+    "hover"
+  ],
+  "seed-b-retro/interaction.toggle": [
+    "hover",
+    "error",
+    "warning",
+    "transition",
+    "tap"
+  ],
+  "seed-a-crisp/toggle-on": [
+    "hover",
+    "tap"
+  ],
+  "seed-a-crisp/toggle-off": [
+    "hover",
+    "tap"
+  ],
+  "seed-b-crisp/interaction.toggle": [
+    "hover",
+    "transition"
+  ],
+  "seed-a-soft/hover": [
+    "hover",
+    "tap"
+  ],
+  "seed-a-crisp/hover": [
+    "hover",
+    "tap"
+  ],
+  "seed-a-soft/click": [
+    "hover",
+    "tap"
+  ],
+  "crisp/page-exit": [
+    "hover"
+  ],
+  "core/modal-close": [
+    "hover"
+  ],
+  "core/modal-open": [
+    "hover"
+  ],
+  "core/pop": [
+    "hover",
+    "error",
+    "transition"
+  ],
+  "soft/tab-switch": [
+    "hover"
+  ],
+  "seed-b-crisp/overlay.collapse": [
+    "hover",
+    "tap"
+  ],
+  "seed-b-crisp/overlay.expand": [
+    "hover",
+    "tap"
+  ],
+  "crisp/swoosh": [
+    "hover",
+    "transition"
+  ],
+  "playful/click": [
+    "hover",
+    "transition"
+  ],
+  "playful/checkbox": [
+    "hover",
+    "transition"
+  ],
+  "seed-e/pop": [
+    "hover",
+    "transition"
+  ],
+  "seed-e/toggle-on": [
+    "hover"
+  ],
+  "seed-e/toggle-off": [
+    "hover",
+    "error"
+  ],
+  "seed-f/glass-hover": [
+    "transition"
+  ],
+  "seed-f/console-hover": [
+    "transition",
+    "warning",
+    "error",
+    "hover"
+  ],
+  "seed-f/console-click": [
+    "transition",
+    "warning",
+    "hover",
+    "error"
+  ],
+  "core/click": [
+    "transition",
+    "hover"
+  ],
+  "playful/notification": [
+    "transition",
+    "success"
+  ],
+  "seed-d/error": [
+    "transition"
+  ],
+  "soft/copy": [
+    "success",
+    "tap"
+  ],
+  "seed-b-soft/notification.info": [
+    "success"
+  ],
+  "seed-b-soft/notification.warning": [
+    "success"
+  ],
+  "seed-b-aero/notification.info": [
+    "success"
+  ],
+  "seed-b-aero/notification.warning": [
+    "success"
+  ],
+  "seed-b-minimal/navigation.forward": [
+    "success",
+    "notification",
+    "tap"
+  ],
+  "seed-b-minimal/navigation.backward": [
+    "success",
+    "notification",
+    "tap"
+  ],
+  "seed-b-crisp/notification.warning": [
+    "success"
+  ],
+  "seed-b-minimal/notification.warning": [
+    "success"
+  ],
+  "seed-b-soft/interaction.confirm": [
+    "success",
+    "hover"
+  ],
+  "seed-b-aero/interaction.confirm": [
+    "success",
+    "tap"
+  ],
+  "seed-b-arcade/interaction.confirm": [
+    "success",
+    "tap"
+  ],
+  "seed-b-organic/interaction.confirm": [
+    "success",
+    "hover"
+  ],
+  "seed-b-glass/interaction.confirm": [
+    "success",
+    "tap"
+  ],
+  "seed-b-industrial/interaction.confirm": [
+    "success"
+  ],
+  "seed-b-minimal/interaction.confirm": [
+    "success",
+    "tap"
+  ],
+  "seed-b-retro/interaction.confirm": [
+    "success"
+  ],
+  "seed-b-crisp/interaction.confirm": [
+    "success",
+    "tap"
+  ],
+  "seed-c/bloom": [
+    "success"
+  ],
+  "core/loading-end": [
+    "success",
+    "tap"
+  ],
+  "core/bounce": [
+    "error"
+  ],
+  "crisp/delete": [
+    "error",
+    "transition",
+    "notification"
+  ],
+  "crisp/pop": [
+    "error",
+    "transition"
+  ],
+  "minimal/delete": [
+    "error",
+    "transition"
+  ],
+  "minimal/pop": [
+    "error",
+    "transition"
+  ],
+  "seed-a-soft/toggle-off": [
+    "error",
+    "hover"
+  ],
+  "seed-d/pop": [
+    "error",
+    "tap"
+  ],
+  "seed-d/drop": [
+    "error",
+    "tap"
+  ],
+  "seed-f/thock-hover": [
+    "error",
+    "transition"
+  ],
+  "core/expand": [
+    "notification"
+  ],
+  "core/collapse": [
+    "notification"
+  ],
+  "core/confetti": [
+    "notification"
+  ],
+  "core/drawer-close": [
+    "notification"
+  ],
+  "core/send": [
+    "notification",
+    "tap"
+  ],
+  "core/undo": [
+    "notification",
+    "tap"
+  ],
+  "core/archive": [
+    "notification",
+    "tap"
+  ],
+  "playful/delete": [
+    "notification",
+    "tap"
+  ],
+  "core/streak": [
+    "notification",
+    "transition",
+    "success"
+  ],
+  "playful/collapse": [
+    "notification",
+    "tap"
+  ],
+  "playful/page-exit": [
+    "notification",
+    "tap"
+  ],
+  "soft/click": [
+    "notification"
+  ],
+  "seed-b-crisp/notification.error": [
+    "notification"
+  ],
+  "seed-f/bubble-click": [
+    "notification",
+    "tap"
+  ],
+  "seed-f/scifi-switch": [
+    "notification",
+    "tap"
+  ],
+  "seed-f/scifi-click": [
+    "notification",
+    "transition"
+  ],
+  "seed-f/glass-click": [
+    "notification",
+    "transition",
+    "tap"
+  ],
+  "playful/slide": [
+    "hover",
+    "notification"
+  ],
+  "core/tab-switch": [
+    "transition"
+  ],
+  "crisp/checkbox": [
+    "transition"
+  ],
+  "crisp/undo": [
+    "transition"
+  ],
+  "crisp/slide": [
+    "transition"
+  ],
+  "minimal/send": [
+    "transition"
+  ],
+  "minimal/undo": [
+    "transition"
+  ],
+  "minimal/swoosh": [
+    "transition",
+    "hover"
+  ],
+  "minimal/slide": [
+    "transition"
+  ],
+  "playful/key-press": [
+    "transition",
+    "hover"
+  ],
+  "playful/select": [
+    "transition"
+  ],
+  "playful/deselect": [
+    "transition",
+    "hover"
+  ],
+  "playful/tab-switch": [
+    "transition"
+  ],
+  "seed-b-soft/navigation.tab": [
+    "transition"
+  ],
+  "seed-b-aero/navigation.tab": [
+    "transition"
+  ],
+  "seed-b-organic/navigation.tab": [
+    "transition",
+    "hover"
+  ],
+  "seed-b-glass/navigation.tab": [
+    "transition"
+  ],
+  "seed-b-minimal/navigation.tab": [
+    "transition",
+    "hover"
+  ],
+  "seed-b-crisp/navigation.tab": [
+    "transition",
+    "hover"
+  ],
+  "seed-e/hover": [
+    "transition"
+  ],
+  "seed-f/lofi-hover": [
+    "transition",
+    "tap"
+  ],
+  "seed-f/lofi-switch": [
+    "transition"
+  ],
+  "seed-f/minecraft-click": [
+    "transition"
+  ],
+  "seed-f/bubble-hover": [
+    "transition"
+  ],
+  "seed-a-soft/toggle-on": [
+    "hover"
+  ],
+  "soft/undo": [
+    "notification",
+    "tap"
+  ],
+  "soft/checkbox": [
+    "transition",
+    "notification"
+  ],
+  "soft/pop": [
+    "transition",
+    "error"
+  ],
+  "seed-c/sparkle": [
+    "tap"
+  ],
+  "seed-c/droplet": [
+    "transition",
+    "tap"
+  ],
+  "seed-b-glass/overlay.close": [
+    "tap"
+  ],
+  "seed-b-glass/overlay.expand": [
+    "tap"
+  ],
+  "seed-b-glass/overlay.collapse": [
+    "tap"
+  ],
+  "pool/warning/4": [
+    "error",
+    "tap",
+    "hover"
+  ],
+  "pool/error/20": [
+    "tap"
+  ],
+  "pool/notification/1": [
+    "tap"
+  ],
+  "pool/error/11": [
+    "tap",
+    "success"
+  ],
+  "pool/error/19": [
+    "tap",
+    "success"
+  ],
+  "pool/error/29": [
+    "tap"
+  ],
+  "pool/error/30": [
+    "tap",
+    "success"
+  ],
+  "pool/error/39": [
+    "tap",
+    "success"
+  ],
+  "pool/error/40": [
+    "tap"
+  ],
+  "pool/error/45": [
+    "tap"
+  ],
+  "pool/error/50": [
+    "tap"
+  ],
+  "pool/error/53": [
+    "tap"
+  ],
+  "pool/error/6": [
+    "tap"
+  ],
+  "pool/error/43": [
+    "tap",
+    "transition"
+  ],
+  "pool/error/0": [
+    "tap"
+  ],
+  "pool/error/9": [
+    "tap",
+    "notification"
+  ],
+  "pool/error/13": [
+    "tap"
+  ],
+  "pool/error/16": [
+    "tap",
+    "notification"
+  ],
+  "pool/error/26": [
+    "tap"
+  ],
+  "pool/error/27": [
+    "tap"
+  ],
+  "pool/error/42": [
+    "tap"
+  ],
+  "pool/error/33": [
+    "tap"
+  ],
+  "pool/error/31": [
+    "tap"
+  ],
+  "pool/error/22": [
+    "tap"
+  ],
+  "pool/error/3": [
+    "tap"
+  ],
+  "pool/error/12": [
+    "tap",
+    "success"
+  ],
+  "pool/error/34": [
+    "tap",
+    "success"
+  ],
+  "pool/error/5": [
+    "tap"
+  ],
+  "pool/error/21": [
+    "tap"
+  ],
+  "pool/error/36": [
+    "tap"
+  ],
+  "pool/warning/7": [
+    "tap"
+  ],
+  "pool/warning/2": [
+    "tap",
+    "success"
+  ],
+  "pool/error/8": [
+    "tap"
+  ],
+  "pool/error/38": [
+    "tap",
+    "hover",
+    "transition"
+  ],
+  "pool/warning/6": [
+    "tap",
+    "hover",
+    "error",
+    "transition"
+  ],
+  "pool/transition/0": [
+    "tap",
+    "hover"
+  ],
+  "pool/warning/5": [
+    "tap",
+    "hover"
+  ],
+  "soft/info": [
+    "tap"
+  ],
+  "pool/tap/2": [
+    "hover",
+    "tap",
+    "notification"
+  ],
+  "pool/tap/4": [
+    "hover"
+  ],
+  "pool/tap/8": [
+    "hover"
+  ],
+  "pool/tap/1": [
+    "hover",
+    "tap"
+  ],
+  "pool/error/23": [
+    "hover",
+    "tap"
+  ],
+  "pool/error/28": [
+    "hover",
+    "tap"
+  ],
+  "pool/error/35": [
+    "hover",
+    "tap"
+  ],
+  "pool/tap/0": [
+    "hover",
+    "tap"
+  ],
+  "pool/tap/7": [
+    "hover"
+  ],
+  "pool/tap/3": [
+    "hover",
+    "tap"
+  ],
+  "pool/warning/0": [
+    "success",
+    "notification"
+  ],
+  "pool/warning/1": [
+    "success"
+  ],
+  "pool/warning/3": [
+    "success"
+  ],
+  "pool/notification/3": [
+    "success",
+    "tap"
+  ],
+  "pool/warning/10": [
+    "success",
+    "tap",
+    "notification"
+  ],
+  "pool/warning/11": [
+    "success",
+    "tap",
+    "notification"
+  ],
+  "pool/success/0": [
+    "notification",
+    "success"
+  ],
+  "seed-d/success": [
+    "success"
+  ],
+  "seed-b-minimal/hero.milestone": [
+    "success"
+  ],
+  "seed-b-minimal/notification.success": [
+    "success"
+  ],
+  "seed-b-aero/notification.success": [
+    "success"
+  ],
+  "seed-b-soft/notification.success": [
+    "success"
+  ],
+  "seed-a-glass/success": [
+    "success"
+  ],
+  "core/level-up": [
+    "success",
+    "notification"
+  ],
+  "core/success": [
+    "notification"
+  ],
+  "seed-d/toggle": [
+    "success",
+    "tap"
+  ],
+  "seed-c/chime": [
+    "success"
+  ],
+  "soft/notification": [
+    "success"
+  ],
+  "pool/warning/16": [
+    "success",
+    "tap",
+    "notification"
+  ],
+  "pool/warning/14": [
+    "success",
+    "tap",
+    "notification"
+  ],
+  "pool/warning/13": [
+    "success",
+    "tap"
+  ],
+  "pool/success/2": [
+    "success"
+  ],
+  "pool/success/13": [
+    "tap"
+  ],
+  "pool/success/12": [
+    "success"
+  ],
+  "pool/success/11": [
+    "tap"
+  ],
+  "pool/success/6": [
+    "tap"
+  ],
+  "pool/notification/6": [
+    "success",
+    "tap"
+  ],
+  "pool/notification/5": [
+    "success",
+    "tap"
+  ],
+  "pool/notification/0": [
+    "success",
+    "tap"
+  ],
+  "pool/success/15": [
+    "tap"
+  ],
+  "pool/warning/15": [
+    "tap"
+  ],
+  "pool/hover/11": [
+    "tap",
+    "transition",
+    "hover"
+  ],
+  "pool/hover/9": [
+    "tap"
+  ],
+  "pool/hover/6": [
+    "tap"
+  ],
+  "pool/hover/2": [
+    "tap",
+    "hover"
+  ],
+  "pool/hover/1": [
+    "tap"
+  ],
+  "pool/notification/4": [
+    "tap"
+  ],
+  "pool/error/54": [
+    "tap"
+  ],
+  "soft/page-enter": [
+    "tap"
+  ],
+  "soft/swoosh": [
+    "tap"
+  ],
+  "soft/expand": [
+    "tap"
+  ],
+  "soft/collapse": [
+    "tap",
+    "notification"
+  ],
+  "soft/send": [
+    "tap"
+  ],
+  "soft/select": [
+    "notification"
+  ],
+  "soft/slide": [
+    "notification",
+    "tap"
+  ],
+  "pool/tap/10": [
+    "tap"
+  ],
+  "pool/error/7": [
+    "transition"
+  ],
+  "pool/hover/7": [
+    "transition",
+    "tap"
+  ],
+  "pool/hover/5": [
+    "hover",
+    "tap"
+  ],
+  "pool/warning/12": [
+    "tap"
+  ],
+  "pool/error/41": [
+    "transition"
+  ],
+  "pool/error/51": [
+    "transition"
+  ],
+  "pool/notification/2": [
+    "hover",
+    "tap"
+  ],
+  "pool/hover/20": [
+    "hover"
+  ],
+  "pool/hover/49": [
+    "tap"
+  ],
+  "pool/hover/41": [
+    "tap"
+  ],
+  "pool/hover/42": [
+    "tap",
+    "transition"
+  ],
+  "pool/hover/44": [
+    "tap"
+  ],
+  "pool/hover/35": [
+    "transition",
+    "tap"
+  ],
+  "pool/hover/36": [
+    "tap"
+  ],
+  "pool/hover/37": [
+    "tap"
+  ],
+  "pool/hover/38": [
+    "tap"
+  ],
+  "pool/hover/39": [
+    "tap"
+  ],
+  "pool/hover/34": [
+    "tap",
+    "transition",
+    "hover"
+  ],
+  "pool/hover/33": [
+    "tap"
+  ],
+  "pool/hover/25": [
+    "tap",
+    "hover"
+  ],
+  "pool/hover/26": [
+    "tap"
+  ],
+  "pool/hover/27": [
+    "tap"
+  ],
+  "pool/hover/28": [
+    "tap",
+    "transition"
+  ],
+  "pool/hover/23": [
+    "tap",
+    "error",
+    "transition"
+  ],
+  "pool/hover/15": [
+    "tap"
+  ],
+  "pool/tap/13": [
+    "hover"
+  ],
+  "pool/warning/19": [
+    "tap",
+    "notification"
+  ],
+  "pool/warning/18": [
+    "tap"
+  ],
+  "pool/warning/17": [
+    "tap",
+    "success"
+  ],
+  "pool/error/62": [
+    "tap"
+  ],
+  "pool/error/59": [
+    "tap"
+  ],
+  "pool/success/53": [
+    "tap"
+  ],
+  "pool/success/52": [
+    "tap"
+  ],
+  "pool/error/56": [
+    "tap"
+  ],
+  "pool/error/58": [
+    "tap"
+  ],
+  "pool/success/51": [
+    "tap"
+  ],
+  "pool/success/49": [
+    "tap"
+  ],
+  "pool/success/44": [
+    "tap",
+    "success"
+  ],
+  "pool/success/45": [
+    "tap",
+    "success"
+  ],
+  "pool/success/41": [
+    "tap",
+    "notification"
+  ],
+  "pool/success/36": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "pool/success/39": [
+    "tap",
+    "notification"
+  ],
+  "pool/success/34": [
+    "tap",
+    "notification"
+  ],
+  "pool/success/33": [
+    "tap",
+    "notification"
+  ],
+  "pool/hover/10": [
+    "tap",
+    "hover"
+  ],
+  "pool/warning/9": [
+    "tap"
+  ],
+  "pool/warning/8": [
+    "tap",
+    "notification"
+  ],
+  "pool/hover/16": [
+    "tap",
+    "hover"
+  ],
+  "pool/hover/19": [
+    "tap"
+  ],
+  "pool/hover/45": [
+    "tap",
+    "transition",
+    "hover"
+  ],
+  "pool/hover/32": [
+    "tap",
+    "hover"
+  ],
+  "pool/hover/8": [
+    "tap",
+    "hover"
+  ],
+  "organic/deselect": [
+    "tap"
+  ],
+  "organic/tab-switch": [
+    "tap"
+  ],
+  "organic/key-press": [
+    "tap"
+  ],
+  "seed-f/bubble-switch": [
+    "tap"
+  ],
+  "pool/tap/12": [
+    "hover"
+  ],
+  "pool/tap/5": [
+    "hover"
+  ],
+  "crisp/collapse": [
+    "hover"
+  ],
+  "seed-a-crisp/click": [
+    "hover",
+    "tap"
+  ],
+  "seed-a-arcade/hover": [
+    "hover",
+    "tap"
+  ],
+  "seed-a-arcade/click": [
+    "hover",
+    "tap"
+  ],
+  "pool/hover/24": [
+    "transition",
+    "hover"
+  ],
+  "pool/hover/0": [
+    "transition"
+  ],
+  "pool/error/10": [
+    "tap"
+  ],
+  "pool/warning/20": [
+    "tap",
+    "notification"
+  ],
+  "pool/warning/21": [
+    "tap",
+    "notification"
+  ],
+  "pool/warning/22": [
+    "success",
+    "notification"
+  ],
+  "pool/warning/23": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "pool/warning/24": [
+    "tap",
+    "success"
+  ],
+  "pool/warning/25": [
+    "tap",
+    "notification"
+  ],
+  "pool/warning/26": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "pool/warning/27": [
+    "success",
+    "notification"
+  ],
+  "pool/warning/28": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "pool/warning/29": [
+    "tap"
+  ],
+  "pool/warning/30": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "pool/warning/31": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "pool/warning/32": [
+    "tap"
+  ],
+  "pool/warning/33": [
+    "success",
+    "notification"
+  ],
+  "pool/warning/34": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "pool/warning/35": [
+    "notification",
+    "success"
+  ],
+  "pool/warning/36": [
+    "tap",
+    "hover"
+  ],
+  "pool/warning/37": [
+    "tap",
+    "notification"
+  ],
+  "pool/warning/38": [
+    "tap"
+  ],
+  "playful/page-enter": [
+    "tap"
+  ],
+  "pool/warning/40": [
+    "tap",
+    "notification"
+  ],
+  "pool/warning/41": [
+    "tap",
+    "success"
+  ],
+  "pool/unsorted/0": [
+    "tap"
+  ],
+  "pool/unsorted/23": [
+    "tap"
+  ],
+  "pool/unsorted/24": [
+    "hover"
+  ],
+  "pool/unsorted/25": [
+    "tap",
+    "success"
+  ],
+  "pool/unsorted/20": [
+    "error",
+    "notification"
+  ],
+  "pool/unsorted/19": [
+    "tap",
+    "notification"
+  ],
+  "pool/unsorted/17": [
+    "tap",
+    "success"
+  ],
+  "pool/unsorted/10": [
+    "tap"
+  ],
+  "pool/unsorted/8": [
+    "notification"
+  ],
+  "pool/unsorted/7": [
+    "success",
+    "notification"
+  ],
+  "pool/unsorted/1": [
+    "transition",
+    "notification"
+  ],
+  "seed-c/error": [
+    "tap"
+  ],
+  "seed-c/loading": [
+    "tap"
+  ],
+  "seed-c/page": [
+    "tap",
+    "hover",
+    "transition"
+  ],
+  "seed-c/ready": [
+    "tap"
+  ],
+  "pool/unsorted/27": [
+    "tap"
+  ],
+  "pool/unsorted/28": [
+    "tap"
+  ],
+  "pool/unsorted/29": [
+    "tap",
+    "success"
+  ],
+  "pool/unsorted/31": [
+    "tap",
+    "success"
+  ],
+  "pool/unsorted/44": [
+    "tap",
+    "transition",
+    "success"
+  ],
+  "pool/unsorted/43": [
+    "tap",
+    "hover"
+  ],
+  "pool/tap/14": [
+    "hover"
+  ],
+  "pool/warning/39": [
+    "tap",
+    "hover"
+  ],
+  "pool/unsorted/30": [
+    "tap",
+    "hover"
+  ],
+  "pool/warning/42": [
+    "tap",
+    "success"
+  ],
+  "pool/unsorted/48": [
+    "tap",
+    "hover"
+  ],
+  "pool/unsorted/49": [
+    "tap",
+    "transition",
+    "error",
+    "warning"
+  ],
+  "pool/unsorted/52": [
+    "tap",
+    "transition"
+  ],
+  "pool/unsorted/57": [
+    "tap",
+    "hover"
+  ],
+  "pool/unsorted/61": [
+    "tap"
+  ],
+  "pool/unsorted/56": [
+    "tap",
+    "hover",
+    "transition"
+  ],
+  "seed-b-aero/overlay.expand": [
+    "tap"
+  ],
+  "seed-b-aero/overlay.collapse": [
+    "tap"
+  ],
+  "core/receive": [
+    "tap"
+  ],
+  "playful/info": [
+    "tap"
+  ],
+  "seed-d/tick": [
+    "tap"
+  ],
+  "crisp/page-enter": [
+    "tap"
+  ],
+  "seed-f/minecraft-hover": [
+    "tap"
+  ],
+  "pool/unsorted/47": [
+    "tap",
+    "hover",
+    "notification"
+  ],
+  "pool/unsorted/54": [
+    "tap"
+  ],
+  "pool/unsorted/60": [
+    "transition",
+    "notification"
+  ],
+  "pool/unsorted/59": [
+    "tap"
+  ],
+  "pool/unsorted/55": [
+    "tap"
+  ],
+  "pool/unsorted/62": [
+    "success",
+    "notification"
+  ],
+  "pool/unsorted/89": [
+    "success",
+    "notification"
+  ],
+  "pool/unsorted/86": [
+    "tap",
+    "hover"
+  ],
+  "pool/unsorted/85": [
+    "hover",
+    "tap"
+  ],
+  "pool/unsorted/83": [
+    "success"
+  ],
+  "pool/unsorted/72": [
+    "tap",
+    "transition"
+  ],
+  "pool/unsorted/71": [
+    "success"
+  ],
+  "pool/unsorted/70": [
+    "tap",
+    "notification",
+    "success"
+  ],
+  "pool/unsorted/68": [
+    "tap"
+  ],
+  "pool/unsorted/66": [
+    "success",
+    "tap"
+  ],
+  "pool/unsorted/64": [
+    "hover",
+    "tap"
+  ],
+  "pool/success/65": [
+    "tap",
+    "notification"
+  ],
+  "pool/error/66": [
+    "tap"
+  ],
+  "pool/error/67": [
+    "tap"
+  ],
+  "pool/success/63": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "pool/unsorted/114": [
+    "tap"
+  ],
+  "pool/unsorted/113": [
+    "tap",
+    "notification"
+  ],
+  "pool/unsorted/112": [
+    "success",
+    "notification"
+  ],
+  "pool/unsorted/109": [
+    "tap",
+    "transition",
+    "notification"
+  ],
+  "pool/unsorted/104": [
+    "notification"
+  ],
+  "pool/unsorted/103": [
+    "tap"
+  ],
+  "pool/unsorted/102": [
+    "tap"
+  ],
+  "pool/unsorted/101": [
+    "success"
+  ],
+  "pool/unsorted/100": [
+    "tap",
+    "hover"
+  ],
+  "pool/unsorted/96": [
+    "transition",
+    "success",
+    "notification"
+  ],
+  "pool/unsorted/93": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "pool/unsorted/92": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "pool/unsorted/90": [
+    "hover"
+  ],
+  "pool/unsorted/45": [
+    "hover"
+  ],
+  "pool/unsorted/35": [
+    "hover",
+    "tap"
+  ],
+  "recent/copy": [
+    "hover"
+  ],
+  "recent/error": [
+    "transition"
+  ],
+  "recent/close": [
+    "hover",
+    "tap"
+  ],
+  "recent/press": [
+    "hover",
+    "tap"
+  ],
+  "recent/pressOutline": [
+    "hover"
+  ],
+  "recent/open": [
+    "hover"
+  ],
+  "recent/toggle-on": [
+    "hover",
+    "tap"
+  ],
+  "recent/toggle-off": [
+    "hover",
+    "tap"
+  ],
+  "recent/pop": [
+    "transition",
+    "tap"
+  ],
+  "recent/pressGhost": [
+    "hover"
+  ],
+  "recent/pressSoft": [
+    "transition"
+  ],
+  "pool/unsorted/110": [
+    "transition"
+  ],
+  "pool/tap/24": [
+    "hover",
+    "transition"
+  ],
+  "pool/tap/20": [
+    "hover",
+    "transition"
+  ],
+  "pool/tap/18": [
+    "hover"
+  ],
+  "pool/tap/19": [
+    "hover"
+  ],
+  "pool/tap/17": [
+    "hover"
+  ],
+  "pool/tap/16": [
+    "hover"
+  ],
+  "pool/tap/21": [
+    "hover",
+    "transition"
+  ],
+  "pool/tap/23": [
+    "transition",
+    "hover"
+  ],
+  "pool/success/64": [
+    "notification"
+  ],
+  "pool/success/23": [
+    "notification"
+  ],
+  "pool/unsorted/118": [
+    "transition"
+  ],
+  "pool/notification/11": [
+    "tap",
+    "hover"
+  ],
+  "pool/success/71": [
+    "tap",
+    "notification"
+  ],
+  "pool/success/72": [
+    "notification"
+  ],
+  "pool/success/73": [
+    "tap",
+    "notification"
+  ],
+  "pool/notification/10": [
+    "tap"
+  ],
+  "pool/transition/2": [
+    "tap",
+    "hover",
+    "notification"
+  ],
+  "pool/transition/3": [
+    "tap",
+    "notification"
+  ],
+  "pool/transition/4": [
+    "notification",
+    "success"
+  ],
+  "pool/transition/5": [
+    "tap",
+    "notification",
+    "success"
+  ],
+  "pool/unsorted/126": [
+    "success"
+  ],
+  "pool/unsorted/127": [
+    "success",
+    "tap",
+    "notification"
+  ],
+  "pool/transition/1": [
+    "notification"
+  ],
+  "pool/unsorted/121": [
+    "hover",
+    "tap"
+  ],
+  "pool/unsorted/119": [
+    "hover"
+  ],
+  "pool/transition/10": [
+    "hover",
+    "tap"
+  ],
+  "pool/transition/6": [
+    "notification",
+    "tap",
+    "hover"
+  ],
+  "pool/transition/7": [
+    "notification",
+    "tap"
+  ],
+  "pool/transition/8": [
+    "hover",
+    "tap"
+  ],
+  "pool/transition/9": [
+    "tap",
+    "notification"
+  ],
+  "pool/success/78": [
+    "notification"
+  ],
+  "pool/success/77": [
+    "tap",
+    "notification"
+  ],
+  "pool/success/76": [
+    "notification"
+  ],
+  "pool/success/75": [
+    "notification"
+  ],
+  "seed-b-glass/interaction.tap": [
+    "tap"
+  ],
+  "pool/hover/48": [
+    "tap",
+    "hover"
+  ],
+  "seed-c/press": [
+    "tap"
+  ],
+  "seed-c/tick": [
+    "tap",
+    "hover"
+  ],
+  "seed-b-crisp/interaction.subtle": [
+    "tap"
+  ],
+  "seed-b-crisp/interaction.tap": [
+    "tap"
+  ],
+  "seed-b-soft/interaction.subtle": [
+    "tap"
+  ],
+  "seed-b-soft/interaction.tap": [
+    "tap"
+  ],
+  "seed-b-arcade/interaction.tap": [
+    "tap"
+  ],
+  "seed-b-organic/interaction.subtle": [
+    "tap"
+  ],
+  "seed-b-minimal/interaction.subtle": [
+    "tap"
+  ],
+  "seed-b-soft/interaction.toggle": [
+    "tap",
+    "hover"
+  ],
+  "seed-b-industrial/interaction.subtle": [
+    "tap"
+  ],
+  "seed-b-organic/interaction.toggle": [
+    "hover"
+  ],
+  "crisp/info": [
+    "hover"
+  ],
+  "crisp/send": [
+    "hover",
+    "notification"
+  ],
+  "recent/select": [
+    "hover"
+  ],
+  "seed-b-minimal/interaction.toggle": [
+    "hover"
+  ],
+  "pool/warning/43": [
+    "tap",
+    "success",
+    "notification"
+  ],
+  "pool/error/73": [
+    "tap"
+  ],
+  "pool/error/71": [
+    "success"
+  ],
+  "pool/error/69": [
+    "tap"
+  ],
+  "pool/tap/25": [
+    "success",
+    "notification",
+    "tap"
+  ],
+  "pool/tap/26": [
+    "success",
+    "notification"
+  ],
+  "pool/tap/27": [
+    "success",
+    "notification"
+  ],
+  "pool/tap/28": [
+    "notification",
+    "tap"
+  ],
+  "pool/tap/29": [
+    "notification"
+  ],
+  "pool/tap/31": [
+    "hover",
+    "tap"
+  ],
+  "pool/tap/33": [
+    "tap"
+  ],
+  "pool/tap/34": [
+    "hover"
+  ],
+  "pool/tap/35": [
+    "notification",
+    "success",
+    "tap"
+  ],
+  "pool/tap/38": [
+    "tap",
+    "hover"
+  ],
+  "pool/tap/39": [
+    "hover"
+  ],
+  "pool/tap/40": [
+    "hover",
+    "tap",
+    "notification"
+  ],
+  "pool/tap/41": [
+    "hover",
+    "tap"
+  ],
+  "pool/tap/42": [
+    "hover",
+    "tap"
+  ],
+  "pool/hover/76": [
+    "hover",
+    "error"
+  ],
+  "pool/hover/79": [
+    "hover",
+    "transition",
+    "tap"
+  ],
+  "pool/hover/81": [
+    "tap"
+  ],
+  "pool/hover/87": [
+    "hover",
+    "tap"
+  ],
+  "pool/hover/106": [
+    "tap"
+  ],
+  "pool/hover/108": [
+    "hover"
+  ],
+  "pool/hover/115": [
+    "tap"
+  ],
+  "pool/hover/116": [
+    "hover",
+    "tap"
+  ],
+  "pool/tap/45": [
+    "hover"
+  ],
+  "pool/error/75": [
+    "tap"
+  ],
+  "minimal/collapse": [
+    "hover"
+  ],
+  "pool/success/87": [
+    "tap",
+    "notification"
+  ],
+  "seed-g/theme-toggle": [
+    "hover",
+    "transition"
+  ],
+  "seed-g/letter-octave": [
+    "notification"
+  ],
+  "seed-g/letter-sixth": [
+    "notification"
+  ],
+  "pool/success/184": [
+    "notification"
+  ],
+  "pool/success/182": [
+    "notification"
+  ],
+  "pool/success/181": [
+    "notification"
+  ],
+  "pool/success/90": [
+    "tap",
+    "hover",
+    "notification"
+  ],
+  "pool/success/95": [
+    "notification",
+    "success"
+  ],
+  "pool/success/97": [
+    "success",
+    "notification"
+  ],
+  "pool/success/99": [
+    "success"
+  ],
+  "pool/success/100": [
+    "tap",
+    "success"
+  ],
+  "pool/success/114": [
+    "notification"
+  ],
+  "pool/tap/46": [
+    "hover",
+    "tap"
+  ],
+  "pool/hover/113": [
+    "tap"
+  ],
+  "pool/tap/48": [
+    "hover"
+  ],
+  "pool/unsorted/125": [
+    "tap"
+  ],
+  "pool/unsorted/2": [
+    "success"
+  ],
+  "pool/unsorted/6": [
+    "success"
+  ],
+  "pool/unsorted/12": [
+    "notification"
+  ],
+  "pool/unsorted/16": [
+    "success"
+  ],
+  "pool/unsorted/22": [
+    "notification"
+  ],
+  "pool/unsorted/32": [
+    "notification"
+  ],
+  "pool/unsorted/34": [
+    "success",
+    "tap"
+  ],
+  "pool/unsorted/37": [
+    "transition",
+    "hover"
+  ],
+  "pool/unsorted/108": [
+    "transition"
+  ],
+  "pool/unsorted/120": [
+    "transition"
+  ],
+  "seed-b-glass/interaction.toggle": [
+    "hover"
+  ],
+  "core/loading-start": [
+    "notification"
+  ],
+  "pool/unsorted/105": [
+    "tap"
+  ],
+  "seed-c/pulse": [
+    "hover",
+    "tap"
+  ],
+  "pool/tap/9": [
+    "notification"
+  ],
+  "pool/success/3": [
+    "notification"
+  ],
+  "pool/success/4": [
+    "notification"
+  ],
+  "pool/success/10": [
+    "notification"
+  ],
+  "pool/hover/3": [
+    "hover"
+  ],
+  "pool/hover/12": [
+    "tap"
+  ],
+  "pool/hover/13": [
+    "hover"
+  ],
+  "pool/success/17": [
+    "notification"
+  ],
+  "pool/success/18": [
+    "notification"
+  ],
+  "pool/success/20": [
+    "notification"
+  ],
+  "pool/success/21": [
+    "notification"
+  ],
+  "pool/success/25": [
+    "notification"
+  ],
+  "pool/success/30": [
+    "notification"
+  ],
+  "pool/success/31": [
+    "notification"
+  ],
+  "pool/success/38": [
+    "notification"
+  ],
+  "pool/transition/11": [
+    "tap"
+  ],
+  "pool/unsorted/117": [
+    "notification"
+  ],
+  "pool/unsorted/106": [
+    "notification"
+  ],
+  "pool/unsorted/97": [
+    "success"
+  ],
+  "pool/unsorted/84": [
+    "notification"
+  ],
+  "pool/unsorted/82": [
+    "notification"
+  ],
+  "pool/error/57": [
+    "notification"
+  ],
+  "pool/success/88": [
+    "notification"
+  ],
+  "pool/success/92": [
+    "notification"
+  ],
+  "pool/success/101": [
+    "notification"
+  ],
+  "pool/success/140": [
+    "notification"
+  ],
+  "pool/success/69": [
+    "notification"
+  ],
+  "pool/success/67": [
+    "notification"
+  ],
+  "pool/tap/22": [
+    "hover"
+  ],
+  "pool/tap/15": [
+    "notification",
+    "tap"
+  ],
+  "pool/success/62": [
+    "notification"
+  ],
+  "pool/unsorted/63": [
+    "success"
+  ],
+  "pool/unsorted/33": [
+    "notification"
+  ],
+  "pool/notification/7": [
+    "success"
+  ],
+  "pool/success/61": [
+    "success"
+  ],
+  "pool/success/43": [
+    "success"
+  ],
+  "pool/success/46": [
+    "notification",
+    "success"
+  ],
+  "pool/success/47": [
+    "notification"
+  ],
+  "pool/success/56": [
+    "notification"
+  ],
+  "pool/success/59": [
+    "notification"
+  ],
+  "pool/hover/14": [
+    "tap"
+  ],
+  "pool/hover/17": [
+    "hover"
+  ],
+  "pool/hover/21": [
+    "hover"
+  ],
+  "pool/hover/30": [
+    "tap"
+  ],
+  "pool/hover/31": [
+    "hover"
+  ],
+  "pool/hover/40": [
+    "hover"
+  ],
+  "pool/hover/46": [
+    "hover"
+  ],
+  "pool/hover/101": [
+    "hover"
+  ],
+  "pool/hover/63": [
+    "tap"
+  ],
+  "pool/hover/52": [
+    "hover"
+  ],
+  "pool/tap/44": [
+    "hover"
+  ],
+  "pool/tap/36": [
+    "hover"
+  ],
+  "minimal/info": [
+    "notification"
+  ],
+  "seed-c/scan": [
+    "tap"
+  ]
+}
