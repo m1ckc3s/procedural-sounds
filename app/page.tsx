@@ -14,7 +14,8 @@ import {
   type ReferenceData,
   type SlotOverrides,
 } from "@/lib/audio/randomize";
-import { DEFAULT_LOUDNESS, loudnessVolume, type LoudnessConfig } from "@/lib/audio/loudness";
+import { loudnessVolume, type LoudnessConfig } from "@/lib/audio/loudness";
+import { CURATION } from "@/lib/curation";
 import { measurePatch } from "@/lib/audio/offline";
 import { patchDuration, playPatch } from "@/lib/audio/synth";
 import { perceptualDistance } from "@/lib/audio/similarity";
@@ -197,18 +198,22 @@ function pickBest<T extends { patch: Patch }>(
 }
 
 export default function Home() {
-  const [slots, setSlots] = useState<SlotOverrides>({});
-  const [approved, setApproved] = useState<ApprovedPools>({});
-  const [deleted, setDeleted] = useState<string[]>([]);
-  const [duplicates, setDuplicates] = useState<string[]>([]);
-  const [exclusions, setExclusions] = useState<Exclusions>({});
-  const [favorites, setFavorites] = useState<string[]>([]);
+  // Initial state is the build-time snapshot, never empty defaults. Production has no API
+  // (proxy.ts closes it), so whatever is here at first render is all a visitor ever gets:
+  // seeding these with `{}` once shipped the raw imports, trashed sounds included, with
+  // untrained dice, and every fetch below failed silently. See lib/curation.ts.
+  const [slots, setSlots] = useState<SlotOverrides>(CURATION.slots);
+  const [approved, setApproved] = useState<ApprovedPools>(CURATION.approved);
+  const [deleted, setDeleted] = useState<string[]>(CURATION.deleted);
+  const [duplicates, setDuplicates] = useState<string[]>(CURATION.duplicates);
+  const [exclusions, setExclusions] = useState<Exclusions>(CURATION.exclusions);
+  const [favorites, setFavorites] = useState<string[]>(CURATION.favorites);
   // Unsorted keeps are members of nothing, so the product never draws one before it has
   // been signed off in the workbench inbox.
-  const [toSort, setToSort] = useState<string[]>([]);
-  const [opStats, setOpStats] = useState<OpStats>({});
-  const [taste, setTaste] = useState<TasteStore>({});
-  const [loudness, setLoudness] = useState<LoudnessConfig>(DEFAULT_LOUDNESS);
+  const [toSort, setToSort] = useState<string[]>(CURATION.toSort);
+  const [opStats, setOpStats] = useState<OpStats>(CURATION.opStats);
+  const [taste, setTaste] = useState<TasteStore>(CURATION.taste);
+  const [loudness, setLoudness] = useState<LoudnessConfig>(CURATION.loudness);
   const [category, setCategory] = useState<Category>("tap");
   const [rung, setRung] = useState(0);
   // The eighth button. Its draws answer to no category, so they store `category: null`
@@ -220,21 +225,31 @@ export default function Home() {
   const setCurrent = useProductStore((s) => s.setCurrent);
   const history = useProductStore((s) => s.history);
 
+  // Dev-only live refresh over the snapshot, so a workbench keep is audible on localhost
+  // without a rebuild. Keyed on the SAME NODE_ENV test proxy.ts uses to close /api, so the
+  // two cannot disagree: production never issues these requests. A failure is loud here
+  // on purpose; the swallowed version of this is how the empty-state bug went unnoticed.
   useEffect(() => {
     localStorage.removeItem("ui-sounds-history");
-    fetch("/api/slots").then((r) => r.json()).then(setSlots).catch(() => {});
-    fetch("/api/pool").then((r) => r.json()).then(setApproved).catch(() => {});
-    fetch("/api/deleted").then((r) => r.json()).then(setDeleted).catch(() => {});
-    fetch("/api/duplicates").then((r) => r.json()).then(setDuplicates).catch(() => {});
-    fetch("/api/exclusions").then((r) => r.json()).then(setExclusions).catch(() => {});
-    fetch("/api/favorites").then((r) => r.json()).then(setFavorites).catch(() => {});
-    fetch("/api/tosort").then((r) => r.json()).then(setToSort).catch(() => {});
-    fetch("/api/creations-feedback").then((r) => r.json()).then(setOpStats).catch(() => {});
-    fetch("/api/taste").then((r) => r.json()).then(setTaste).catch(() => {});
-    fetch("/api/loudness-map")
-      .then((r) => r.json())
-      .then((s) => s?.config && setLoudness(s.config))
-      .catch(() => {});
+    if (process.env.NODE_ENV === "production") return;
+    const refresh = <T,>(route: string, apply: (v: T) => void) =>
+      fetch(route)
+        .then((r) => {
+          if (!r.ok) throw new Error(`${route} ${r.status}`);
+          return r.json() as Promise<T>;
+        })
+        .then(apply)
+        .catch((e) => console.warn("[curation refresh]", e));
+    refresh<SlotOverrides>("/api/slots", setSlots);
+    refresh<ApprovedPools>("/api/pool", setApproved);
+    refresh<string[]>("/api/deleted", setDeleted);
+    refresh<string[]>("/api/duplicates", setDuplicates);
+    refresh<Exclusions>("/api/exclusions", setExclusions);
+    refresh<string[]>("/api/favorites", setFavorites);
+    refresh<string[]>("/api/tosort", setToSort);
+    refresh<OpStats>("/api/creations-feedback", setOpStats);
+    refresh<TasteStore>("/api/taste", setTaste);
+    refresh<{ config?: LoudnessConfig }>("/api/loudness-map", (s) => s?.config && setLoudness(s.config));
   }, []);
 
   const pool = useMemo(

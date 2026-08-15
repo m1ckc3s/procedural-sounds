@@ -1,22 +1,14 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { NextResponse } from "next/server";
-import { DEFAULT_LOUDNESS, type LoudnessStore } from "@/lib/audio/loudness";
+import { DEFAULT_LOUDNESS, withLoudnessDefaults, type LoudnessStore } from "@/lib/audio/loudness";
 
 const MAP_PATH = path.join(process.cwd(), "data", "pool", "loudness.json");
 
 async function readStore(): Promise<LoudnessStore> {
   try {
     const raw = JSON.parse(await fs.readFile(MAP_PATH, "utf8")) as Partial<LoudnessStore>;
-    return {
-      config: {
-        ...DEFAULT_LOUDNESS,
-        ...raw.config,
-        offsets: { ...DEFAULT_LOUDNESS.offsets, ...raw.config?.offsets },
-        strength: raw.config?.strength ?? DEFAULT_LOUDNESS.strength,
-      },
-      measures: raw.measures ?? {},
-    };
+    return { config: withLoudnessDefaults(raw.config), measures: raw.measures ?? {} };
   } catch {
     return { config: DEFAULT_LOUDNESS, measures: {} };
   }

@@ -33,6 +33,18 @@ export interface LoudnessStore {
   measures: Record<string, { winDb: number; peakDb: number }>;
 }
 
+// The one place a stored config is filled to a complete one: the API route reads it through
+// this at dev time and the build-time snapshot in lib/curation.ts reads it through this at
+// bundle time, so a new field defaults identically on both surfaces.
+export function withLoudnessDefaults(raw?: Partial<LoudnessConfig> | null): LoudnessConfig {
+  return {
+    ...DEFAULT_LOUDNESS,
+    ...raw,
+    offsets: { ...DEFAULT_LOUDNESS.offsets, ...raw?.offsets },
+    strength: raw?.strength ?? DEFAULT_LOUDNESS.strength,
+  };
+}
+
 // Boost clamp: a sound sitting 30+dB under target is a near-silent outlier; amplifying
 // it that far mostly raises its noise floor. Cap and let the outlier audit catch it.
 const MAX_BOOST_DB = 24;

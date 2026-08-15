@@ -84,8 +84,22 @@ in CLAUDE.md.
 
 ### `lib/` (non-audio)
 
-`store.ts` (product state), `font-weight.ts`, `shape-context.tsx`, `icon-context.tsx`,
-`surface-context.tsx`, `surface-classes.ts`, `springs.ts`, `utils.ts`.
+`store.ts` (product state), `curation.ts` (the build-time curation snapshot, below),
+`version.ts` (`APP_VERSION` and `LAST_UPDATED`, rendered in the product's corner cluster),
+`rungs.ts` (the two product tiers, keys `core` and `orbit`, labelled Familiar and Exotic),
+`font-weight.ts`, `shape-context.tsx`, `icon-context.tsx`, `surface-context.tsx`,
+`surface-classes.ts`, `springs.ts`, `utils.ts`.
+
+**How the product gets its curation state.** `lib/curation.ts` statically imports every
+`data/pool/*.json` the product reads (the eight bucket files, slots, deleted, duplicates,
+exclusions, favorites, tosort, creations-feedback, taste, and the loudness config) and
+exports them as one typed `CURATION` snapshot. `app/page.tsx` seeds its state from that
+snapshot, so a production build carries the library exactly as it stood in `data/pool` at
+that commit. The `/api/*` fetches in the product are a dev-only live refresh layered on
+top, gated on the same `NODE_ENV` test `proxy.ts` uses to close those routes, so a keep in
+the workbench is audible on localhost without a rebuild and production never issues the
+requests. A route the product needs that is fetched but not in the snapshot ships as its
+empty default in production and fails silently, which is the bug this replaced.
 
 ### `data/`
 
