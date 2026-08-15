@@ -1,7 +1,9 @@
 export interface Rung {
   key: string;
   name: string;
-  /** Bare form for sentences that already carry the verb ("Generate another v1"). */
+  /** The toggle label. Names the CHARACTER of the sound, never a version: "v2" read as a
+   *  newer and better "v1" when the two are peers differing only in how far from the
+   *  library a draw may travel. The flanking hints carry the how, so these carry the what. */
   short: string;
   hint: string;
 }
@@ -15,14 +17,14 @@ export interface Rung {
 export const RUNGS: Rung[] = [
   {
     key: "core",
-    name: "Generate v1",
-    short: "v1",
+    name: "Generate familiar",
+    short: "Familiar",
     hint: "The core library: hand-curated sounds, each varied within strict bounds",
   },
   {
     key: "orbit",
-    name: "Generate v2",
-    short: "v2",
+    name: "Generate exotic",
+    short: "Exotic",
     hint: "The remix engine: library sounds rebuilt into new structures by learned taste",
   },
 ];

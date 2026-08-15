@@ -98,6 +98,29 @@ const SOURCE_DOT: Record<string, string> = {
 const EXPERIMENTAL_WASH =
   "bg-gradient-to-br from-fuchsia-100/70 via-card to-sky-100/60 dark:from-fuchsia-950/45 dark:via-card dark:to-sky-950/40";
 
+// The horizontal sibling of the aside arrow under the grid. Drawn once pointing right and
+// mirrored for the left-pointing case, so the pair stays symmetrical by construction.
+function SketchArrow({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 32 15"
+      width="28"
+      height="13"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={`inline-block shrink-0 align-middle ${className ?? ""}`}
+    >
+      <path d="M2 10.5C8 5 16 3.5 29 5.5" />
+      <path d="M23.5 1.8c2 1 3.8 2.2 5.5 3.7" />
+      <path d="M23 10c2.2-1.2 4.2-2.7 6-4.5" />
+    </svg>
+  );
+}
+
 function SourceButton({
   label,
   dotKey,
@@ -455,7 +478,7 @@ export default function Home() {
 
           {/* One button per SOURCE, not a scale. The stops were never degrees of one
               quantity, so a slider was always the wrong instrument: the seven categories
-              are peers, and the eighth ignores category entirely. The v1/v2 toggle sits
+              are peers, and the eighth ignores category entirely. The familiar/exotic toggle sits
               under them because it modifies the seven, not the eighth. */}
           <div className="mx-auto mt-10 max-w-xl">
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
@@ -514,7 +537,7 @@ export default function Home() {
                   !experimental && rung === 0 ? "text-foreground" : "text-muted-foreground/70 hover:text-muted-foreground"
                 }`}
               >
-                {RUNGS[0].hint} <span aria-hidden>→</span>
+                {RUNGS[0].hint} <SketchArrow className="ml-1" />
               </button>
               <div
                 role="group"
@@ -544,7 +567,7 @@ export default function Home() {
                   !experimental && rung === 1 ? "text-foreground" : "text-muted-foreground/70 hover:text-muted-foreground"
                 }`}
               >
-                <span aria-hidden>←</span> {RUNGS[1].hint}
+                <SketchArrow className="mr-1 -scale-x-100" /> {RUNGS[1].hint}
               </button>
             </div>
 
