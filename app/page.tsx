@@ -257,8 +257,26 @@ export default function Home() {
     [slots, approved, deleted, duplicates, exclusions, favorites, toSort],
   );
 
+  // Device-side bisect switches, read once: ?fx=0 (no stage animation), ?measure=0 (no
+  // offline loudness render), ?audio=0 (no playback), ?guard=1 (ignore a tap while a sound
+  // is still playing). Diagnostic only.
+  const kill = useMemo(() => {
+    const none = { fx: false, measure: false, audio: false, guard: false };
+    if (typeof window === "undefined") return none;
+    const q = new URLSearchParams(window.location.search);
+    return { fx: q.get("fx") === "0", measure: q.get("measure") === "0", audio: q.get("audio") === "0", guard: q.get("guard") === "1" };
+  }, []);
+
+  const busyUntil = useRef(0);
+  const guarded = () => kill.guard && nowMs() < busyUntil.current;
   const play = (patch: Patch, volume?: number) => {
+    if (kill.audio) return;
+    busyUntil.current = nowMs() + patchDuration(patch) * 1000;
     void playPatch(patch, volume !== undefined ? { volume } : undefined);
+  };
+  const fireStage = () => {
+    if (kill.fx) return;
+    fireStage();
   };
 
 
@@ -290,7 +308,7 @@ export default function Home() {
   // it can reach a generator.
   const drawing = useRef(false);
   const onGenerate = async (atRung: number, atCategory: Category = category) => {
-    if (drawing.current) return;
+    if (drawing.current || guarded()) return;
     drawing.current = true;
     try {
       await draw(atRung, atCategory);
@@ -307,10 +325,12 @@ export default function Home() {
       .map((sound) => ({ patch: sound.patch, label: sound.event }));
     const made = prospect(prospectMemory.current, seeds, opStats);
     let volume: number | undefined;
-    try {
-      const m = await measurePatch(made.patch);
-      volume = loudnessVolume(loudness, m, null);
-    } catch {}
+    if (!kill.measure) {
+      try {
+        const m = await measurePatch(made.patch);
+        volume = loudnessVolume(loudness, m, null);
+      } catch {}
+    }
     setCurrent({
       id: newId(),
       name: soundName(EXPERIMENTAL_LABEL, made.patch),
@@ -323,11 +343,11 @@ export default function Home() {
     });
     setExperimental(true);
     play(made.patch, volume);
-    setStageFire((k) => k + 1);
+    fireStage();
   };
 
   const onGenerateExperimental = async () => {
-    if (drawing.current) return;
+    if (drawing.current || guarded()) return;
     drawing.current = true;
     try {
       await drawExperimental();
@@ -346,10 +366,12 @@ export default function Home() {
     // Loudness leveling: measure the mixed render, solve the play volume to the master
     // target (+ the drawn category's offset). Milliseconds; never rewrites the patch.
     let volume: number | undefined;
-    try {
-      const m = await measurePatch(made.patch);
-      volume = loudnessVolume(loudness, m, atCategory);
-    } catch {}
+    if (!kill.measure) {
+      try {
+        const m = await measurePatch(made.patch);
+        volume = loudnessVolume(loudness, m, atCategory);
+      } catch {}
+    }
     const entry: SoundEntry = {
       id: newId(),
       name: made.name,
@@ -374,7 +396,7 @@ export default function Home() {
     setCategory(atCategory);
     setCurrent(entry);
     play(made.patch, volume);
-    setStageFire((k) => k + 1);
+    fireStage();
   };
 
   // The stage only owns sounds drawn in the active category, so a stale cross-category
@@ -384,8 +406,9 @@ export default function Home() {
   const stageMatch = (cat: string | null) => (experimental ? cat === null : cat === category);
 
   const onReplay = (entry: SoundEntry) => {
+    if (guarded()) return;
     play(entry.patch, entry.volume);
-    if (stageMatch(entry.category)) setStageFire((k) => k + 1);
+    if (stageMatch(entry.category)) fireStage();
   };
 
   // Stage reverse control: inverted patch at the same leveled volume; no stageFire bump
