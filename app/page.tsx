@@ -289,8 +289,16 @@ export default function Home() {
   // has committed. This ref flips before the first await, so a duplicate is dropped before
   // it can reach a generator.
   const drawing = useRef(false);
+  // 500ms between plays, on every button that makes sound.
+  const lastPlayAt = useRef(0);
+  const debounced = () => {
+    const now = nowMs();
+    if (now - lastPlayAt.current < 500) return true;
+    lastPlayAt.current = now;
+    return false;
+  };
   const onGenerate = async (atRung: number, atCategory: Category = category) => {
-    if (drawing.current) return;
+    if (drawing.current || debounced()) return;
     drawing.current = true;
     try {
       await draw(atRung, atCategory);
@@ -327,7 +335,7 @@ export default function Home() {
   };
 
   const onGenerateExperimental = async () => {
-    if (drawing.current) return;
+    if (drawing.current || debounced()) return;
     drawing.current = true;
     try {
       await drawExperimental();
@@ -384,6 +392,7 @@ export default function Home() {
   const stageMatch = (cat: string | null) => (experimental ? cat === null : cat === category);
 
   const onReplay = (entry: SoundEntry) => {
+    if (debounced()) return;
     play(entry.patch, entry.volume);
     if (stageMatch(entry.category)) setStageFire((k) => k + 1);
   };
@@ -391,6 +400,7 @@ export default function Home() {
   // Stage reverse control: inverted patch at the same leveled volume; no stageFire bump
   // (the stage animates the expand direction itself).
   const onReplayReverse = () => {
+    if (debounced()) return;
     if (current) play(invertPatch(current.patch), current.volume);
   };
 

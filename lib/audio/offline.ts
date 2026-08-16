@@ -4,24 +4,11 @@ import { patchDuration, renderPatch } from "./synth";
 // Offline render through the SAME node-building as live playback (renderPatch), so a
 // measured buffer is exactly what the ear gets. Mono is deliberate: the synth has no
 // pan, so channel 0 is the whole signal.
-// Keyed on patch identity: a draw measures loudness in page.tsx and draws the waveform in
-// SoundStage from the same Patch object, so this halves the OfflineAudioContexts per tap.
-const RENDERS = new WeakMap<Patch, Promise<AudioBuffer>>();
-
-export function renderToBuffer(patch: Patch, sampleRate = 44100): Promise<AudioBuffer> {
-  if (sampleRate === 44100) {
-    const hit = RENDERS.get(patch);
-    if (hit) return hit;
-  }
+export async function renderToBuffer(patch: Patch, sampleRate = 44100): Promise<AudioBuffer> {
   const seconds = Math.min(patchDuration(patch) + 0.05, 8);
   const ctx = new OfflineAudioContext(1, Math.max(1, Math.ceil(seconds * sampleRate)), sampleRate);
   renderPatch(ctx, patch, undefined, 0, ctx.destination);
-  const rendered = ctx.startRendering();
-  if (sampleRate === 44100) {
-    RENDERS.set(patch, rendered);
-    rendered.catch(() => RENDERS.delete(patch));
-  }
-  return rendered;
+  return ctx.startRendering();
 }
 
 export interface LoudnessMeasure {
