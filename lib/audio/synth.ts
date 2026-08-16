@@ -6,7 +6,7 @@
  * Copyright (c) 2026 Raphael Salaja. MIT License. Full text: THIRD-PARTY-NOTICES.md.
  */
 
-import { ensureReady, getDestination } from "./context";
+import { ensureReady, getContext, getDestination } from "./context";
 import { createReverb, createShimmer, shimmerTail } from "./effects";
 import type { Envelope, Filter, NoiseColor, NoiseSource, OscillatorSource, Patch, Source } from "./patch";
 import { layersOf } from "./patch";
@@ -323,6 +323,8 @@ export function renderPatch(
 }
 
 export async function playPatch(patch: Patch, opts?: PlayOptions): Promise<PlayHandle> {
-  const ctx = await ensureReady();
+  // Render inside the gesture when the context is already running; awaiting resume() first
+  // would push the start past the tap on iOS.
+  const ctx = getContext().state === "running" ? getContext() : await ensureReady();
   return renderPatch(ctx, patch, opts, undefined, getDestination());
 }

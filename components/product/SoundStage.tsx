@@ -5,6 +5,7 @@ import { Switch } from "@/components/ui/switch";
 import type { Category } from "@/lib/audio/categories";
 import type { Patch } from "@/lib/audio/patch";
 import { renderToBuffer } from "@/lib/audio/offline";
+import { isIOS } from "@/lib/audio/context";
 
 interface StageProps {
   category: Category;
@@ -654,7 +655,7 @@ function WaveStage({ fireKey, hasSound, onTrigger, meta }: SubProps & { meta?: S
   // pure waste and would fight the loop's direct DOM writes.
   useEffect(() => {
     const patch = meta?.patch;
-    if (!patch) {
+    if (!patch || isIOS()) {
       st.current.env = null;
       return;
     }

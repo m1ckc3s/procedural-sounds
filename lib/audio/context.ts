@@ -7,6 +7,15 @@
 let ctx: AudioContext | null = null;
 let masterGain: GainNode | null = null;
 
+// iOS Safari hangs the page when an OfflineAudioContext is created while the live context is
+// mid-sound (real device only; the simulator has no audio hardware and never shows it). The
+// product must not construct one there. iPadOS reports as MacIntel with touch points.
+export function isIOS(): boolean {
+  if (typeof navigator === "undefined") return false;
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+}
+
 export function getContext(): AudioContext {
   if (!ctx || ctx.state === "closed") {
     ctx = new AudioContext();

@@ -64,6 +64,7 @@ export interface CurationSnapshot {
   opStats: OpStats;
   taste: TasteStore;
   loudness: LoudnessConfig;
+  loudnessMeasures: Record<string, { winDb: number; peakDb: number }>;
 }
 
 export const CURATION: CurationSnapshot = {
@@ -76,7 +77,8 @@ export const CURATION: CurationSnapshot = {
   toSort: tosort as string[],
   opStats: creationsFeedback as OpStats,
   taste: taste as unknown as TasteStore,
-  // Only the config ships. `measures` is the Calibrate survey the workbench uses to relevel
-  // the library; the product measures each fresh draw itself at generate time.
   loudness: withLoudnessDefaults((loudness as { config?: Partial<LoudnessConfig> }).config),
+  // The Calibrate survey, keyed by sound id. A library draw levels from here and never needs
+  // a live render; that is what lets iOS skip the OfflineAudioContext entirely.
+  loudnessMeasures: ((loudness as { measures?: Record<string, { winDb: number; peakDb: number }> }).measures) ?? {},
 };

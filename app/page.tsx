@@ -18,6 +18,7 @@ import { loudnessVolume, type LoudnessConfig } from "@/lib/audio/loudness";
 import { CURATION } from "@/lib/curation";
 import { measurePatch } from "@/lib/audio/offline";
 import { patchDuration, playPatch } from "@/lib/audio/synth";
+import { isIOS } from "@/lib/audio/context";
 import { perceptualDistance } from "@/lib/audio/similarity";
 import { isDeletedTwin, tasteScore, type TasteData, type TasteStore } from "@/lib/audio/taste";
 import { invertPatch } from "@/lib/audio/invert";
@@ -264,12 +265,12 @@ export default function Home() {
 
   // atCategory is passed when the caller knows the category better than state does: a tab
   // click generates in the category it just selected, and `category` has not re-rendered yet.
-  const makeSound = (atRung: number, atCategory: Category): { patch: Patch; name: string } | null => {
+  const makeSound = (atRung: number, atCategory: Category): { patch: Patch; name: string; seedId?: string } | null => {
     const cat = atCategory;
     switch (RUNGS[atRung].key) {
       case "core": {
         const r = generate(pool, cat);
-        return r && { patch: r.patch, name: soundName(cat, r.patch) };
+        return r && { patch: r.patch, name: soundName(cat, r.patch), seedId: r.seed.id };
       }
       case "orbit": {
         const seed = generate(pool, cat, 0);
@@ -315,10 +316,12 @@ export default function Home() {
       .map((sound) => ({ patch: sound.patch, label: sound.event }));
     const made = prospect(prospectMemory.current, seeds, opStats);
     let volume: number | undefined;
-    try {
-      const m = await measurePatch(made.patch);
-      volume = loudnessVolume(loudness, m, null);
-    } catch {}
+    if (!isIOS()) {
+      try {
+        const m = await measurePatch(made.patch);
+        volume = loudnessVolume(loudness, m, null);
+      } catch {}
+    }
     setCurrent({
       id: newId(),
       name: soundName(EXPERIMENTAL_LABEL, made.patch),
@@ -351,13 +354,19 @@ export default function Home() {
       setRung(atRung);
       return;
     }
-    // Loudness leveling: measure the mixed render, solve the play volume to the master
-    // target (+ the drawn category's offset). Milliseconds; never rewrites the patch.
+    // Loudness leveling: solve the play volume to the master target (+ the drawn category's
+    // offset). A library draw levels from the surveyed measure of its seed (a variation nudges
+    // numbers, not level). Only an engine draw needs a live offline render, and NEVER on iOS.
     let volume: number | undefined;
-    try {
-      const m = await measurePatch(made.patch);
-      volume = loudnessVolume(loudness, m, atCategory);
-    } catch {}
+    const known = made.seedId ? CURATION.loudnessMeasures[made.seedId] : undefined;
+    if (known) {
+      volume = loudnessVolume(loudness, known, atCategory);
+    } else if (!isIOS()) {
+      try {
+        const m = await measurePatch(made.patch);
+        volume = loudnessVolume(loudness, m, atCategory);
+      } catch {}
+    }
     const entry: SoundEntry = {
       id: newId(),
       name: made.name,
