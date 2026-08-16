@@ -173,6 +173,7 @@ export const INSTRUMENT_INFO: Record<string, string> = {
   "blip-square": "raw square wave, unfiltered and retro",
   boop: "a rounded tone with a small downward flick",
   zap: "an octave-up glide arriving somewhere higher",
+  "swoop-up": "one sine gliding up about a major seventh, the plain open",
   drop: "a pitch that falls fast and lands, the way a droplet does",
   "hollow-tube": "triangle through a high-Q band: a resonant tube",
   "pad-swell": "detuned voices that swell in rather than strike",

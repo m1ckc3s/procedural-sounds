@@ -460,5 +460,21 @@
   "pool/tap/20",
   "pool/unsorted/14",
   "seed-f/glass-switch",
-  "seed-c/whisper"
+  "seed-c/whisper",
+  "pool/unsorted/172",
+  "pool/unsorted/93",
+  "seed-f/scifi-switch",
+  "core/archive",
+  "core/undo",
+  "pool/transition/2",
+  "pool/hover/32",
+  "pool/tap/46",
+  "pool/tap/42",
+  "pool/tap/34",
+  "pool/transition/9",
+  "pool/transition/6",
+  "seed-c/release",
+  "recent/toggle-off",
+  "seed-a-crisp/toggle-off",
+  "seed-e/toggle-off"
 ]

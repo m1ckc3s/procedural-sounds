@@ -3673,8 +3673,8 @@
         "source": {
           "type": "sine",
           "frequency": {
-            "start": 1400,
-            "end": 800
+            "start": 699,
+            "end": 484
           }
         },
         "envelope": {

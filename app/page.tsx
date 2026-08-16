@@ -491,7 +491,31 @@ export default function Home() {
                 : undefined
             }
             footer={
-              <span className="flex flex-1 items-center justify-center gap-3">
+              <span className="relative flex flex-1 items-center justify-center gap-3">
+                {/* A transition WAV is two files (the sound plus its inverted return), which
+                    nothing on the button says. Positioned absolutely so the buttons stay
+                    centered whether or not the aside is showing. */}
+                {current && stageMatch(current.category) && current.category === "transition" && (
+                  <span className="pointer-events-none absolute right-1/2 mr-[6.25rem] hidden items-center gap-1.5 whitespace-nowrap text-[12px] leading-tight italic text-muted-foreground sm:flex">
+                    two files: there and back
+                    <svg
+                      viewBox="0 0 42 24"
+                      width="34"
+                      height="20"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="shrink-0 text-muted-foreground/60"
+                      aria-hidden="true"
+                    >
+                      <path d="M3 16c9 3 20 2 30-2c1.5-.6 3-1.3 4.5-2" />
+                      <path d="M32 7c2 1.5 4 3.2 5.8 5" />
+                      <path d="M31.5 17.5c2.2-1.6 4.4-3.5 6.3-5.5" />
+                    </svg>
+                  </span>
+                )}
                 <ExportButtons entry={current && stageMatch(current.category) ? current : null} />
               </span>
             }

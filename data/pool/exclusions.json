@@ -246,7 +246,8 @@
     "hover"
   ],
   "playful/tap": [
-    "hover"
+    "hover",
+    "tap"
   ],
   "seed-a-crisp/swoosh": [
     "tap",
@@ -321,7 +322,9 @@
   ],
   "minimal/success": [
     "hover",
-    "success"
+    "success",
+    "transition",
+    "tap"
   ],
   "seed-a-glass/pop": [
     "hover",
@@ -352,7 +355,8 @@
     "hover"
   ],
   "playful/copy": [
-    "hover"
+    "hover",
+    "tap"
   ],
   "seed-a-glass/toggle-on": [
     "hover"
@@ -585,7 +589,8 @@
     "tap"
   ],
   "seed-b-industrial/interaction.confirm": [
-    "success"
+    "success",
+    "transition"
   ],
   "seed-b-minimal/interaction.confirm": [
     "success",
@@ -1940,7 +1945,8 @@
     "hover"
   ],
   "seed-b-industrial/interaction.subtle": [
-    "tap"
+    "tap",
+    "transition"
   ],
   "seed-b-organic/interaction.toggle": [
     "hover"
@@ -1950,7 +1956,8 @@
   ],
   "crisp/send": [
     "hover",
-    "notification"
+    "notification",
+    "tap"
   ],
   "recent/select": [
     "hover"
@@ -2332,5 +2339,14 @@
   ],
   "seed-c/scan": [
     "tap"
+  ],
+  "core/spring": [
+    "tap"
+  ],
+  "seed-b-industrial/interaction.tap": [
+    "transition"
+  ],
+  "crisp/tab-switch": [
+    "transition"
   ]
 }

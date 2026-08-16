@@ -11201,5 +11201,77 @@
         ]
       }
     ]
+  },
+  {
+    "source": {
+      "type": "sine",
+      "frequency": {
+        "start": 396.8,
+        "end": 671.394
+      }
+    },
+    "envelope": {
+      "attack": 0.002,
+      "decay": 0.136,
+      "sustain": 0,
+      "release": 0.045
+    },
+    "gain": 0.379
+  },
+  {
+    "layers": [
+      {
+        "source": {
+          "type": "sine",
+          "frequency": {
+            "start": 625.068,
+            "end": 1250.136
+          }
+        },
+        "envelope": {
+          "attack": 0.002,
+          "decay": 0.083,
+          "sustain": 0,
+          "release": 0.017,
+          "curve": "ramp"
+        },
+        "gain": 0.158
+      },
+      {
+        "source": {
+          "type": "sine",
+          "frequency": {
+            "start": 312.534,
+            "end": 625.068
+          }
+        },
+        "envelope": {
+          "attack": 0.002,
+          "decay": 0.152,
+          "sustain": 0,
+          "release": 0.03,
+          "curve": "ramp"
+        },
+        "gain": 0.149,
+        "delay": 0.092
+      }
+    ]
+  },
+  {
+    "source": {
+      "type": "sine",
+      "frequency": {
+        "start": 468.288,
+        "end": 367.525
+      }
+    },
+    "envelope": {
+      "attack": 0.002,
+      "decay": 0.151,
+      "sustain": 0,
+      "release": 0.03,
+      "curve": "ramp"
+    },
+    "gain": 0.176
   }
 ]

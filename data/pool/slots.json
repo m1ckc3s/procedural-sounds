@@ -538,7 +538,6 @@
     "notification"
   ],
   "pool/success/44": [
-    "transition",
     "notification"
   ],
   "pool/success/45": [
@@ -621,7 +620,7 @@
     "tap"
   ],
   "pool/tap/13": [
-    "transition"
+    "notification"
   ],
   "pool/hover/14": [
     "hover"
@@ -651,7 +650,6 @@
   ],
   "pool/hover/22": [
     "hover",
-    "transition",
     "tap"
   ],
   "pool/hover/23": [
@@ -925,11 +923,10 @@
     "warning"
   ],
   "pool/unsorted/34": [
-    "transition",
     "notification"
   ],
   "pool/unsorted/35": [
-    "transition"
+    "notification"
   ],
   "pool/unsorted/36": [
     "success",
@@ -1112,8 +1109,7 @@
   ],
   "pool/hover/50": [
     "hover",
-    "tap",
-    "transition"
+    "tap"
   ],
   "pool/error/66": [
     "error",
@@ -1230,12 +1226,10 @@
     "transition"
   ],
   "pool/tap/18": [
-    "tap",
     "transition"
   ],
   "pool/tap/19": [
-    "tap",
-    "transition"
+    "tap"
   ],
   "pool/tap/20": [
     "transition"
@@ -1244,8 +1238,7 @@
     "tap"
   ],
   "pool/tap/22": [
-    "tap",
-    "transition"
+    "tap"
   ],
   "pool/tap/23": [
     "tap"
@@ -1285,7 +1278,7 @@
     "success"
   ],
   "pool/unsorted/121": [
-    "transition"
+    "notification"
   ],
   "pool/unsorted/122": [
     "warning"
@@ -1316,7 +1309,7 @@
     "transition"
   ],
   "pool/transition/5": [
-    "transition"
+    "notification"
   ],
   "pool/notification/8": [
     "notification"
@@ -1371,7 +1364,7 @@
     "transition"
   ],
   "pool/transition/10": [
-    "transition"
+    "notification"
   ],
   "pool/transition/11": [
     "transition"
@@ -1391,12 +1384,8 @@
   "seed-b-aero/interaction.confirm": [
     "transition"
   ],
-  "seed-b-industrial/interaction.tap": [
-    "transition"
-  ],
-  "seed-b-industrial/interaction.subtle": [
-    "transition"
-  ],
+  "seed-b-industrial/interaction.tap": [],
+  "seed-b-industrial/interaction.subtle": [],
   "playful/copy": [],
   "pool/tap/25": [
     "warning"
@@ -1451,7 +1440,6 @@
     "tap"
   ],
   "pool/tap/38": [
-    "transition",
     "warning"
   ],
   "pool/tap/39": [
@@ -1471,8 +1459,7 @@
     "transition"
   ],
   "pool/tap/44": [
-    "tap",
-    "transition"
+    "tap"
   ],
   "pool/hover/51": [
     "hover"
@@ -1489,7 +1476,6 @@
   ],
   "pool/hover/55": [
     "hover",
-    "transition",
     "tap"
   ],
   "pool/hover/56": [
@@ -1576,7 +1562,6 @@
     "warning"
   ],
   "pool/hover/80": [
-    "hover",
     "tap",
     "transition"
   ],
@@ -1644,7 +1629,6 @@
     "hover"
   ],
   "pool/hover/101": [
-    "transition",
     "tap"
   ],
   "pool/hover/102": [
@@ -1672,8 +1656,7 @@
   ],
   "pool/hover/109": [
     "hover",
-    "tap",
-    "transition"
+    "tap"
   ],
   "pool/hover/110": [
     "hover",
@@ -2133,7 +2116,6 @@
   ],
   "pool/tap/49": [
     "hover",
-    "transition",
     "tap"
   ],
   "pool/tap/0": [
@@ -2157,9 +2139,7 @@
   "minimal/checkbox": [
     "transition"
   ],
-  "seed-b-industrial/interaction.confirm": [
-    "transition"
-  ],
+  "seed-b-industrial/interaction.confirm": [],
   "pool/unsorted/128": [
     "success",
     "warning",
@@ -2170,9 +2150,7 @@
     "warning",
     "error"
   ],
-  "minimal/success": [
-    "transition"
-  ],
+  "minimal/success": [],
   "pool/unsorted/130": [],
   "seed-c/pulse": [
     "transition"
@@ -2288,7 +2266,6 @@
     "notification"
   ],
   "pool/unsorted/150": [
-    "transition",
     "notification"
   ],
   "pool/unsorted/151": [
@@ -2433,7 +2410,6 @@
     "transition"
   ],
   "pool/transition/14": [
-    "transition",
     "tap"
   ],
   "pool/transition/15": [
@@ -2471,5 +2447,23 @@
   ],
   "pool/unsorted/176": [
     "notification"
+  ],
+  "pool/transition/19": [
+    "transition"
+  ],
+  "pool/transition/20": [
+    "transition"
+  ],
+  "pool/transition/21": [
+    "transition"
+  ],
+  "pool/transition/22": [],
+  "pool/unsorted/177": [],
+  "pool/unsorted/178": [
+    "transition"
+  ],
+  "pool/unsorted/179": [
+    "transition",
+    "tap"
   ]
 }

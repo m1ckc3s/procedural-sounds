@@ -105,7 +105,7 @@ exists. It still runs, still trains, and still feeds the library.
 ### Craft: instrument-first invention
 
 Where Invent generates and then rescues, Craft casts. A draw picks a plausible
-**instrument** (42 coherent single-note voices, wood, tine, metal, string, air and so on),
+**instrument** (43 coherent single-note voices, wood, tine, metal, string, air and so on),
 a plausible **figure** (the gesture shape), and a plausible **space** (the room), then
 places the root so the whole thing already sits inside the category's register. Nothing is
 generated and then clamped into shape; the design rules are the constraint.
@@ -272,7 +272,7 @@ that volume into the layer gains so the file plays exactly as the site did.
 - **Register band** - the pitch range that suits a category, the way a bass and a soprano have ranges. Error sounds sit low, notifications sit high.
 - **Character** (called a *gesture* in the code) - a hand-written musical figure that needs a key handed to it. Around 37 of them, shared by Invent and Wild.
 - **Archetype** - a hand-written complete recipe that supplies its own pitch and needs no contract. Around 32 of them, each with a home category, all available everywhere.
-- **Instrument** - one of Craft's 42 coherent single-note voices, grouped by family (wood, tine, metal, string, body, transient, air, digital, sustained).
+- **Instrument** - one of Craft's 43 coherent single-note voices, grouped by family (wood, tine, metal, string, body, transient, air, digital, sustained).
 - **Figure** - Craft's gesture shape: how many strikes, when they land, how they decay.
 - **Space** - Craft's room: dry, or one of a few reverb and shimmer treatments.
 - **Motif** - hitting the same character two or three times at different scale degrees instead of once, so a lone ping becomes a phrase. Earlier hits are shortened and quieted so the last one lands.

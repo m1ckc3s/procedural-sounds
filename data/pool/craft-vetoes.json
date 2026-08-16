@@ -56,5 +56,10 @@
       "hollow-tube",
       "kalimba"
     ]
+  },
+  "transition": {
+    "instruments": [
+      "pluck-steel"
+    ]
   }
 }

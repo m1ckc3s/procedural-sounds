@@ -11,6 +11,7 @@ import {
 } from "@/lib/audio/craft";
 import { layersOf, type Patch } from "@/lib/audio/patch";
 import { patchDuration, playPatch } from "@/lib/audio/synth";
+import { invertPatch } from "@/lib/audio/invert";
 
 interface Row extends CraftResult {
   key: string;
@@ -218,6 +219,15 @@ export default function CraftPage() {
                 >
                   ▶
                 </button>
+                {cat === "transition" && (
+                  <button
+                    onClick={() => play(invertPatch(row.patch))}
+                    title="Play the reversed direction (does it work as a door?)"
+                    className="shrink-0 rounded-md bg-neutral-900 px-2.5 py-1 font-bold text-white transition-opacity hover:opacity-80 dark:bg-neutral-100 dark:text-black"
+                  >
+                    ⇄
+                  </button>
+                )}
                 <button
                   onClick={() => void keep(row)}
                   disabled={busy}

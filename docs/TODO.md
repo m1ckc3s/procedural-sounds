@@ -15,10 +15,6 @@ roughly a third of perfectly average cells get executed within their first five 
 damage today: transition Creations has 3 of its 9 ops dead, notification, hover and tap have
 one each, and Invent has roughly 24 of 66 cells muted in success and 24 of 61 in hover.
 
-**The rejected fix.** Adding an exploration floor so a condemned cell still draws about 1 in
-50. Rejected, correctly: a swoosh does not belong in notification at ANY rate,
-and a floor just makes the wrong sound rare instead of absent. It also treats the symptom.
-
 **The real fix: stop guessing why a delete happened and ask.** `taste.ts` currently
 anomaly-weights blame across 9 features, which is a heuristic for not knowing. The curator is
 right there and can say. Shape:
@@ -47,21 +43,3 @@ needed. Keep the mute.
 **Do not un-mute the existing dead cells until this ships.** Re-earned verdicts are only
 worth having once they can be attributed; un-muting first just re-runs the same coin flip.
 
-
-## Current (parallel): product UI design pass (`app/`)
-
-- Internal labels leak: "cross-breed", "wave-swap", and `g:*` archetype keys must never reach a user surface.
-- UI sounds for the product's own UI: pick favorites for the buttons and the slider ticks, then wire them to the real controls.
-- Step 3 of "Use it in your project" is a one-line `addEventListener` example. The clever version (attaching a sound to a button without hand-writing the wiring) is still open.
-- Design tokens and polish: color tokens, line spacing, animations.
-
-## export module (`lib/audio/export/`)
-
-WAV and the JS snippet ship, wired to the stage buttons, every recent-sounds row and the
-usage steps. MP3 is dropped for good (lamejs is uninstalled and the LGPL question died with
-it). What is left:
-
-- `toJson(patch)`: `JSON.stringify(patch, null, 2)`. Lands in `lib/audio/export/`, never beside it, so usage gating stays in one place.
-- User-side waveform (feeds the design-pass waveform items above): the user always sees the MIX, never layers. Offline-render the whole patch to one buffer and draw one waveform shape. Per-layer stacked waveforms are a workbench-editor concept only.
-- Deferred, likely forever: 24-bit, stereo, and the worker/fflate ZIP-pack machinery. A single-sound WAV encodes in about 1ms so no jank is possible, and the pack pattern is in the local archive's WAV-encoder study if it is ever needed.
-- Snippet drift guard: `PLAYER_JS` is a hand-maintained copy of `synth.ts` plus `effects.ts`. Nothing checks that they agree. A test that renders both offline and compares buffers would close it.

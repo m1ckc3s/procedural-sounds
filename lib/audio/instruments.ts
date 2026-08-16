@@ -480,6 +480,24 @@ export const INSTRUMENTS: Instrument[] = [
     render: (c) => [osc(c.freq, "sine", struck(0.002, r(c.rng, 0.08, 0.13) * c.hold), g(c, 0.14, 0.18), { sweepTo: semi(c.freq, 12) })],
   },
   {
+    // The dominant open idiom across the reference packs: one sine, a short glide up,
+    // nothing else. Envelope stated by hand so the release stays proportionally longer
+    // than `struck` gives (the reference recipes sit near release = decay / 3).
+    name: "swoop-up",
+    family: "digital",
+    register: [360, 540],
+    decay: "tight",
+    topRatio: 2,
+    render: (c) => {
+      const decay = round3(r(c.rng, 0.07, 0.11) * c.hold);
+      return [
+        osc(c.freq, "sine", { attack: 0.002, decay, sustain: 0, release: round3(decay / 3) }, g(c, 0.3, 0.42), {
+          sweepTo: semi(c.freq, r(c.rng, 8, 12)),
+        }),
+      ];
+    },
+  },
+  {
     name: "drop",
     family: "digital",
     register: [280, 780],

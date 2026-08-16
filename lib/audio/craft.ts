@@ -31,6 +31,8 @@ export interface Profile {
   // minus anything named in `banned`. Stated this way so adding an instrument to the
   // bank automatically reaches every category it plausibly suits.
   leadFamilies: readonly Family[];
+  // Instruments that enter the lead draw three times instead of once.
+  favored?: readonly string[];
   leadDecays: readonly Decay[];
   banned?: readonly string[];
   bodies: readonly string[];
@@ -108,18 +110,23 @@ const PROFILES: Record<Category, Profile> = {
     spaces: { dry: 0.25, room: 0.3, trail: 0.35, wide: 0.1 },
   },
   transition: {
-    leadFamilies: ["air", "digital", "string", "sustained", "tine"],
-    leadDecays: ["tight", "medium", "ring"],
+    // The north star is the open side of a door: one short sine glide up, dry. The close is
+    // derived by invert, never cast. The swoop is favored and `single` is repeated to weight
+    // the draw toward that; the multi-note figures stay in at a low share because some keeps
+    // are that.
+    leadFamilies: ["digital", "air", "string", "tine"],
+    favored: ["swoop-up"],
+    leadDecays: ["tight", "medium"],
     banned: ["blip-square", "organ"],
     bodies: ["sub-thump"],
     transients: ["shaker", "click-soft", "tick-dry"],
-    figures: ["single", "rise-two", "fall-two", "run-five", "blur-three", "accel-rise", "transient-single"],
+    figures: ["single", "single", "single", "single", "rise-two", "fall-two", "accel-rise", "transient-single"],
     intervals: ["fifths", "fourths", "pentatonic"],
-    root: [240, 700],
-    ceilingHz: 1200,
-    maxSeconds: 0.85,
+    root: [340, 760],
+    ceilingHz: 1300,
+    maxSeconds: 0.45,
     gainBudget: 0.5,
-    spaces: { dry: 0.35, room: 0.25, trail: 0.3, wide: 0.1 },
+    spaces: { dry: 0.7, room: 0.15, trail: 0.15 },
   },
   tap: {
     leadFamilies: ["wood", "digital", "transient", "air"],
@@ -296,7 +303,10 @@ export function castFrom(p: Profile, rng: () => number = Math.random, out: Vetoe
   // Picked from the profile's raw name list, not the deduped set, so a name listed
   // more than once genuinely draws more often (a tap is mostly a single beat).
   const figureNames = p.figures.filter((n) => allowedFigures.has(n));
-  const lead = pick(leads, rng);
+  const lead = pick(
+    leads.flatMap((i) => (p.favored?.includes(i.name) ? [i, i, i] : [i])),
+    rng,
+  );
   let figure = FIGURE_OF(figureNames.length ? pick(figureNames, rng) : "single");
   const ivName = pick(p.intervals, rng);
   let events = figure.build(rng, INTERVALS[ivName]);

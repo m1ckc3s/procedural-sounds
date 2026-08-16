@@ -70,11 +70,11 @@
     },
     "transpose-wide": {
       "k": 3,
-      "d": 22
+      "d": 26
     },
     "add-shimmer": {
       "k": 2,
-      "d": 13
+      "d": 16
     },
     "add-echo-layer": {
       "k": 0,
@@ -85,16 +85,16 @@
       "d": 6
     },
     "filter-add": {
-      "k": 5,
-      "d": 13
-    },
-    "sweepify": {
-      "k": 5,
+      "k": 9,
       "d": 21
     },
-    "invert-direction": {
+    "sweepify": {
       "k": 6,
-      "d": 17
+      "d": 25
+    },
+    "invert-direction": {
+      "k": 7,
+      "d": 19
     }
   },
   "error": {
