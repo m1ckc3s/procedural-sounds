@@ -11056,5 +11056,150 @@
         "delay": 0.118
       }
     ]
+  },
+  {
+    "layers": [
+      {
+        "source": {
+          "type": "sine",
+          "frequency": 446.692
+        },
+        "envelope": {
+          "attack": 0.003,
+          "decay": 0.031,
+          "sustain": 0,
+          "release": 0
+        },
+        "gain": 0.075,
+        "effects": [
+          {
+            "type": "delay",
+            "delay": 0.11220475342790112,
+            "feedback": 0.3110583561146082,
+            "wet": 0.18183425803847586,
+            "lowpass": 5247.914513826253
+          }
+        ],
+        "filter": {
+          "type": "lowpass",
+          "frequency": 1511.1787102798953,
+          "Q": 2.2786953219949604
+        }
+      },
+      {
+        "source": {
+          "type": "sine",
+          "frequency": 501.395
+        },
+        "envelope": {
+          "attack": 0.003,
+          "decay": 0.219,
+          "sustain": 0,
+          "release": 0
+        },
+        "gain": 0.169,
+        "delay": 0.05,
+        "effects": [
+          {
+            "type": "delay",
+            "delay": 0.11220475342790112,
+            "feedback": 0.3110583561146082,
+            "wet": 0.18183425803847586,
+            "lowpass": 5247.914513826253
+          }
+        ],
+        "filter": {
+          "type": "lowpass",
+          "frequency": 1506.9737406110153,
+          "Q": 2.4947162502576705
+        }
+      }
+    ]
+  },
+  {
+    "layers": [
+      {
+        "source": {
+          "type": "noise",
+          "color": "white"
+        },
+        "envelope": {
+          "attack": 0.001,
+          "decay": 0.007,
+          "sustain": 0,
+          "release": 0.001,
+          "curve": "ramp"
+        },
+        "gain": 0.102,
+        "filter": {
+          "type": "bandpass",
+          "frequency": 2828,
+          "Q": 1.6
+        },
+        "effects": [
+          {
+            "type": "delay",
+            "delay": 0.176,
+            "feedback": 0.172,
+            "wet": 0.19,
+            "lowpass": 2064
+          }
+        ]
+      },
+      {
+        "source": {
+          "type": "sine",
+          "frequency": {
+            "start": 264.746,
+            "end": 529.492
+          }
+        },
+        "envelope": {
+          "attack": 0.002,
+          "decay": 0.082,
+          "sustain": 0,
+          "release": 0.016,
+          "curve": "ramp"
+        },
+        "gain": 0.151,
+        "delay": 0.016,
+        "effects": [
+          {
+            "type": "delay",
+            "delay": 0.176,
+            "feedback": 0.172,
+            "wet": 0.19,
+            "lowpass": 2064
+          }
+        ]
+      },
+      {
+        "source": {
+          "type": "sine",
+          "frequency": {
+            "start": 445.248,
+            "end": 890.496
+          }
+        },
+        "envelope": {
+          "attack": 0.002,
+          "decay": 0.174,
+          "sustain": 0,
+          "release": 0.035,
+          "curve": "ramp"
+        },
+        "gain": 0.178,
+        "delay": 0.068,
+        "effects": [
+          {
+            "type": "delay",
+            "delay": 0.176,
+            "feedback": 0.172,
+            "wet": 0.19,
+            "lowpass": 2064
+          }
+        ]
+      }
+    ]
   }
 ]
