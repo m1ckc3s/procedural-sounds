@@ -21,7 +21,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sonaut — create the sound your interface makes",
+  title: "Procedural interface sounds, with taste",
   description:
     "Generate UI sounds that fit: taps, toggles, notifications, transitions. Designed by AI, tuned by human ears. Play in the browser, export as a file or one line of code.",
 };

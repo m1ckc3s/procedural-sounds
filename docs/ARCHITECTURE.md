@@ -7,10 +7,9 @@ the learning actually work is [HOW-IT-WORKS.md](HOW-IT-WORKS.md) and
 
 Never state pack or sound counts here. The data and the workbench are the only truth.
 
-## Where this landed (read first if you are picking this up cold)
+## The shape of the thing (read first if you are picking this up cold)
 
-The branch `feat/instrument-first-invention` rebuilt how sounds are invented and cut the
-product down to what actually ships. In order of importance:
+How sounds are invented, and what the product actually ships, in order of importance:
 
 1. **Invention is instrument-first now.** A draw is `instrument x figure x space`
    (`instruments.ts`, `figures.ts`, `craft.ts`) rather than randomised parameters that
@@ -18,20 +17,18 @@ product down to what actually ships. In order of importance:
    something the curator called professional. Section below.
 2. **Prospect is five engines behind one button** (`prospect.ts`): remix, craft, deck,
    breed, wildcard, plus one shared finishing pass and two anti-repetition guards.
-3. **The product ships two stops, not four.** Generate v1 and v2, plus an experimental
-   button backed by Prospect. Galaxy and Singularity were removed from the product and
-   remain as workbench engines that fill the library.
-4. **A register bug was fixed in the old path.** The hybrid branch returned before
-   taming, so 71% of success hybrids sat above the ceiling (p90 2827 Hz). Every category
-   now carries a `freqCap`; measured 0% over cap afterwards.
-5. **A post-hoc "polish" pass was tried twice and removed.** Do not rebuild it; the
-   section below records why it cannot work.
+3. **The product ships two stops, not four.** Familiar (`core`) and Exotic (`orbit`),
+   plus an experimental button backed by Prospect. Galaxy and Singularity are not in the
+   product; they remain as workbench engines that fill the library.
+4. **Every category carries a `freqCap`**, applied after hybridizing, so no draw sits
+   above its register ceiling.
+5. **There is no post-hoc "polish" pass.** Do not build one; the section below records
+   why it cannot work.
 
-**The honest state of the thing.** Success ran a long directed training session and the
-keep rate never reached the curator's 8-of-10 ship bar. The instrument-first engine is
-liked; the older Invent and Wild engines are not, and are now internal. The effective
-library SHRANK slightly over the session (558 to 548 shelved) because dedupe and deletes
-outpaced the new keeps, which is the first item in TODO.md.
+**The honest state of the thing.** The instrument-first engine is liked; the older Invent
+and Wild engines are internal and feed the library only. Keep rate is not yet at the
+curator's 8-of-10 ship bar, and growing the effective library is the first item in
+TODO.md.
 
 ## Stack
 
@@ -46,34 +43,34 @@ in CLAUDE.md.
 ### `lib/audio/` (synth core and generators)
 
 - `patch.ts` - the `Patch` type, the canonical sound recipe and the JSON export shape. Shape-compatible with `data/reference/reference-sounds.json`, so reference data ingests directly. A patch is a flat single layer or `{ layers: Layer[] }`; a layer is `{ source, envelope, gain, delay?, filter?, effects? }`. Full whitelist of allowed fields in CLAUDE.md.
-- `synth.ts` - the recipe player. `playVoice` builds one voice graph (source, filter, ADSR gain, effects, master). `playPatch` plays a flat voice or mixes `layers`, each at its own `delay` offset. Anti-click handling uses exponential ramps with a small positive floor (Web Audio rejects a ramp target of 0) and releases to near-zero before stop. Per-trigger jitter keeps repeats from being byte-identical. No layer cap: seeds play at their native layer count.
+- `synth.ts` - the recipe player. `renderPatch` builds every layer's graph (source, filter, ADSR gain, effects, destination) on any `BaseAudioContext`, so live play and offline render share one node builder; `playPatch` runs it on the live context. Anti-click handling uses exponential ramps with a small positive floor (Web Audio rejects a ramp target of 0) and releases to near-zero before stop. Optional per-trigger jitter keeps repeats from being byte-identical. No layer cap: seeds play at their native layer count. Every node is disconnected when done: source, envelope and filters on `onended`, effect nodes once their tail has rung out. Nothing lives on the graph past its sound.
 - `context.ts` - `AudioContext` singleton, lazy init, auto-resume on first user gesture (`ensureAudio()`), master gain bus.
-- `effects.ts` - `reverb` (synthetic exponential-decay impulse response into a native ConvolverNode) and the shimmer delay/echo (`createShimmer`/`shimmerTail`, opt-in via `effects:[{type:"delay", ...}]`). That is the entire effect surface.
+- `effects.ts` - `createReverb` (synthetic exponential-decay impulse response into a native ConvolverNode; impulse responses are cached by shape, since the noise is random and one buffer serves live and offline contexts alike) and the shimmer delay/echo (`createShimmer`/`shimmerTail`, opt-in via `effects:[{type:"delay", ...}]`). Each returns its node list and tail length so the player can tear it down. That is the entire effect surface.
 - `randomize.ts` - pool building (`buildPool`), the membership formula (`effectiveCategories`), the draw (`generate`), and the FROZEN variation pass (`mutatePatch`). Favorited seeds draw at `FAVORITE_WEIGHT`. `generate()` with no category draws from every pool including unslotted sounds; that path is workbench-only, the product always passes a category.
 - `create.ts` - `createFrom`, the creator behind v2: structural remixes of a library seed, steered by op dice.
 - `compose.ts` - `compose`/`hybridize`: de-novo per-category grammars and two-parent hybrids, steered by archetype dice.
 - `invent.ts` - `invent`, the Invent draw. Workbench-only (the Invent tab, and one of Prospect's five sources). Dice keys `g:*` and `hybrid` live in `data/pool/invent-feedback.json`; the code key stays `nebula` in the feedback data.
 - `wild.ts` - `wild`/`ultraWild`/`discovery`, the untrained discovery paths. Workbench-only (the Wild tab, plus Prospect's `deck` and `wildcard` sources). Also holds the shared gesture deck, the motif builder and the `finishWild` polish pass.
-- `instruments.ts` - the instrument bank: ~40 coherent single-note voices (struck wood, tines, metal, strings, bodies, transients, air, digital, sustained), each with a plausible register, a decay character and its highest sounding partial.
-- `figures.ts` - the figure bank (~18 gesture shapes) plus the four spaces (dry, room, trail, wide). A figure emits role-tagged note events and never names a timbre.
+- `instruments.ts` - the instrument bank: 42 coherent single-note voices (struck wood, tines, metal, strings, bodies, transients, air, digital, sustained), each with a plausible register, a decay character and its highest sounding partial.
+- `figures.ts` - the figure bank (20 gesture shapes) plus the four spaces (dry, room, trail, wide). A figure emits role-tagged note events and never names a timbre.
 - `craft.ts` - the caster behind the Craft bench: picks instrument x figure x space per category and places the root so the draw is born inside the register and length budget. `castFrom` is the category-free caster underneath it, so a bespoke profile can reuse the same machinery.
 - `prospect.ts` - the category-agnostic discovery draw behind the Prospect bench. FIVE engines behind one button (remix, craft, deck, breed, wildcard) plus one shared finishing pass and two anti-repetition guards; no dice, no learning. Section below.
 - `taste.ts` - per-category feature buckets and the deleted-twin fingerprint ring.
 - `gates.ts` - category gates. `MECHANICAL_CATEGORIES` (tap, hover, transition) are gate-cast; `SEMANTIC_GATED_CATEGORIES` (success, error, warning, notification) are gated semantically. Gates must never read `gain`.
 - `limits.ts` - ear-safety clamps.
 - `loudness.ts` - play-time leveling. Never rewrites a patch. Every workbench play is leveled including the FIRST: an unmeasured sound is measured offline before it plays, guarded by a sequence token so a stale measure cannot land on a later click.
-- `offline.ts` - offline render plus peak/RMS measurement.
+- `offline.ts` - offline render plus peak/RMS measurement. `renderToBuffer` caches by `Patch` identity, so a draw's loudness measure and its stage waveform share one `OfflineAudioContext`.
 - `similarity.ts` - the perceptual distance metric, `matchPercent`, `withinVariationReach`.
 - `invert.ts` - the directional-pair transform used by the toggle/reverse case.
 - `categories.ts` - `CATEGORIES`, `categoryId()`, per-category use-case hints, and the display-only name suggestions.
 - `atlas.ts` - the vocabulary descriptions the atlas page renders.
-- `lib/audio/export/` - the single door out of the app for a sound. `wav.ts` holds the mono 16-bit RIFF encoder and the trim/fade pass; `index.ts` holds `patchToWav`, `downloadPatchWav` and `wavFilename`. Section below. The JS snippet and the JSON recipe are not built yet and land HERE when they are.
+- `lib/audio/export/` - the single door out of the app for a sound. `wav.ts` holds the mono 16-bit RIFF encoder and the trim/fade pass; `snippet.ts` holds `PLAYER_JS` (the one-time standalone player), `toSoundJs` (the per-sound recipe), `toSnippet` (both in one paste) and `parseSound` (the way back in for Import); `index.ts` holds `patchToWav`, `downloadSoundWav`, `soundToSnippet`, `soundToStandaloneSnippet` and `wavFilename`. Section below.
 
 ### `app/`
 
 - `app/page.tsx` - the product. Details below.
-- `app/workbench/` - the curation tool: one page (`page.tsx`) driven by `?tab=`, inside a sidebar shell (`layout.tsx` plus `components/workbench/nav.tsx`). `app/workbench/atlas/` is its own route.
-- `app/api/*` - file-backed persistence for `data/pool/*.json`, one route per file; `pool` also takes a PUT for in-place replace (slots, pool, deleted, duplicates, exclusions, favorites, origins, tosort, taste, numbers, limits, loudness, loudness-map, kept-dates, similar-dismissed, creations-feedback, invent-feedback). These routes write to the local filesystem, so the workbench only functions under `npm run dev`.
+- `app/workbench/` - the curation tool: one page (`page.tsx`) driven by `?tab=`, inside a sidebar shell (`layout.tsx` plus `components/workbench/nav.tsx`), plus four real routes: `atlas/`, `craft/`, `import/`, `prospect/`.
+- `app/api/*` - file-backed persistence for `data/pool/*.json`, one route per file; `pool` also takes a PUT for in-place replace (slots, pool, deleted, duplicates, exclusions, favorites, origins, tosort, taste, numbers, limits, limit-approved, tail-approved, craft-vetoes, loudness, loudness-map, kept-dates, similar-dismissed, creations-feedback, invent-feedback, reference). These routes write to the local filesystem, so the workbench only functions under `npm run dev`.
 - `app/globals.css` - theme tokens, including the sidebar tokens and the explicit `@utility` rules for `--shadow-100..400`.
 
 ### `components/`
@@ -105,17 +102,17 @@ empty default in production and fails silently, which is the bug this replaced.
 
 - `data/reference/reference-sounds.json` - the imported seed packs, keyed by an anonymous pack id (`core`, `seed-a-soft`, `seed-c`, and so on). These ship as seeds in the generation pool, slotted into categories and drawn directly by `generate(category)`. There is no separate "theirs vs ours" set. Which projects seeded them, and under what license, is in THIRD-PARTY-NOTICES.md and nowhere else.
 - (the upstream design-rule skill and the captured reference playground now live in the local archive, not the repo) upstream design rules. Calibration reference only, never a runtime feature.
-- `data/pool/` - curation state: `limit-approved.json`, `slots.json`, `deleted.json`, `duplicates.json`, `exclusions.json`, `favorites.json`, `origins.json`, `tosort.json`, `taste.json`, `numbers.json` (the permanent number registry), `limits.json`, `loudness.json`, `kept-dates.json`, `similar-dismissed.json`, `creations-feedback.json`, `invent-feedback.json`, and the per-category keep files.
+- `data/pool/` - curation state: `limit-approved.json`, `slots.json`, `deleted.json`, `duplicates.json`, `exclusions.json`, `favorites.json`, `origins.json`, `tosort.json`, `taste.json`, `numbers.json` (the permanent number registry), `limits.json`, `tail-approved.json`, `craft-vetoes.json`, `loudness.json`, `kept-dates.json`, `similar-dismissed.json`, `creations-feedback.json`, `invent-feedback.json`, and the per-category keep files.
 
 ## Product UI
 
 The product lives at the ROOT route (`app/page.tsx`). The product IS the site.
 
-Page order, top to bottom: centered wordmark, hero copy, the `SoundStage` (exports live
+Page order, top to bottom: the beta pill, hero copy, the `SoundStage` (exports live
 INSIDE its card), the category TAB row, the two engine buttons, the recent-sounds list,
 footer (which carries the workbench link, labelled as dev mode).
 
-TWO STOPS, BOTH CURATED. Generate v1 (`core`) and Generate v2 (`orbit`). The generative
+TWO STOPS, BOTH CURATED. Familiar (`core`) and Exotic (`orbit`). The generative
 stops that used to sit to the right, Galaxy (`nebula`) and Singularity (`singularity`),
 were REMOVED from the product: their hit rate never reached something a stranger would
 enjoy, and shipping them undercut the promise the curated tiers keep. Both engines still
@@ -153,20 +150,21 @@ curated presets per category.
 - **NO auth in v1.** Free means generate and listen, unlimited. If a paywall ever arrives it gates EXPORT and is added inside the single export module, which is exactly why that hard rule exists.
 - **Export is WAV, a standalone JS snippet, and a JSON recipe.** MP3 is rejected, which also closes the LGPL question. The snippet never imports this repo's lib. Every format funnels through the one export module.
 - **The tweaker is DEFERRED** and may never ship. If it is ever built it must be generated-driven: render only the fields present in the current `Patch`, no fixed dashboard, no "off" toggles for absent features, no global stacking control. A single-number `frequency` shows one control and a `{start,end}` sweep shows two; multi-layer patches render labeled "Layer 1 / Layer 2" groups. Live re-play on change.
-- **Launch gating.** All four stops are live in dev. Which rungs ship at launch is governed by the ugly-proofing rule: the safe-by-construction rungs go first, and the higher rungs follow once their curation is trusted.
+- **Launch gating.** Two stops ship. Anything further is governed by the ugly-proofing rule: the safe-by-construction rungs go first, and a higher rung follows only once its curation is trusted.
 - **Multi-layer authoring UI is phase 2.** Playback and seed-mutation of multi-layer sounds ship now.
 
 ## Workbench
 
 One page driven by `?tab=`, in a sidebar shell. The sidebar labels each Sounds tab with
-the product stop it trains. Nav groups: **Sounds** = Library, Variations, Creations,
-Craft, Invent, Wild, Prospect, Dedupe. **Tools** = Editor, Import, Calibrate, Atlas, Trash.
+the product stop it trains. Nav groups, in sidebar order: **Sounds** = Library, Variations,
+Creations, Prospect, Craft, Invent, Wild. **Tools** = Atlas, Editor, Import, Dedupe,
+Calibrate, Trash. The order in `components/workbench/nav.tsx` is the truth.
 
 - **Library** (slug `review`) - the whole library, imports plus keeps. Live number search (digits prefix-match permanent numbers across every category; results are full rows including Trash context). An "ear safety" chip appears beside "to sort" whenever library sounds exceed a current ceiling: `auditLimits` clones a patch, runs `enforceLimits` on the clone and diffs, so the audit and the proposed fix come from the same function and cannot drift. Apply-fix writes the clamped recipe via `PUT /api/pool` (curated keeps only); "keep as is" records the ceilings it was approved UNDER in `limit-approved.json`, so tightening a ceiling re-surfaces it. The "to sort" inbox sits on its own row above the category chips, because it is the gate every keep passes through rather than one aisle among them. Every list (inbox, aisles, number search) is the SAME vendored `Table`: star toggle, number, categories, an `imported` chip on seed-data rows (generated is the default and unmarked; the two are KINDS, never sources), context play, then edit and delete icons. Neither the event name nor the pack is displayed anywhere: a sound is its number and its categories. A row click plays and selects into the inspector; the icon actions stopPropagation so a misclick on them can never read as an audition. An "exposed tails" chip lists sounds carrying a high layer that starts AFTER the body has decayed, which the prominence gate cannot see because it reads gain and length but never onset; nothing is auto-fixed there, and "keep" records the ceilings it was kept UNDER in `tail-approved.json`. Right-hand sticky inspector: selected sound, action row (mark-sorted, favorite, edit, delete, duplicate), a BINARY category checklist (in or out; vetoes remain as import-only plumbing but never render), the measured gate description, suggestion, preview.
 - **Variations** - queue for the frozen variation pass.
 - **Creations** (RL) - the v2 queue. Trains the op dice.
 - **Craft** (`/workbench/craft`, its own route) - the instrument-first inventor. Per-category batches of 20, each row naming its instrument, any body or transient partner, its figure and its space. No dice and no learning layer: the design rules ARE the constraint, so a bad draw is a rule to change rather than a verdict to file. Keeps go down the ordinary path (unsorted bucket, zero categories, to-sort inbox, registry number).
-- **Prospect** (`/workbench/prospect`, its own route, under Wild) - the discovery bench. One button, one sound, no categories and no dials. Keyboard: space generates, k keeps, r replays. Keeps go down the ordinary path (unsorted bucket, zero categories, to-sort inbox, registry number); everything else is discarded and nothing is recorded. Details below.
+- **Prospect** (`/workbench/prospect`, its own route) - the discovery bench. One button, one sound, no categories and no dials. Keyboard: space generates, k keeps, r replays. Keeps go down the ordinary path (unsorted bucket, zero categories, to-sort inbox, registry number); everything else is discarded and nothing is recorded. Details below.
 - **Invent** (RL) - the `invent` queue. Trains the archetype and hybrid dice. No longer feeds a product stop; it feeds the library.
 - **Wild** - the `discovery` queue, with the ultra-share tuning dial (0-100%, step 5). Nothing here trains anything. No longer feeds a product stop.
 - **Dedupe** - whole-library similar-pair triage. Details below.
@@ -186,7 +184,7 @@ train. Batch pages carry no session counters and no empty-state prose.
 All user-facing categories are intention-based or action-based: things a UI does, never
 a vibe word (minimal, crisp, organic) and never a flavor word (pop, chime, twinkle). The
 list is code: `CATEGORIES` and `categoryId()` in `lib/audio/categories.ts`, addressed as
-C1 through C8 by array order (C1 tap, C2 hover, C3 transition, C4 success, C5 error,
+C1 through C7 by array order (C1 tap, C2 hover, C3 transition, C4 success, C5 error,
 C6 warning, C7 notification).
 
 **Packs are source libraries, never categories.** An import is slotted by ear or gate-cast
@@ -471,7 +469,7 @@ character: `tone()` in `compose.ts` emits it unless explicitly disabled, `noise(
 emits it, and `create.ts` and `wild.ts` use it too.
 
 **There is no ten-step cleaning pass at runtime.** The 10 rules that look like one (5
-`pipeline-*` plus 5 `validate-*` in `data/reference/rules/`) are an upstream AGENT skill, and
+`pipeline-*` plus 5 `validate-*`, archived in the local docs) are an upstream AGENT skill, and
 CLAUDE.md's hard rule keeps that as calibration reference only, never a runtime feature. The
 pass that does clean every generated recipe is `enforceLimits`, ours, described below.
 

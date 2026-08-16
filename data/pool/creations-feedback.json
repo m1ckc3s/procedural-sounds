@@ -126,7 +126,7 @@
   "notification": {
     "retime-layers": {
       "k": 3,
-      "d": 14
+      "d": 15
     },
     "add-harmonic": {
       "k": 0,
@@ -138,7 +138,7 @@
     },
     "transpose-wide": {
       "k": 1,
-      "d": 12
+      "d": 13
     },
     "add-shimmer": {
       "k": 1,
@@ -151,25 +151,29 @@
   },
   "warning": {
     "reshape-envelope": {
-      "k": 0,
-      "d": 2
+      "k": 2,
+      "d": 3
     },
     "swap-waveform": {
-      "k": 1,
-      "d": 3
+      "k": 3,
+      "d": 7
     },
     "add-harmonic": {
       "k": 2,
-      "d": 1
+      "d": 3
     },
     "transpose-wide": {
+      "k": 4,
+      "d": 4
+    },
+    "filter-shift": {
       "k": 2,
       "d": 1
     }
   },
   "hover": {
     "curve-flip": {
-      "k": 2,
+      "k": 3,
       "d": 1
     },
     "filter-shift": {
@@ -182,14 +186,14 @@
     },
     "reshape-envelope": {
       "k": 0,
-      "d": 2
+      "d": 3
     },
     "swap-waveform": {
       "k": 1,
-      "d": 3
+      "d": 4
     },
     "transpose-wide": {
-      "k": 1,
+      "k": 2,
       "d": 1
     }
   }

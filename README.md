@@ -53,6 +53,8 @@ Inside the workbench you can:
 - **Calibrate**: set the ear-safety ceilings and loudness targets by listening.
 - **Atlas**: everything every generator can say, rendered live from the code and the
   current training state.
+- **Dedupe**: whole-library similar-pair triage. Identical-only; when unsure, keep both.
+- **Trash**: everything deleted or marked duplicate. Restore lives only here.
 
 Read [`docs/TRAINING.md`](docs/TRAINING.md) before a curation session. It says what
 each tab's keep and delete actually write.
@@ -64,7 +66,7 @@ it, and a learning layer that shifts each generator's odds every time a curator 
 deletes what it made. The library and the training data are the same asset.
 
 On provenance: the synth core began as an adaptation of an open source recipe player, and a
-few open source sound packs seeded the very first library. Everything that generates,
+several open source sound packs seeded the very first library. Everything that generates,
 learns and curates is original to this project, as are the instruments, figures and
 characters the generators draw from, and the library has been growing past its seeds ever
 since. The specific projects and their licenses are in

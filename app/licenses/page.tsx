@@ -2,7 +2,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import Link from "next/link";
 
-export const metadata = { title: "Third-party notices — sonaut" };
+export const metadata = { title: "Third-party notices" };
 
 // Renders THIRD-PARTY-NOTICES.md, the one attribution source of truth, with a purpose-built
 // parser instead of a markdown dependency: the file uses five constructs (h1, h2, hr, code
@@ -75,7 +75,7 @@ export default async function LicensesPage() {
     <div className="min-h-screen bg-background text-foreground">
       <header className="mx-auto flex max-w-2xl items-center justify-center px-6 py-6">
         <Link href="/" className="text-[18px] font-[450] tracking-tight">
-          sonaut
+          Back to the sounds
         </Link>
       </header>
       <main className="mx-auto max-w-2xl space-y-4 px-6 pt-4 pb-20">

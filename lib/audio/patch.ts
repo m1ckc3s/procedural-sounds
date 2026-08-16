@@ -1,7 +1,5 @@
 export type Waveform = "sine" | "triangle" | "square" | "sawtooth";
 
-// Sweep glides start->end over the layer's full duration unless `time` caps it (the
-// pitch then holds at `end`); `time` is opt-in so pre-existing sweeps are unchanged.
 export type Frequency = number | { start: number; end: number; time?: number };
 
 export interface FM {
@@ -25,10 +23,6 @@ export interface NoiseSource {
 
 export type Source = OscillatorSource | NoiseSource;
 
-// curve "ramp" = the reference pack's hard exponential ramps (attack rises exponentially from
-// silence, decay ramps to silence ending exactly at attack+decay: punchier, shorter tail).
-// Default (absent) = the ported setTargetAtTime behavior; opt-in only, so every patch
-// without it renders byte-identical.
 export interface Envelope {
   attack?: number;
   decay: number;
@@ -60,8 +54,6 @@ export interface ReverbEffect {
   roomSize?: number;
 }
 
-// Feedback-delay echo ("shimmer"), ported from the reference pack (attribution in effects.ts). Opt-in only:
-// runs solely when a patch declares it, so every patch without it renders byte-identical.
 export interface DelayEffect {
   type: "delay";
   delay: number;

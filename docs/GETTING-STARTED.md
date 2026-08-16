@@ -15,7 +15,7 @@ npm run dev
 
 Two surfaces:
 
-- **`/`** the product. The sound stage, eight source buttons (seven categories plus one experimental), and a v1/v2 toggle. The four-stop slider is retired: only the two curated stops ship.
+- **`/`** the product. The sound stage, eight source buttons (seven categories plus one experimental), and a Familiar/Exotic toggle (v1/v2 internally). The four-stop slider is retired: only the two curated stops ship.
 - **`/workbench`** the curation tool. This is where the sound library is grown and the
   generators are trained. Dev only: a production build returns 404 for it and for every
   `/api` route (`proxy.ts`).
@@ -40,22 +40,22 @@ the training data are the same asset.
 
 ## The workbench, in one table
 
-`/workbench` is one page driven by `?tab=`. What each tab is for:
+`/workbench` is one page driven by `?tab=`, plus four routes of their own (Atlas, Craft, Import, Prospect). In sidebar order, what each tab is for:
 
 | Tab | What it does |
 |---|---|
 | Library (`?tab=review`) | The sound library, per-category aisles plus a "to sort" inbox and an inspector. Where sounds get their categories. |
 | Variations | The frozen variation pass. Trains NOTHING by design, so it has one button ("add to library") and no delete. |
 | Creations | The creator (`createFrom`): structural remixes of a seed. Keep/delete here trains v2. |
+| Prospect | One button, five engines (remix, craft, deck, breed, wildcard), no category. Also behind the product's experimental button. |
 | Craft | Instrument-first invention: instrument x figure x space, per category. No dice; a bad draw is a rule to edit. Vetoes remove a component for good. |
 | Invent | The hybrid / archetype / character lottery. Keep/delete trains its dice. Feeds the library. |
-| Prospect | One button, five engines (remix, craft, deck, breed, wildcard), no category. Also behind the product's experimental button. |
 | Wild | The untrained discovery paths. Never learns; keeps land in the to-sort inbox. |
-| Dedupe | Whole-library similar-pair triage. |
+| Atlas | Own route. Renders every engine's vocabulary, allocations, and live dice from the code, plus an "under the hood" glossary. Read this to understand the generators. |
 | Editor | Open a sound by number, tweak it, then either keep it as a NEW sound or replace the original in place. |
 | Import | Own route. Paste a sound copied off the product page ("Copy sound") back into the library. Shows its nearest library match first, then keeps it through the ordinary to-sort path. |
+| Dedupe | Whole-library similar-pair triage. |
 | Calibrate | Ear-safety probe ladders plus the loudness controls. |
-| Atlas | Own route. Renders every engine's vocabulary, allocations, and live dice from the code, plus an "under the hood" glossary. Read this to understand the generators. |
 | Trash | Everything deleted or marked duplicate. Restore lives ONLY here. |
 
 ## Docs

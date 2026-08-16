@@ -73,11 +73,11 @@ const GROUPS: { label: string; items: Item[] }[] = [
   {
     label: "Tools",
     items: [
+      { slug: "atlas", label: "Atlas", icon: Map },
       { slug: "editor", label: "Editor", icon: Dices },
       { slug: "import", label: "Import", route: "/workbench/import", icon: ClipboardPaste },
       { slug: "dedupe", label: "Dedupe", icon: Copy },
       { slug: "calibrate", label: "Calibrate", icon: SlidersHorizontal },
-      { slug: "atlas", label: "Atlas", icon: Map },
       { slug: "trash", label: "Trash", icon: Trash2 },
     ],
   },

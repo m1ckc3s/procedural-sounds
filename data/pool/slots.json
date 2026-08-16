@@ -2447,5 +2447,23 @@
   ],
   "pool/transition/18": [
     "transition"
+  ],
+  "pool/hover/123": [
+    "hover"
+  ],
+  "pool/warning/44": [
+    "error"
+  ],
+  "pool/warning/45": [
+    "warning"
+  ],
+  "pool/warning/46": [
+    "warning"
+  ],
+  "pool/warning/47": [
+    "error"
+  ],
+  "pool/unsorted/174": [
+    "warning"
   ]
 }

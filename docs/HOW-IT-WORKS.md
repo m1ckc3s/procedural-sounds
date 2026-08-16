@@ -37,7 +37,10 @@ inventing a patch. Two of them learn from human verdicts. The rest do not.
 ## The engines
 
 The product ships three: **v1**, **v2**, and the **experimental** button. The rest live in
-the workbench, where they fill the library the product draws from.
+the workbench, where they fill the library the product draws from. v1 and v2 are the
+internal names (the workbench sidebar labels tabs with them); the product's toggle calls
+them **Familiar** and **Exotic**, since they are peers differing in how far from the
+library a draw wanders, not versions.
 
 | Engine | Where | Where it starts | What it can produce | Learns? |
 |---|---|---|---|---|
@@ -168,7 +171,7 @@ queues trains **two separate layers**, and they answer different questions.
 
 **The dice answer "which recipe".** Each category keeps a tally of keeps and deletes for
 every possible move: for v2 that is each structural edit, for Invent each archetype, each
-character, and the hybrid option. Around 68 trainable cells per category. A cell's weight
+character, and the hybrid option. Around 60 to 70 trainable cells per category (it varies by category). A cell's weight
 is a smoothed keep rate, `(keeps + 1) / (keeps + deletes + 2)`, so a single keep reads as
 "promising" rather than "perfect". Weights feed a proportional lottery.
 
@@ -267,7 +270,7 @@ that volume into the layer gains so the file plays exactly as the site did.
 - **Tamed contract** - the polite brief used by Invent: consonant scales only, base pitch inside the range chosen for that category, mostly pure sine tones.
 - **Exotic contract** - the Wild brief: odd scales (whole-tone, quartal, hirajoshi), a wider global pitch range, more FM.
 - **Register band** - the pitch range that suits a category, the way a bass and a soprano have ranges. Error sounds sit low, notifications sit high.
-- **Character** (called a *gesture* in the code) - a hand-written musical figure that needs a key handed to it. Around 35 of them, shared by Invent and Wild.
+- **Character** (called a *gesture* in the code) - a hand-written musical figure that needs a key handed to it. Around 37 of them, shared by Invent and Wild.
 - **Archetype** - a hand-written complete recipe that supplies its own pitch and needs no contract. Around 32 of them, each with a home category, all available everywhere.
 - **Instrument** - one of Craft's 42 coherent single-note voices, grouped by family (wood, tine, metal, string, body, transient, air, digital, sustained).
 - **Figure** - Craft's gesture shape: how many strikes, when they land, how they decay.

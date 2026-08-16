@@ -13,19 +13,19 @@ imported reference data at `data/reference/UPSTREAM-LICENSE`.
 https://github.com/raphaelsalaja/audio
 
 Copyright (c) 2026 Raphael Salaja
-License: MIT 
+License: MIT
 
 ## cuelume
 https://github.com/Danilaa1/cuelume
 
 Copyright (c) 2026 Daniel Belyi
-License: MIT 
+License: MIT
 
 ## tiks
 https://github.com/rexa-developer/tiks
 
 Copyright (c) 2026 Rexa
-License: MIT 
+License: MIT
 
 ## sensory-ui
 https://github.com/SatyamVyas04/sensory-ui
@@ -37,13 +37,13 @@ License: MIT
 https://github.com/ndoherty-xyz/plinq
 
 Copyright (c) ndoherty-xyz.
-License: MIT 
+License: MIT
 
 ## soniq
 https://github.com/JakubZitko/soniq
 
 Copyright (c) 2026 JakubZitko
-License: MIT 
+License: MIT
 
 ## RareUI
 https://github.com/Codewithswappy/RareUI
@@ -55,7 +55,7 @@ License: MIT
 https://github.com/ManasBarman229/sound-lab
 
 Copyright (c) 2025 Manas Barman
-License: MIT 
+License: MIT
 
 ---
 ## MIT License

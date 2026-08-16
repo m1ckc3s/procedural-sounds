@@ -2270,5 +2270,24 @@
       "curve": "ramp"
     },
     "gain": 0.06
+  },
+  {
+    "source": {
+      "type": "sine",
+      "frequency": 3500
+    },
+    "envelope": {
+      "attack": 0,
+      "decay": 0.01,
+      "sustain": 0,
+      "release": 0.003,
+      "curve": "ramp"
+    },
+    "gain": 0.06,
+    "filter": {
+      "type": "bandpass",
+      "frequency": 5400,
+      "Q": 1.8
+    }
   }
 ]

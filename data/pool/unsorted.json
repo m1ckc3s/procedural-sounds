@@ -11023,5 +11023,38 @@
         }
       }
     ]
+  },
+  {
+    "layers": [
+      {
+        "source": {
+          "type": "square",
+          "frequency": 330
+        },
+        "envelope": {
+          "attack": 0.001,
+          "decay": 0.065,
+          "sustain": 0,
+          "release": 0.013,
+          "curve": "ramp"
+        },
+        "gain": 0.12
+      },
+      {
+        "source": {
+          "type": "square",
+          "frequency": 330
+        },
+        "envelope": {
+          "attack": 0.001,
+          "decay": 0.077,
+          "sustain": 0,
+          "release": 0.015,
+          "curve": "ramp"
+        },
+        "gain": 0.117,
+        "delay": 0.118
+      }
+    ]
   }
 ]
