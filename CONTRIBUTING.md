@@ -15,14 +15,13 @@ be the biggest single improvement. The player is already standalone and dependen
 (`lib/audio/export/snippet.ts`, `PLAYER_JS`), so this is packaging work, not audio work.
 
 **Training data.** The library grows by curation: open the workbench, generate, keep what is
-good, delete what is not, sort keeps into categories by ear. Every verdict trains the
-generators. If you have ears and patience, this is the most valuable thing anyone can do.
-Read [`docs/TRAINING.md`](docs/TRAINING.md) first, then see "Curation pull requests"
-below for how it merges.
+good, delete what is not. If you have ears and patience, this is the most valuable thing
+anyone can do. Read [`docs/TRAINING.md`](docs/TRAINING.md) first, then "Contributing
+sounds" below for what to do and what to leave alone.
 
 **Sounds.** New hand-written recipes for the library. Same path as training data: they enter
 through the workbench (Editor, or Import to paste a recipe), land in the to-sort inbox, and
-get sorted by ear.
+get sorted by ear on review.
 
 **Stage animations.** The product's per-category stage widgets in
 `components/product/SoundStage.tsx`. Character and motion work; the whole thing is CSS
@@ -55,16 +54,47 @@ The full list is in CLAUDE.md. The ones contributors hit most:
   Radix. `components/ui/btn.tsx` is read-only.
 - No em dashes in repo text.
 
-## Curation pull requests
+## Contributing sounds
 
-Curation state is committed to git as data, so a curation contribution is a pull request
-that touches `data/pool/*.json`. To keep those mergeable:
+Curation state is committed to git as data, so a sound contribution is a pull request that
+touches `data/pool/*.json`. Here is what helps most, and how it merges.
 
-- Keep curation PRs to `data/pool/` only. Code changes go in separate PRs.
-- Sound numbers are assigned at max+1 as you keep, and they are provisional until merged.
-  Two curation PRs open at once will both claim the same numbers, and the second to merge
-  gets renumbered on the way in. Once a number is on `main` it is permanent.
-- Say in the PR what you curated: which tabs, which categories, roughly how many verdicts.
+**Broaden, do not narrow.** Both product tiers only ever play what is already in the
+library: Familiar varies a library sound within strict bounds, Exotic remixes one
+structurally. Neither can invent a character the library does not have. So the most
+valuable thing a contributor can do is generate from the engines that CAN, and keep the
+good ones:
+
+- **Craft** (`/workbench/craft`): instrument x figure x space. Coherent single-note voices.
+- **Invent**: hybrid, archetype and character draws.
+- **Prospect** (`/workbench/prospect`): five engines behind one button, no category.
+- **Wild**: the untrained discovery paths.
+
+Every keep from those tabs is a new seed that both product tiers can then draw from.
+Pressing keep and delete on the Creations tab (the Exotic engine's own review) is real
+training too, but the maintainer runs plenty of it; a hundred Craft keeps in an
+under-served category do more for the product than a hundred Creations verdicts.
+
+**Leave everything in the to-sort inbox. Do not mark anything sorted.** Every keep, from
+every tab, lands in the inbox with zero categories; that is automatic. Sorting is done on
+review, by ear, by the maintainer, and it is how contributed sounds get verified. A keep
+you mark sorted yourself skips that step and is much harder to review, because it is now
+one row among hundreds instead of a visible inbox of exactly what your PR added. The inbox
+IS the review queue. Fill it and leave it.
+
+**Keeping is as important as deleting.** A PR that only deletes from a category will be
+asked why. Deletes are welcome when a sound is genuinely bad for its category, but the
+library gets better by growing in the right places, not by shrinking. Dedupe is part of
+every pass and is identical-only: when unsure whether two sounds are the same, keep both.
+
+**Keep it mergeable:**
+
+- Curation PRs touch `data/pool/` only. Code changes go in separate PRs.
+- Small and often beats large and rare. Sound numbers and pool ids are assigned at max+1
+  as you keep, and both are provisional until merged: two curation PRs open at once will
+  claim the same numbers and the same positional ids, and the second to merge is re-keyed
+  on the way in. Once a number is on `main` it is permanent.
+- Say in the PR what you did: which tabs, which categories, roughly how many keeps.
 - Do not edit `data/reference/reference-sounds.json` in a curation PR. That file is
   imported reference data with its own attribution.
 
