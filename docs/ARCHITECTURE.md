@@ -85,7 +85,7 @@ in CLAUDE.md.
 ### `lib/` (non-audio)
 
 `store.ts` (product state), `curation.ts` (the build-time curation snapshot, below),
-`version.ts` (`APP_VERSION` and `LAST_UPDATED`, rendered in the product's corner cluster),
+`version.ts` (`APP_VERSION`, rendered in the product's corner cluster),
 `rungs.ts` (the two product tiers, keys `core` and `orbit`, labelled Familiar and Exotic),
 `font-weight.ts`, `shape-context.tsx`, `icon-context.tsx`, `surface-context.tsx`,
 `surface-classes.ts`, `springs.ts`, `utils.ts`.

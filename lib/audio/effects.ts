@@ -9,12 +9,17 @@ import type { DelayEffect, ReverbEffect } from "./patch";
 export interface EffectNode {
   input: AudioNode;
   output: AudioNode;
+  nodes: AudioNode[];
+  // Seconds the effect keeps sounding after its input goes silent; the caller waits this
+  // long before disconnecting `nodes`.
+  tail: number;
 }
 
 function withMix(
   ctx: BaseAudioContext,
   mix: number,
-  create: (wet: GainNode, wetOut: GainNode) => void,
+  tail: number,
+  create: (wet: GainNode, wetOut: GainNode) => AudioNode[],
 ): EffectNode {
   const input = ctx.createGain();
   const output = ctx.createGain();
@@ -31,9 +36,9 @@ function withMix(
   const wetOut = ctx.createGain();
   wetOut.connect(output);
 
-  create(wet, wetOut);
+  const inner = create(wet, wetOut);
 
-  return { input, output };
+  return { input, output, tail, nodes: [input, output, dry, wet, wetOut, ...inner] };
 }
 
 /*
@@ -63,7 +68,12 @@ export function createShimmer(ctx: BaseAudioContext, opts: DelayEffect): EffectN
   feedbackFilter.connect(wetGain);
   wetGain.connect(output);
 
-  return { input, output };
+  return {
+    input,
+    output,
+    tail: shimmerTail(opts),
+    nodes: [input, output, delay, feedbackFilter, feedbackGain, wetGain],
+  };
 }
 
 const INAUDIBLE_GAIN = 0.001;
@@ -75,49 +85,69 @@ export function shimmerTail(opts: DelayEffect): number {
   return opts.delay * (1 + Math.ceil(Math.log(INAUDIBLE_GAIN) / Math.log(opts.feedback)));
 }
 
+// Impulse responses are cached by shape, not regenerated per play. A fresh 2ch x seconds
+// Math.random buffer per node was built three times per draw (live play plus two offline
+// renders); on iOS Safari a spam-tapped reverb sound made that allocation storm freeze the
+// tab. An AudioBuffer is not bound to the context that created it, so one IR serves live and
+// offline contexts alike; the noise was random anyway, so nothing audible changes.
+const IR_CACHE = new Map<string, AudioBuffer>();
+const IR_CACHE_MAX = 24;
+
+function impulseResponse(ctx: BaseAudioContext, length: number, damping: number): AudioBuffer {
+  const sampleRate = ctx.sampleRate;
+  const key = `${sampleRate}|${length}|${damping}`;
+  const hit = IR_CACHE.get(key);
+  if (hit) return hit;
+
+  const buffer = ctx.createBuffer(2, length, sampleRate);
+  for (let ch = 0; ch < 2; ch++) {
+    const data = buffer.getChannelData(ch);
+    for (let i = 0; i < length; i++) {
+      data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (length * 0.28));
+    }
+  }
+
+  if (damping > 0) {
+    for (let ch = 0; ch < 2; ch++) {
+      const data = buffer.getChannelData(ch);
+      const coeff = Math.min(damping, 0.99);
+      let prev = 0;
+      for (let i = 0; i < length; i++) {
+        prev = data[i] * (1 - coeff) + prev * coeff;
+        data[i] = prev;
+      }
+    }
+  }
+
+  if (IR_CACHE.size >= IR_CACHE_MAX) IR_CACHE.delete(IR_CACHE.keys().next().value as string);
+  IR_CACHE.set(key, buffer);
+  return buffer;
+}
+
 export function createReverb(ctx: BaseAudioContext, opts: ReverbEffect): EffectNode {
   const decay = opts.decay ?? 0.5;
   const mix = opts.mix ?? 0.3;
   const preDelay = opts.preDelay ?? 0;
   const damping = opts.damping ?? 0;
   const roomSize = opts.roomSize ?? 1;
+  const effectiveDecay = decay * roomSize;
 
-  return withMix(ctx, mix, (wet, wetOut) => {
-    const sampleRate = ctx.sampleRate;
-    const effectiveDecay = decay * roomSize;
-    const length = Math.ceil(sampleRate * effectiveDecay);
-    const buffer = ctx.createBuffer(2, length, sampleRate);
-
-    for (let ch = 0; ch < 2; ch++) {
-      const data = buffer.getChannelData(ch);
-      for (let i = 0; i < length; i++) {
-        data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (length * 0.28));
-      }
-    }
-
-    if (damping > 0) {
-      for (let ch = 0; ch < 2; ch++) {
-        const data = buffer.getChannelData(ch);
-        const coeff = Math.min(damping, 0.99);
-        let prev = 0;
-        for (let i = 0; i < length; i++) {
-          prev = data[i] * (1 - coeff) + prev * coeff;
-          data[i] = prev;
-        }
-      }
-    }
-
+  return withMix(ctx, mix, preDelay + effectiveDecay, (wet, wetOut) => {
+    const length = Math.max(1, Math.ceil(ctx.sampleRate * effectiveDecay));
     const convolver = ctx.createConvolver();
-    convolver.buffer = buffer;
+    convolver.buffer = impulseResponse(ctx, length, damping);
 
+    const nodes: AudioNode[] = [convolver];
     if (preDelay > 0) {
       const preDelayNode = ctx.createDelay(Math.max(preDelay + 0.01, 1));
       preDelayNode.delayTime.value = preDelay;
       wet.connect(preDelayNode);
       preDelayNode.connect(convolver);
+      nodes.push(preDelayNode);
     } else {
       wet.connect(convolver);
     }
     convolver.connect(wetOut);
+    return nodes;
   });
 }

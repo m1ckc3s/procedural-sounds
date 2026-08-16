@@ -29,7 +29,7 @@ import { EXPERIMENTAL_LABEL, soundName } from "@/lib/audio/naming";
 import { SoundStage } from "@/components/product/SoundStage";
 import { UsageSteps } from "@/components/product/UsageSteps";
 import { useProductStore, type SoundEntry } from "@/lib/store";
-import { APP_VERSION, lastUpdatedLabel } from "@/lib/version";
+import { APP_VERSION } from "@/lib/version";
 
 const reference = referenceJson as unknown as ReferenceData;
 const PRODUCT_CATEGORIES = CATEGORIES;
@@ -404,10 +404,6 @@ export default function Home() {
       >
         <span className="inline-flex h-9 items-center gap-1.5 rounded-full border bg-card px-3.5 text-[11px] whitespace-nowrap text-muted-foreground shadow-100">
           v{APP_VERSION}
-          <span aria-hidden className="hidden text-muted-foreground/40 sm:inline">
-            ·
-          </span>
-          <span className="hidden sm:inline">updated {lastUpdatedLabel()}</span>
         </span>
         <a
           href={REPO_URL}
@@ -434,7 +430,6 @@ export default function Home() {
       </nav>
 
       <header className="mx-auto flex max-w-3xl flex-col items-center gap-3 px-6 py-6">
-        <span className="text-[18px] font-[450] tracking-tight">sonaut</span>
         <a
           href={REPO_URL}
           target="_blank"

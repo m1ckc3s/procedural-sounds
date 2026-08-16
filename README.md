@@ -1,6 +1,6 @@
-# sonaut
+# Procedural interface sounds, with taste
 
-Procedural interface sounds, with taste.
+This project does not have a settled name yet. Naming ideas are welcome, open an issue.
 
 Every sound is synthesized live in the browser from a recipe. There are no audio files
 anywhere in the product. Pick a category, generate until one fits, hear it in context,

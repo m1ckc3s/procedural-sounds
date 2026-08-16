@@ -46,16 +46,10 @@ export const PLAYER_JS = `function playSound(patch, context) {
     return buf;
   }
 
-  function reverb(o) {
-    const decay = o.decay == null ? 0.5 : o.decay;
-    const mix = o.mix == null ? 0.3 : o.mix;
-    const damping = o.damping == null ? 0 : o.damping;
-    const input = ctx.createGain(), output = ctx.createGain();
-    const dry = ctx.createGain(); dry.gain.value = 1 - mix;
-    input.connect(dry); dry.connect(output);
-    const wet = ctx.createGain(); wet.gain.value = mix; input.connect(wet);
-    const wetOut = ctx.createGain(); wetOut.connect(output);
-    const len = Math.ceil(ctx.sampleRate * decay * (o.roomSize == null ? 1 : o.roomSize));
+  function impulse(len, damping) {
+    const cache = playSound.ir || (playSound.ir = new Map());
+    const key = ctx.sampleRate + "|" + len + "|" + damping;
+    if (cache.has(key)) return cache.get(key);
     const buf = ctx.createBuffer(2, len, ctx.sampleRate);
     for (let ch = 0; ch < 2; ch++) {
       const d = buf.getChannelData(ch);
@@ -66,17 +60,35 @@ export const PLAYER_JS = `function playSound(patch, context) {
         for (let i = 0; i < len; i++) { prev = d[i] * (1 - c) + prev * c; d[i] = prev; }
       }
     }
-    const conv = ctx.createConvolver(); conv.buffer = buf;
+    if (cache.size >= 24) cache.delete(cache.keys().next().value);
+    cache.set(key, buf);
+    return buf;
+  }
+
+  function reverb(o) {
+    const decay = o.decay == null ? 0.5 : o.decay;
+    const mix = o.mix == null ? 0.3 : o.mix;
+    const damping = o.damping == null ? 0 : o.damping;
+    const input = ctx.createGain(), output = ctx.createGain();
+    const dry = ctx.createGain(); dry.gain.value = 1 - mix;
+    input.connect(dry); dry.connect(output);
+    const wet = ctx.createGain(); wet.gain.value = mix; input.connect(wet);
+    const wetOut = ctx.createGain(); wetOut.connect(output);
+    const seconds = decay * (o.roomSize == null ? 1 : o.roomSize);
+    const len = Math.max(1, Math.ceil(ctx.sampleRate * seconds));
+    const conv = ctx.createConvolver(); conv.buffer = impulse(len, damping);
+    const nodes = [input, output, dry, wet, wetOut, conv];
     const pre = o.preDelay == null ? 0 : o.preDelay;
     if (pre > 0) {
       const pd = ctx.createDelay(Math.max(pre + 0.01, 1));
       pd.delayTime.value = pre;
       wet.connect(pd); pd.connect(conv);
+      nodes.push(pd);
     } else {
       wet.connect(conv);
     }
     conv.connect(wetOut);
-    return { input: input, output: output };
+    return { input: input, output: output, nodes: nodes, tail: pre + seconds };
   }
 
   function shimmer(o) {
@@ -88,7 +100,12 @@ export const PLAYER_JS = `function playSound(patch, context) {
     const wet = ctx.createGain(); wet.gain.value = o.wet;
     input.connect(delay); delay.connect(lp); lp.connect(fb); fb.connect(delay);
     lp.connect(wet); wet.connect(output);
-    return { input: input, output: output };
+    const tail = o.feedback <= 0 ? 0 : o.feedback >= 1 ? o.delay : o.delay * (1 + Math.ceil(Math.log(0.001) / Math.log(o.feedback)));
+    return { input: input, output: output, nodes: [input, output, delay, lp, fb, wet], tail: tail };
+  }
+
+  function disconnectAll(nodes) {
+    for (const n of nodes) { try { n.disconnect(); } catch (e) {} }
   }
 
   for (const layer of (patch.layers || [patch])) {
@@ -153,6 +170,7 @@ export const PLAYER_JS = `function playSound(patch, context) {
     src.start(t); src.stop(t + dur + 0.1);
 
     let node = src;
+    const own = [src, g];
     const filters = !layer.filter ? [] : (Array.isArray(layer.filter) ? layer.filter : [layer.filter]);
     for (const f of filters) {
       const bq = ctx.createBiquadFilter();
@@ -164,17 +182,24 @@ export const PLAYER_JS = `function playSound(patch, context) {
         bq.frequency.linearRampToValueAtTime(f.envelope.peak, peakAt);
         bq.frequency.exponentialRampToValueAtTime(Math.max(f.frequency, 1), peakAt + f.envelope.decay);
       }
-      node.connect(bq); node = bq;
+      node.connect(bq); node = bq; own.push(bq);
     }
     node.connect(g);
 
     let out = g;
+    const fxNodes = [];
+    let fxTail = 0;
     for (const fx of (layer.effects || [])) {
       const built = fx.type === "reverb" ? reverb(fx) : fx.type === "delay" ? shimmer(fx) : null;
       if (!built) continue;
       out.connect(built.input); out = built.output;
+      fxNodes.push.apply(fxNodes, built.nodes); fxTail += built.tail;
     }
     out.connect(ctx.destination);
+    src.onended = function () {
+      disconnectAll(own);
+      if (fxNodes.length) setTimeout(function () { disconnectAll(fxNodes); }, (fxTail + 0.2) * 1000);
+    };
   }
 }`;
 
@@ -195,8 +220,7 @@ function identifier(name: string | undefined): string {
 // setup and repeating it per sound is what buries the four lines that actually differ.
 export function toSoundJs(patch: Patch, opts: SnippetOptions = {}): string {
   const name = identifier(opts.name);
-  return `// ${opts.name ?? "sound"}, generated by sonaut. Needs the sonaut player once (Copy player).
-const ${name} = ${JSON.stringify(bakeVolume(patch, opts.volume ?? 1), null, 2)};
+  return `const ${name} = ${JSON.stringify(bakeVolume(patch, opts.volume ?? 1), null, 2)};
 
 playSound(${name});
 `;

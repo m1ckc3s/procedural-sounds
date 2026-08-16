@@ -98,6 +98,6 @@ The workbench only works under `npm run dev`: its API routes write curation stat
 
 - Comments: near-zero. At most one terse line, and only for something the code cannot say itself. No preambles, no change history.
 - Commits: Conventional Commits (`feat:`, `fix:`, `chore:`, `refactor:`, `style:`, `docs:`, `perf:`). Never auto-commit or auto-push; wait for an explicit instruction.
-- EVERY PUSH TO MAIN BUMPS THE VERSION. Before the commit that gets pushed, bump `APP_VERSION` and set `LAST_UPDATED` to the push date in `lib/version.ts`, and mirror the same version into `package.json`. Both are rendered in the page's top-right corner cluster, so a stale value is visible to everyone. Patch bump by default; minor when a surface or an engine changes.
+- EVERY PUSH TO MAIN BUMPS THE VERSION. Before the commit that gets pushed, bump `APP_VERSION` in `lib/version.ts` and mirror the same version into `package.json`. It is rendered in the page's top-right corner cluster, so a stale value is visible to everyone. Patch bump by default; minor when a surface or an engine changes.
 - Repo text carries no em dashes.
 - Docs carry no dates, no personal names, and no decision narrative. State what is true now; history belongs in the local archive.

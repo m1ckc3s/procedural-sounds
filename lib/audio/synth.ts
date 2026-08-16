@@ -279,6 +279,8 @@ export function renderPatch(
     tail.connect(envNode);
 
     let cursor: AudioNode = envNode;
+    const fxNodes: AudioNode[] = [];
+    let fxTail = 0;
     for (const effect of layer.effects ?? []) {
       const fx =
         effect.type === "reverb"
@@ -289,17 +291,27 @@ export function renderPatch(
       if (!fx) continue;
       cursor.connect(fx.input);
       cursor = fx.output;
+      fxNodes.push(...fx.nodes);
+      fxTail += fx.tail;
     }
     cursor.connect(dest);
 
     allSourceNodes.push(srcNode);
     const nodesToDisconnect: AudioNode[] = [srcNode, envNode, ...filterNodes];
-    srcNode.onended = () => {
-      for (const n of nodesToDisconnect) {
+    const disconnectAll = (nodes: AudioNode[]) => {
+      for (const n of nodes) {
         try {
           n.disconnect();
         } catch {}
       }
+    };
+    // Effect nodes MUST come down too, once their tail has rung out. Left connected, every
+    // play of a reverb sound parked a live ConvolverNode on the destination for the life of
+    // the page; a spam-tapped Success or Transition stacked dozens and froze iOS Safari.
+    srcNode.onended = () => {
+      disconnectAll(nodesToDisconnect);
+      if (fxNodes.length === 0) return;
+      setTimeout(() => disconnectAll(fxNodes), (fxTail + 0.2) * 1000);
     };
   }
 
