@@ -429,7 +429,9 @@ export default function Home() {
         </a>
       </nav>
 
-      <header className="mx-auto flex max-w-3xl flex-col items-center gap-3 px-6 py-6">
+      {/* Below lg the header clears the absolute corner cluster (top-5 + h-9) instead of
+          sliding under it. */}
+      <header className="mx-auto flex max-w-3xl flex-col items-center gap-3 px-6 pt-[76px] pb-6 lg:py-6">
         <a
           href={REPO_URL}
           target="_blank"
