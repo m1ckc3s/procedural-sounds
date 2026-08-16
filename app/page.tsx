@@ -276,7 +276,7 @@ export default function Home() {
   };
   const fireStage = () => {
     if (kill.fx) return;
-    fireStage();
+    setStageFire((k) => k + 1);
   };
 
 
