@@ -411,8 +411,7 @@
   ],
   "pool/warning/13": [
     "warning",
-    "error",
-    "notification"
+    "error"
   ],
   "pool/warning/14": [
     "warning",
@@ -1278,7 +1277,7 @@
     "success"
   ],
   "pool/unsorted/121": [
-    "notification"
+    "transition"
   ],
   "pool/unsorted/122": [
     "warning"
@@ -1364,7 +1363,7 @@
     "transition"
   ],
   "pool/transition/10": [
-    "notification"
+    "transition"
   ],
   "pool/transition/11": [
     "transition"
@@ -2465,5 +2464,73 @@
   "pool/unsorted/179": [
     "transition",
     "tap"
-  ]
+  ],
+  "pool/notification/24": [],
+  "pool/notification/25": [
+    "notification"
+  ],
+  "pool/notification/26": [
+    "notification"
+  ],
+  "pool/notification/27": [
+    "notification"
+  ],
+  "pool/notification/28": [
+    "notification"
+  ],
+  "pool/notification/29": [
+    "notification"
+  ],
+  "pool/notification/30": [
+    "notification"
+  ],
+  "pool/notification/31": [
+    "notification"
+  ],
+  "pool/notification/32": [],
+  "pool/notification/33": [
+    "notification",
+    "transition"
+  ],
+  "pool/notification/34": [
+    "notification"
+  ],
+  "pool/notification/35": [
+    "notification"
+  ],
+  "pool/notification/36": [],
+  "pool/notification/37": [],
+  "pool/notification/38": [
+    "notification"
+  ],
+  "pool/notification/39": [
+    "notification"
+  ],
+  "pool/notification/40": [],
+  "pool/notification/41": [
+    "notification"
+  ],
+  "pool/notification/42": [
+    "notification"
+  ],
+  "pool/notification/43": [
+    "notification",
+    "transition"
+  ],
+  "core/save": [
+    "transition"
+  ],
+  "pool/unsorted/180": [
+    "notification"
+  ],
+  "pool/unsorted/181": [
+    "notification"
+  ],
+  "pool/unsorted/182": [
+    "notification"
+  ],
+  "pool/notification/44": [
+    "notification"
+  ],
+  "pool/notification/45": []
 }

@@ -7,18 +7,11 @@
   },
   "notification": {
     "instruments": [
-      "blip-sine",
-      "harp",
-      "tongue-drum",
+      "drop",
       "metal-ping",
-      "tine-soft",
-      "pluck-nylon",
-      "kalimba"
+      "harp"
     ],
-    "figures": [
-      "single",
-      "transient-single"
-    ]
+    "figures": []
   },
   "success": {
     "instruments": [

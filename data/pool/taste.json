@@ -3,7 +3,7 @@
     "buckets": {
       "pitch:hi": {
         "k": 60,
-        "d": 500.728
+        "d": 517.198
       },
       "wave:soft": {
         "k": 163,
@@ -11,15 +11,15 @@
       },
       "dur:m": {
         "k": 136,
-        "d": 283.757
+        "d": 300.928
       },
       "layers:3+": {
         "k": 159,
-        "d": 89.161
+        "d": 91.905
       },
       "shimmer:y": {
         "k": 105,
-        "d": 547.212
+        "d": 576.93
       },
       "noise:n": {
         "k": 163,
@@ -27,11 +27,11 @@
       },
       "sweep:n": {
         "k": 162,
-        "d": 13.074
+        "d": 13.763
       },
       "pitch:piercing": {
         "k": 61,
-        "d": 503.561
+        "d": 547.386
       },
       "layers:2": {
         "k": 3,
@@ -39,11 +39,11 @@
       },
       "shimmer:n": {
         "k": 58,
-        "d": 545.227
+        "d": 563.517
       },
       "pitch:mid": {
         "k": 39,
-        "d": 450.843
+        "d": 453.803
       },
       "dur:s": {
         "k": 1,
@@ -55,7 +55,7 @@
       },
       "pitch:lo": {
         "k": 3,
-        "d": 108.526
+        "d": 120.219
       },
       "layers:1": {
         "k": 1,
@@ -63,15 +63,15 @@
       },
       "dur:l": {
         "k": 26,
-        "d": 216.679
+        "d": 223.607
       },
       "att:instant": {
         "k": 115,
-        "d": 347.316
+        "d": 364.589
       },
       "filter:none": {
         "k": 112,
-        "d": 266.32
+        "d": 283.301
       },
       "att:slow": {
         "k": 2,
@@ -95,7 +95,7 @@
       },
       "filter:lowpass": {
         "k": 21,
-        "d": 241.075
+        "d": 254.337
       },
       "noise:y": {
         "k": 0,
@@ -111,2042 +111,6 @@
       }
     },
     "deleted": [
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 893.055
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.073,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.164,
-            "filter": {
-              "type": "bandpass",
-              "frequency": 3200,
-              "Q": 1.7
-            }
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1100.71
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.083,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.13,
-            "delay": 0.054,
-            "filter": {
-              "type": "bandpass",
-              "frequency": 3200,
-              "Q": 1.7
-            }
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1341.138
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.072,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.122,
-            "delay": 0.101,
-            "filter": {
-              "type": "bandpass",
-              "frequency": 3200,
-              "Q": 1.7
-            }
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1302.839
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.238,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.158,
-            "delay": 0.14,
-            "filter": {
-              "type": "bandpass",
-              "frequency": 3200,
-              "Q": 1.7
-            }
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 3057.891
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.236,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.052,
-            "delay": 0.174,
-            "filter": {
-              "type": "bandpass",
-              "frequency": 3200,
-              "Q": 1.7
-            }
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 811.658
-            },
-            "envelope": {
-              "attack": 0.006,
-              "decay": 0.177,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.157,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.136,
-                "feedback": 0.32,
-                "wet": 0.192,
-                "lowpass": 3321
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1216.113
-            },
-            "envelope": {
-              "attack": 0.007,
-              "decay": 0.246,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.152,
-            "delay": 0.086,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.136,
-                "feedback": 0.32,
-                "wet": 0.192,
-                "lowpass": 3321
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 811.658,
-              "detune": 10
-            },
-            "envelope": {
-              "attack": 0.006,
-              "decay": 0.177,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.079,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.136,
-                "feedback": 0.32,
-                "wet": 0.192,
-                "lowpass": 3321
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "triangle",
-              "frequency": 576.792
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.096,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.157,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.093,
-                "feedback": 0.264,
-                "wet": 0.143,
-                "lowpass": 3104
-              }
-            ],
-            "filter": {
-              "type": "lowpass",
-              "frequency": 1442
-            }
-          },
-          {
-            "source": {
-              "type": "triangle",
-              "frequency": 864.211
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.283,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.138,
-            "delay": 0.092,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.093,
-                "feedback": 0.264,
-                "wet": 0.143,
-                "lowpass": 3104
-              }
-            ],
-            "filter": {
-              "type": "lowpass",
-              "frequency": 2161
-            }
-          },
-          {
-            "source": {
-              "type": "triangle",
-              "frequency": 576.792,
-              "detune": 9
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.096,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.079,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.093,
-                "feedback": 0.264,
-                "wet": 0.143,
-                "lowpass": 3104
-              }
-            ],
-            "filter": {
-              "type": "lowpass",
-              "frequency": 1442
-            }
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 489.42
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.077,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.124,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.098,
-                "feedback": 0.254,
-                "wet": 0.157,
-                "lowpass": 4164
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 653.297
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.142,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.124,
-            "delay": 0.073,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.098,
-                "feedback": 0.254,
-                "wet": 0.157,
-                "lowpass": 4164
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 823.102
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.259,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.171,
-            "delay": 0.147,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.098,
-                "feedback": 0.254,
-                "wet": 0.157,
-                "lowpass": 4164
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1646.205
-            },
-            "envelope": {
-              "attack": 0.008,
-              "decay": 0.189,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.051,
-            "delay": 0.147,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.098,
-                "feedback": 0.254,
-                "wet": 0.157,
-                "lowpass": 4164
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 823.102,
-              "detune": 8
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.259,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.086,
-            "delay": 0.147,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.098,
-                "feedback": 0.254,
-                "wet": 0.157,
-                "lowpass": 4164
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 370.967
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.077,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.147
-          },
-          {
-            "source": {
-              "type": "triangle",
-              "frequency": 441.156
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.16,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.115,
-            "delay": 0.075,
-            "filter": {
-              "type": "lowpass",
-              "frequency": 1200
-            }
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 441.156,
-              "detune": 10
-            },
-            "envelope": {
-              "attack": 0.006,
-              "decay": 0.139,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.057,
-            "delay": 0.075
-          },
-          {
-            "source": {
-              "type": "triangle",
-              "frequency": 660.987
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.166,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.13,
-            "delay": 0.149,
-            "filter": {
-              "type": "lowpass",
-              "frequency": 1652
-            }
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 660.987,
-              "detune": 9
-            },
-            "envelope": {
-              "attack": 0.006,
-              "decay": 0.154,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.075,
-            "delay": 0.149
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 882.312
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.283,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.192,
-            "delay": 0.224
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1764.625
-            },
-            "envelope": {
-              "attack": 0.008,
-              "decay": 0.213,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.06,
-            "delay": 0.224
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 882.312,
-              "detune": 12
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.283,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.096,
-            "delay": 0.224
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": {
-                "start": 285.244,
-                "end": 142.622
-              }
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.154,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.159
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 142.622
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.177,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.086,
-            "delay": 0.024
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": {
-                "start": 285.244,
-                "end": 142.622
-              },
-              "detune": 6
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.154,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.08
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 492.145
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.1,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.136,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.097,
-                "feedback": 0.188,
-                "wet": 0.169,
-                "lowpass": 3849
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 620.064
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.168,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.118,
-            "delay": 0.103,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.097,
-                "feedback": 0.188,
-                "wet": 0.169,
-                "lowpass": 3849
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 620.064,
-              "detune": 11
-            },
-            "envelope": {
-              "attack": 0.006,
-              "decay": 0.152,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.056,
-            "delay": 0.103,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.097,
-                "feedback": 0.188,
-                "wet": 0.169,
-                "lowpass": 3849
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 781.231
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.105,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.133,
-            "delay": 0.206,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.097,
-                "feedback": 0.188,
-                "wet": 0.169,
-                "lowpass": 3849
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 781.231,
-              "detune": 8
-            },
-            "envelope": {
-              "attack": 0.006,
-              "decay": 0.113,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.073,
-            "delay": 0.206,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.097,
-                "feedback": 0.188,
-                "wet": 0.169,
-                "lowpass": 3849
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 984.29
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.243,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.163,
-            "delay": 0.309,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.097,
-                "feedback": 0.188,
-                "wet": 0.169,
-                "lowpass": 3849
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1968.579
-            },
-            "envelope": {
-              "attack": 0.008,
-              "decay": 0.193,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.056,
-            "delay": 0.309,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.097,
-                "feedback": 0.188,
-                "wet": 0.169,
-                "lowpass": 3849
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 984.29,
-              "detune": 5
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.243,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.082,
-            "delay": 0.309,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.097,
-                "feedback": 0.188,
-                "wet": 0.169,
-                "lowpass": 3849
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": {
-                "start": 314.593,
-                "end": 471.357,
-                "time": 0.066
-              }
-            },
-            "envelope": {
-              "attack": 0.025,
-              "decay": 0.34,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.163
-          },
-          {
-            "source": {
-              "type": "triangle",
-              "frequency": 471.357
-            },
-            "envelope": {
-              "attack": 0.081,
-              "decay": 0.394,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.064,
-            "delay": 0.056,
-            "filter": {
-              "type": "lowpass",
-              "frequency": 1200
-            }
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1261.269
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.16,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.172,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.087,
-                "feedback": 0.299,
-                "wet": 0.194,
-                "lowpass": 4424
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 2356.913
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.188,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.097,
-            "delay": 0.13
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 3940.454
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.101,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.07,
-            "delay": 0.281
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1246.175
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.16,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.086
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1145.442
-            },
-            "envelope": {
-              "attack": 0.002,
-              "decay": 0.075,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.192,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.139,
-                "feedback": 0.237,
-                "wet": 0.198,
-                "lowpass": 3258
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1353.679
-            },
-            "envelope": {
-              "attack": 0.002,
-              "decay": 0.054,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.167,
-            "delay": 0.098
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1876.311
-            },
-            "envelope": {
-              "attack": 0.002,
-              "decay": 0.271,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.193,
-            "delay": 0.196
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1861.173
-            },
-            "envelope": {
-              "attack": 0.002,
-              "decay": 0.271,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.106,
-            "delay": 0.196
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 2752.486
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.069,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.115,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.124,
-                "feedback": 0.265,
-                "wet": 0.189,
-                "lowpass": 3128
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 3596.776
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.057,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.107,
-            "delay": 0.047
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 2000
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.355,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.155,
-            "delay": 0.088
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 6000
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.23,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.031,
-            "delay": 0.123
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 4485.454
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.355,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.078,
-            "delay": 0.088
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 400,
-              "fm": {
-                "depth": 112,
-                "ratio": 4.16
-              }
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.227,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.144,
-            "delay": 0,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.081,
-                "feedback": 0.191,
-                "wet": 0.15,
-                "lowpass": 3783
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 800,
-              "fm": {
-                "depth": 100,
-                "ratio": 2.76
-              }
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.354,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.179,
-            "delay": 0.132,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.081,
-                "feedback": 0.191,
-                "wet": 0.15,
-                "lowpass": 3783
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 800,
-              "fm": {
-                "depth": 100,
-                "ratio": 2.76
-              },
-              "detune": 11
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.354,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.09,
-            "delay": 0.132,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.081,
-                "feedback": 0.191,
-                "wet": 0.15,
-                "lowpass": 3783
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "noise",
-              "color": "white"
-            },
-            "envelope": {
-              "attack": 0.001,
-              "decay": 0.013,
-              "sustain": 0,
-              "release": 0,
-              "curve": "ramp"
-            },
-            "gain": 0.082,
-            "filter": {
-              "type": "bandpass",
-              "frequency": 900,
-              "Q": 1.319
-            },
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.129,
-                "feedback": 0.24,
-                "wet": 0.124,
-                "lowpass": 4251
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 90
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.051,
-              "sustain": 0,
-              "release": 0,
-              "curve": "ramp"
-            },
-            "gain": 0.196,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.129,
-                "feedback": 0.24,
-                "wet": 0.124,
-                "lowpass": 4251
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 365.044
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.098,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.038,
-            "delay": 0.007,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.129,
-                "feedback": 0.24,
-                "wet": 0.124,
-                "lowpass": 4251
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 90,
-              "detune": 10
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.051,
-              "sustain": 0,
-              "release": 0,
-              "curve": "ramp"
-            },
-            "gain": 0.098,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.129,
-                "feedback": 0.24,
-                "wet": 0.124,
-                "lowpass": 4251
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "noise",
-              "color": "white"
-            },
-            "envelope": {
-              "attack": 0.164,
-              "decay": 0.062,
-              "sustain": 0,
-              "release": 0,
-              "curve": "ramp"
-            },
-            "gain": 0.083,
-            "filter": {
-              "type": "lowpass",
-              "frequency": 1659
-            },
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.121,
-                "feedback": 0.229,
-                "wet": 0.166,
-                "lowpass": 2757
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 414.999
-            },
-            "envelope": {
-              "attack": 0.016,
-              "decay": 0.326,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.172,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.121,
-                "feedback": 0.229,
-                "wet": 0.166,
-                "lowpass": 2757
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 522.866
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.2,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.137,
-            "delay": 0.164,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.121,
-                "feedback": 0.229,
-                "wet": 0.166,
-                "lowpass": 2757
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 829.998
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.19,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.061,
-            "delay": 0.216,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.121,
-                "feedback": 0.229,
-                "wet": 0.166,
-                "lowpass": 2757
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 414.999,
-              "detune": 8
-            },
-            "envelope": {
-              "attack": 0.016,
-              "decay": 0.326,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.086,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.121,
-                "feedback": 0.229,
-                "wet": 0.166,
-                "lowpass": 2757
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 998.264
-            },
-            "envelope": {
-              "attack": 0.007,
-              "decay": 0.103,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.163
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1332.522
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.26,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.101,
-            "delay": 0.091
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 998.264,
-              "detune": 8
-            },
-            "envelope": {
-              "attack": 0.007,
-              "decay": 0.103,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.082
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 951.366,
-              "fm": {
-                "depth": 85,
-                "ratio": 2.76
-              }
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.218,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.128,
-            "delay": 0
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1600,
-              "fm": {
-                "depth": 134,
-                "ratio": 3.53
-              }
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.303,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.176,
-            "delay": 0.126
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1600,
-              "fm": {
-                "depth": 134,
-                "ratio": 3.53
-              },
-              "detune": 9
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.303,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.088,
-            "delay": 0.126
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 893.622
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.143,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.189,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.089,
-                "feedback": 0.264,
-                "wet": 0.145,
-                "lowpass": 3627
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1062.702
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.141,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.12,
-            "delay": 0.1,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.089,
-                "feedback": 0.264,
-                "wet": 0.145,
-                "lowpass": 3627
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1192.842
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.144,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.057,
-            "delay": 0.206,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.089,
-                "feedback": 0.264,
-                "wet": 0.145,
-                "lowpass": 3627
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 893.622,
-              "detune": 11
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.143,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.095,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.089,
-                "feedback": 0.264,
-                "wet": 0.145,
-                "lowpass": 3627
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 434.712
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.08,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.145,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.065,
-                "feedback": 0.204,
-                "wet": 0.158,
-                "lowpass": 2658
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 651.332
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.133,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.122,
-            "delay": 0.057,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.065,
-                "feedback": 0.204,
-                "wet": 0.158,
-                "lowpass": 2658
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 651.332,
-              "detune": 9
-            },
-            "envelope": {
-              "attack": 0.006,
-              "decay": 0.092,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.052,
-            "delay": 0.057,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.065,
-                "feedback": 0.204,
-                "wet": 0.158,
-                "lowpass": 2658
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 869.423
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.117,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.117,
-            "delay": 0.114,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.065,
-                "feedback": 0.204,
-                "wet": 0.158,
-                "lowpass": 2658
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1160.541
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.175,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.166,
-            "delay": 0.171,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.065,
-                "feedback": 0.204,
-                "wet": 0.158,
-                "lowpass": 2658
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 2321.082
-            },
-            "envelope": {
-              "attack": 0.008,
-              "decay": 0.169,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.039,
-            "delay": 0.171,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.065,
-                "feedback": 0.204,
-                "wet": 0.158,
-                "lowpass": 2658
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 290.833,
-              "fm": {
-                "depth": 66,
-                "ratio": 1.055
-              }
-            },
-            "envelope": {
-              "attack": 0.011,
-              "decay": 0.044,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.183,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.117,
-                "feedback": 0.258,
-                "wet": 0.184,
-                "lowpass": 4368
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 366.427,
-              "fm": {
-                "depth": 66,
-                "ratio": 1.055
-              }
-            },
-            "envelope": {
-              "attack": 0.011,
-              "decay": 0.046,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.157,
-            "delay": 0.041,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.117,
-                "feedback": 0.258,
-                "wet": 0.184,
-                "lowpass": 4368
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 435.757,
-              "fm": {
-                "depth": 66,
-                "ratio": 1.055
-              }
-            },
-            "envelope": {
-              "attack": 0.011,
-              "decay": 0.259,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.169,
-            "delay": 0.083,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.117,
-                "feedback": 0.258,
-                "wet": 0.184,
-                "lowpass": 4368
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 435.757,
-              "fm": {
-                "depth": 66,
-                "ratio": 1.055
-              },
-              "detune": 8
-            },
-            "envelope": {
-              "attack": 0.011,
-              "decay": 0.259,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.093,
-            "delay": 0.083,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.117,
-                "feedback": 0.258,
-                "wet": 0.184,
-                "lowpass": 4368
-              }
-            ]
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 290.833,
-              "fm": {
-                "depth": 66,
-                "ratio": 1.055
-              },
-              "detune": 12
-            },
-            "envelope": {
-              "attack": 0.011,
-              "decay": 0.044,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.092,
-            "effects": [
-              {
-                "type": "delay",
-                "delay": 0.117,
-                "feedback": 0.258,
-                "wet": 0.184,
-                "lowpass": 4368
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 489.228
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.068,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.129
-          },
-          {
-            "source": {
-              "type": "triangle",
-              "frequency": 653.042
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.079,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.132,
-            "delay": 0.047,
-            "filter": {
-              "type": "lowpass",
-              "frequency": 1633
-            }
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 653.042,
-              "detune": 9
-            },
-            "envelope": {
-              "attack": 0.006,
-              "decay": 0.074,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.061,
-            "delay": 0.047
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 822.781
-            },
-            "envelope": {
-              "attack": 0.004,
-              "decay": 0.078,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.101,
-            "delay": 0.095
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1232.778
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.204,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.16,
-            "delay": 0.142
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 2465.556
-            },
-            "envelope": {
-              "attack": 0.008,
-              "decay": 0.139,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.038,
-            "delay": 0.142
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1232.778,
-              "detune": 7
-            },
-            "envelope": {
-              "attack": 0.005,
-              "decay": 0.204,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.08,
-            "delay": 0.142
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "triangle",
-              "frequency": 305.465
-            },
-            "envelope": {
-              "attack": 0.006,
-              "decay": 0.124,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.171,
-            "filter": {
-              "type": "lowpass",
-              "frequency": 1200
-            }
-          },
-          {
-            "source": {
-              "type": "triangle",
-              "frequency": 407.746
-            },
-            "envelope": {
-              "attack": 0.006,
-              "decay": 0.123,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.111,
-            "delay": 0.049,
-            "filter": {
-              "type": "lowpass",
-              "frequency": 1200
-            }
-          },
-          {
-            "source": {
-              "type": "triangle",
-              "frequency": 513.728
-            },
-            "envelope": {
-              "attack": 0.003,
-              "decay": 0.258,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.117,
-            "delay": 0.088,
-            "filter": {
-              "type": "lowpass",
-              "frequency": 1284
-            }
-          }
-        ]
-      },
-      {
-        "layers": [
-          {
-            "source": {
-              "type": "sine",
-              "frequency": {
-                "start": 480.609,
-                "end": 452.03
-              },
-              "fm": {
-                "depth": 69,
-                "ratio": 1.657
-              }
-            },
-            "envelope": {
-              "attack": 0.027,
-              "decay": 0.138,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.13,
-            "delay": 0
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": {
-                "start": 641.536,
-                "end": 569.087
-              },
-              "fm": {
-                "depth": 69,
-                "ratio": 1.657
-              }
-            },
-            "envelope": {
-              "attack": 0.027,
-              "decay": 0.171,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.185,
-            "delay": 0.114
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": 1283.072,
-              "fm": {
-                "depth": 69,
-                "ratio": 1.657
-              }
-            },
-            "envelope": {
-              "attack": 0.027,
-              "decay": 0.086,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.051,
-            "delay": 0.114
-          },
-          {
-            "source": {
-              "type": "sine",
-              "frequency": {
-                "start": 641.536,
-                "end": 569.087
-              },
-              "fm": {
-                "depth": 69,
-                "ratio": 1.657
-              },
-              "detune": 6
-            },
-            "envelope": {
-              "attack": 0.027,
-              "decay": 0.171,
-              "sustain": 0,
-              "release": 0
-            },
-            "gain": 0.093,
-            "delay": 0.114
-          }
-        ]
-      },
       {
         "layers": [
           {
@@ -17367,6 +15331,1833 @@
             },
             "gain": 0.0803,
             "delay": 0.08220324822647188
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 931.25
+            },
+            "envelope": {
+              "attack": 0.0068239851859618434,
+              "decay": 0.06100992387289996,
+              "sustain": 0.03,
+              "release": 0.016
+            },
+            "gain": 0.163,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.102,
+                "feedback": 0.213,
+                "wet": 0.166,
+                "lowpass": 3178
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1862.498
+            },
+            "envelope": {
+              "attack": 0.0038351383246139083,
+              "decay": 0.088308717572772,
+              "sustain": 0.03,
+              "release": 0.02
+            },
+            "gain": 0.13,
+            "delay": 0.098,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.102,
+                "feedback": 0.213,
+                "wet": 0.166,
+                "lowpass": 3178
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 931.25
+            },
+            "envelope": {
+              "attack": 0.006740576568292672,
+              "decay": 0.16869386056177427,
+              "sustain": 0.03,
+              "release": 0.057
+            },
+            "gain": 0.136,
+            "delay": 0.121,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.102,
+                "feedback": 0.213,
+                "wet": 0.166,
+                "lowpass": 3178
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 65.4
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.28,
+              "sustain": 0.04,
+              "release": 0.1
+            },
+            "gain": 0.22,
+            "filter": {
+              "type": "lowpass",
+              "frequency": 400
+            },
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.08491376728874268,
+                "feedback": 0.3071417558525503,
+                "wet": 0.15472227329690746,
+                "lowpass": 2648.3296996559197
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 784
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.2,
+              "sustain": 0.03,
+              "release": 0.08
+            },
+            "delay": 0.05,
+            "gain": 0.1,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.08491376728874268,
+                "feedback": 0.3071417558525503,
+                "wet": 0.15472227329690746,
+                "lowpass": 2648.3296996559197
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1046.5
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.26,
+              "sustain": 0.03,
+              "release": 0.1
+            },
+            "delay": 0.11,
+            "gain": 0.08,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.08491376728874268,
+                "feedback": 0.3071417558525503,
+                "wet": 0.15472227329690746,
+                "lowpass": 2648.3296996559197
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1467.647
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.122,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.15,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.08398630233770113,
+                "feedback": 0.22104517830027315,
+                "wet": 0.16750227849055904,
+                "lowpass": 2735.370691004857
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1849.119
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.089,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.199,
+            "delay": 0.089,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.08398630233770113,
+                "feedback": 0.22104517830027315,
+                "wet": 0.16750227849055904,
+                "lowpass": 2735.370691004857
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 2198.986
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.099,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.147,
+            "delay": 0.178,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.08398630233770113,
+                "feedback": 0.22104517830027315,
+                "wet": 0.16750227849055904,
+                "lowpass": 2735.370691004857
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1500
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.159,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.126,
+            "delay": 0.266,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.08398630233770113,
+                "feedback": 0.22104517830027315,
+                "wet": 0.16750227849055904,
+                "lowpass": 2735.370691004857
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 165.923
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.142,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.184
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 221.48
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.098,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.174,
+            "delay": 0.108
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 279.047
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.223,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.166,
+            "delay": 0.24
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 165.923,
+              "detune": 9
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.142,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.092,
+            "delay": 0.318
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1567.428
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.098,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.193,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.111,
+                "feedback": 0.286,
+                "wet": 0.127,
+                "lowpass": 4838
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 2348.488
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.112,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.147,
+            "delay": 0.057,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.111,
+                "feedback": 0.286,
+                "wet": 0.127,
+                "lowpass": 4838
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1500
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.153,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.139,
+            "delay": 0.114,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.111,
+                "feedback": 0.286,
+                "wet": 0.127,
+                "lowpass": 4838
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1974.836
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.098,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.10615000000000001,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.111,
+                "feedback": 0.286,
+                "wet": 0.127,
+                "lowpass": 4838
+              }
+            ],
+            "delay": 0.03210888628762552
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1760
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.09,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.0225,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.07,
+                "feedback": 0.35,
+                "wet": 0.22,
+                "lowpass": 6000
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 2217
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.09,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.02,
+            "delay": 0.045,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.07,
+                "feedback": 0.35,
+                "wet": 0.22,
+                "lowpass": 6000
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 2637
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.1,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.019,
+            "delay": 0.09,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.07,
+                "feedback": 0.35,
+                "wet": 0.22,
+                "lowpass": 6000
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 3500
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.12,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.016,
+            "delay": 0.135,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.07,
+                "feedback": 0.35,
+                "wet": 0.22,
+                "lowpass": 6000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 531.364
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.113,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.139,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.104,
+                "feedback": 0.295,
+                "wet": 0.145,
+                "lowpass": 3001
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 669.476
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.111,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.16,
+            "delay": 0.1,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.104,
+                "feedback": 0.295,
+                "wet": 0.145,
+                "lowpass": 3001
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 893.644
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.282,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.157,
+            "delay": 0.079,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.104,
+                "feedback": 0.295,
+                "wet": 0.145,
+                "lowpass": 3001
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 531.364
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.113,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.139,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.15362803320833499,
+                "feedback": 0.2830051958402987,
+                "wet": 0.20173815865340544,
+                "lowpass": 5221.669174945483
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 669.476
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.111,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.16,
+            "delay": 0.066,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.15362803320833499,
+                "feedback": 0.2830051958402987,
+                "wet": 0.20173815865340544,
+                "lowpass": 5221.669174945483
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 893.644
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.282,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.157,
+            "delay": 0.136,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.15362803320833499,
+                "feedback": 0.2830051958402987,
+                "wet": 0.20173815865340544,
+                "lowpass": 5221.669174945483
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 1062.728
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.113,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.07645000000000002,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.15362803320833499,
+                "feedback": 0.2830051958402987,
+                "wet": 0.20173815865340544,
+                "lowpass": 5221.669174945483
+              }
+            ],
+            "delay": 0.06218733274514423
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 842.552
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.097,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.18,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.138,
+                "feedback": 0.243,
+                "wet": 0.155,
+                "lowpass": 4128
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1201.603
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.096,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.16,
+            "delay": 0.055
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1500
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.2,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.189,
+            "delay": 0.136
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1685.104
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.097,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.099,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.138,
+                "feedback": 0.243,
+                "wet": 0.155,
+                "lowpass": 4128
+              }
+            ],
+            "delay": 0.05358335067947936
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 1062.728
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.113,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.139,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.104,
+                "feedback": 0.295,
+                "wet": 0.145,
+                "lowpass": 3001
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 1338.952
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.111,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.16,
+            "delay": 0.094,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.104,
+                "feedback": 0.295,
+                "wet": 0.145,
+                "lowpass": 3001
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 1500
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.282,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.157,
+            "delay": 0.074,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.104,
+                "feedback": 0.295,
+                "wet": 0.145,
+                "lowpass": 3001
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1307.525
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.122,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.15
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1647.378
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.089,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.199,
+            "delay": 0.089
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1959.074
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.099,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.147,
+            "delay": 0.178
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1500
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.159,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.126,
+            "delay": 0.266
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 1062.728
+            },
+            "envelope": {
+              "attack": 0.0037876276943909796,
+              "decay": 0.1962482823044186,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.139,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.08505307481900781,
+                "feedback": 0.3774758741304602,
+                "wet": 0.21780785171227926,
+                "lowpass": 3015.1875388343337
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 1338.952
+            },
+            "envelope": {
+              "attack": 0.0010167583715709632,
+              "decay": 0.18789825452119738,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.16,
+            "delay": 0.074,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.08505307481900781,
+                "feedback": 0.3774758741304602,
+                "wet": 0.21780785171227926,
+                "lowpass": 3015.1875388343337
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 1500
+            },
+            "envelope": {
+              "attack": 0.009079466944721011,
+              "decay": 0.4516674491623904,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.157,
+            "delay": 0.147,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.08505307481900781,
+                "feedback": 0.3774758741304602,
+                "wet": 0.21780785171227926,
+                "lowpass": 3015.1875388343337
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 80
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.26,
+              "sustain": 0.04,
+              "release": 0.1
+            },
+            "gain": 0.21,
+            "filter": {
+              "type": "lowpass",
+              "frequency": 380
+            },
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.10391347136974138,
+                "feedback": 0.34223961886800663,
+                "wet": 0.18933097298821278,
+                "lowpass": 3060.69728865888
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 261.629
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.11,
+              "sustain": 0,
+              "release": 0.03,
+              "curve": "ramp"
+            },
+            "delay": 0.045,
+            "gain": 0.15,
+            "filter": {
+              "type": "lowpass",
+              "frequency": 1600
+            },
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.10391347136974138,
+                "feedback": 0.34223961886800663,
+                "wet": 0.18933097298821278,
+                "lowpass": 3060.69728865888
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 391.976
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.17,
+              "sustain": 0,
+              "release": 0.05,
+              "curve": "ramp"
+            },
+            "delay": 0.1,
+            "gain": 0.14,
+            "filter": {
+              "type": "lowpass",
+              "frequency": 1800
+            },
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.10391347136974138,
+                "feedback": 0.34223961886800663,
+                "wet": 0.18933097298821278,
+                "lowpass": 3060.69728865888
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 950.996
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.073,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.193
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 645.436
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.085,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.12,
+            "delay": 0.06
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1448.608
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.063,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.132,
+            "delay": 0.133
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 2897.216,
+              "fm": {
+                "depth": 42,
+                "ratio": 2.08
+              }
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.15,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.073,
+            "delay": 0.15
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 3500
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.09,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.0225,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.07,
+                "feedback": 0.35,
+                "wet": 0.22,
+                "lowpass": 6000
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 3500
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.09,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.02,
+            "delay": 0.045,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.07,
+                "feedback": 0.35,
+                "wet": 0.22,
+                "lowpass": 6000
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 3500
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.1,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.019,
+            "delay": 0.09,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.07,
+                "feedback": 0.35,
+                "wet": 0.22,
+                "lowpass": 6000
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 3500
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.12,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.016,
+            "delay": 0.135,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.07,
+                "feedback": 0.35,
+                "wet": 0.22,
+                "lowpass": 6000
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 3500
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.09,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.012375,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.07,
+                "feedback": 0.35,
+                "wet": 0.22,
+                "lowpass": 6000
+              }
+            ],
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1046,
+              "fm": {
+                "ratio": 3,
+                "depth": 250
+              }
+            },
+            "envelope": {
+              "attack": 0,
+              "decay": 0.5,
+              "sustain": 0.03,
+              "release": 0.2,
+              "curve": "ramp"
+            },
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.7,
+                "damping": 0.4,
+                "mix": 0.12
+              },
+              {
+                "type": "delay",
+                "delay": 0.10480801062535164,
+                "feedback": 0.28295246403272317,
+                "wet": 0.13836845988586466,
+                "lowpass": 3514.542172895942
+              }
+            ],
+            "gain": 0.12
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1317.999,
+              "fm": {
+                "ratio": 3,
+                "depth": 220
+              }
+            },
+            "envelope": {
+              "attack": 0,
+              "decay": 0.45,
+              "sustain": 0.02,
+              "release": 0.18,
+              "curve": "ramp"
+            },
+            "delay": 0.1,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.7,
+                "damping": 0.4,
+                "mix": 0.12
+              },
+              {
+                "type": "delay",
+                "delay": 0.10480801062535164,
+                "feedback": 0.28295246403272317,
+                "wet": 0.13836845988586466,
+                "lowpass": 3514.542172895942
+              }
+            ],
+            "gain": 0.1
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1567.999,
+              "fm": {
+                "ratio": 3,
+                "depth": 200
+              }
+            },
+            "envelope": {
+              "attack": 0,
+              "decay": 0.4,
+              "sustain": 0.02,
+              "release": 0.18,
+              "curve": "ramp"
+            },
+            "delay": 0.2,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.7,
+                "damping": 0.4,
+                "mix": 0.12
+              },
+              {
+                "type": "delay",
+                "delay": 0.10480801062535164,
+                "feedback": 0.28295246403272317,
+                "wet": 0.13836845988586466,
+                "lowpass": 3514.542172895942
+              }
+            ],
+            "gain": 0.09
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 796.146
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.113,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.139,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.104,
+                "feedback": 0.295,
+                "wet": 0.145,
+                "lowpass": 3001
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 1003.081
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.111,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.16,
+            "delay": 0.068,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.104,
+                "feedback": 0.295,
+                "wet": 0.145,
+                "lowpass": 3001
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 1338.953
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.282,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.157,
+            "delay": 0.14,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.104,
+                "feedback": 0.295,
+                "wet": 0.145,
+                "lowpass": 3001
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 1192.872
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.113,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.07645000000000002,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.104,
+                "feedback": 0.295,
+                "wet": 0.145,
+                "lowpass": 3001
+              }
+            ],
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 130.8
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.26,
+              "sustain": 0.04,
+              "release": 0.1
+            },
+            "gain": 0.21,
+            "filter": {
+              "type": "lowpass",
+              "frequency": 380
+            },
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.06457460313911977,
+                "feedback": 0.36985856126390454,
+                "wet": 0.12565404615941697,
+                "lowpass": 4711.547783339051
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 784
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.11,
+              "sustain": 0,
+              "release": 0.03,
+              "curve": "ramp"
+            },
+            "delay": 0.045,
+            "gain": 0.15,
+            "filter": {
+              "type": "lowpass",
+              "frequency": 1600
+            },
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.06457460313911977,
+                "feedback": 0.36985856126390454,
+                "wet": 0.12565404615941697,
+                "lowpass": 4711.547783339051
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 1174.6
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.17,
+              "sustain": 0,
+              "release": 0.05,
+              "curve": "ramp"
+            },
+            "delay": 0.1,
+            "gain": 0.14,
+            "filter": {
+              "type": "lowpass",
+              "frequency": 1800
+            },
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.06457460313911977,
+                "feedback": 0.36985856126390454,
+                "wet": 0.12565404615941697,
+                "lowpass": 4711.547783339051
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 325.581
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.064,
+              "sustain": 0,
+              "release": 0.013,
+              "curve": "ramp"
+            },
+            "gain": 0.174,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.221,
+                "damping": 0.505,
+                "mix": 0.127
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 325.581
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.09,
+              "sustain": 0,
+              "release": 0.018,
+              "curve": "ramp"
+            },
+            "gain": 0.186,
+            "delay": 0.151,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.221,
+                "damping": 0.505,
+                "mix": 0.127
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 162.791
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.064,
+              "sustain": 0,
+              "release": 0.013,
+              "curve": "ramp"
+            },
+            "gain": 0.09570000000000001,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.221,
+                "damping": 0.505,
+                "mix": 0.127
+              }
+            ],
+            "delay": 0
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1500
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.122,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.15
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 2468.278
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.089,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.199,
+            "delay": 0.049
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 2935.294
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.099,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.147,
+            "delay": 0.166
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1500
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.159,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.126,
+            "delay": 0.09
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 247.051
+            },
+            "envelope": {
+              "attack": 0.009495950446226234,
+              "decay": 0.25242297994637347,
+              "sustain": 0,
+              "release": 0.08
+            },
+            "gain": 0.18,
+            "filter": {
+              "type": "lowpass",
+              "frequency": 600,
+              "Q": 1
+            },
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.14226568868324907,
+                "feedback": 0.21488170429358155,
+                "wet": 0.21896231618319337,
+                "lowpass": 5066.374748427804
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 249.717
+            },
+            "envelope": {
+              "attack": 0.01104757171387093,
+              "decay": 0.12128477835151677,
+              "sustain": 0,
+              "release": 0.07
+            },
+            "gain": 0.14,
+            "delay": 0.118,
+            "filter": {
+              "type": "lowpass",
+              "frequency": 600,
+              "Q": 1
+            },
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.14226568868324907,
+                "feedback": 0.21488170429358155,
+                "wet": 0.21896231618319337,
+                "lowpass": 5066.374748427804
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 494.102
+            },
+            "envelope": {
+              "attack": 0.001514106601405267,
+              "decay": 0.29272232987949975,
+              "sustain": 0,
+              "release": 0.08
+            },
+            "gain": 0.099,
+            "filter": {
+              "type": "lowpass",
+              "frequency": 600,
+              "Q": 1
+            },
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.14226568868324907,
+                "feedback": 0.21488170429358155,
+                "wet": 0.21896231618319337,
+                "lowpass": 5066.374748427804
+              }
+            ],
+            "delay": 0.077
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1047,
+              "fm": {
+                "ratio": 2.76,
+                "depth": 200
+              }
+            },
+            "envelope": {
+              "attack": 0,
+              "decay": 0.28007226109896016,
+              "sustain": 0,
+              "release": 0.07
+            },
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.4,
+                "damping": 0.6,
+                "mix": 0.08
+              }
+            ],
+            "gain": 0.1
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1320,
+              "fm": {
+                "ratio": 2.76,
+                "depth": 180
+              }
+            },
+            "envelope": {
+              "attack": 0,
+              "decay": 0.1375465841140379,
+              "sustain": 0,
+              "release": 0.06
+            },
+            "delay": 0.06,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.4,
+                "damping": 0.6,
+                "mix": 0.08
+              }
+            ],
+            "gain": 0.08
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1568.728,
+              "fm": {
+                "ratio": 2.76,
+                "depth": 200
+              }
+            },
+            "envelope": {
+              "attack": 0,
+              "decay": 0.28007226109896016,
+              "sustain": 0,
+              "release": 0.07
+            },
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.4,
+                "damping": 0.6,
+                "mix": 0.08
+              }
+            ],
+            "gain": 0.05500000000000001,
+            "delay": 0
           }
         ]
       }
@@ -32630,72 +32421,72 @@
   "notification": {
     "buckets": {
       "pitch:piercing": {
-        "k": 1,
-        "d": 19.326
+        "k": 2,
+        "d": 41.568
       },
       "wave:soft": {
-        "k": 16,
+        "k": 38,
         "d": 0
       },
       "dur:m": {
-        "k": 5,
-        "d": 32.591
+        "k": 16,
+        "d": 69.227
       },
       "layers:1": {
-        "k": 2,
-        "d": 17.364
+        "k": 3,
+        "d": 26.498
       },
       "shimmer:n": {
-        "k": 10,
-        "d": 37.132
+        "k": 25,
+        "d": 65.142
       },
       "noise:n": {
-        "k": 16,
+        "k": 38,
         "d": 0
       },
       "sweep:n": {
-        "k": 16,
+        "k": 38,
         "d": 0
       },
       "shimmer:y": {
-        "k": 6,
-        "d": 41.302
+        "k": 13,
+        "d": 76.973
       },
       "pitch:hi": {
-        "k": 11,
-        "d": 33.819
+        "k": 24,
+        "d": 53.313
       },
       "layers:3+": {
-        "k": 7,
-        "d": 38.921
+        "k": 19,
+        "d": 73.054
       },
       "pitch:mid": {
-        "k": 4,
-        "d": 22.068
+        "k": 11,
+        "d": 49.351
       },
       "dur:l": {
         "k": 1,
-        "d": 35.72
+        "d": 49.1
       },
       "layers:2": {
-        "k": 7,
-        "d": 40.686
+        "k": 16,
+        "d": 72.723
       },
       "dur:s": {
-        "k": 9,
-        "d": 31.702
+        "k": 20,
+        "d": 55.262
       },
       "att:instant": {
-        "k": 11,
-        "d": 10.635
+        "k": 33,
+        "d": 17.058
       },
       "filter:none": {
-        "k": 11,
-        "d": 8.304
+        "k": 32,
+        "d": 15.817
       },
       "att:soft": {
         "k": 1,
-        "d": 8.611
+        "d": 11.143
       },
       "filter:bandpass": {
         "k": 1,
@@ -32703,7 +32494,7 @@
       },
       "att:slow": {
         "k": 0,
-        "d": 0
+        "d": 8.096
       },
       "pitch:none": {
         "k": 0,
@@ -32711,19 +32502,23 @@
       },
       "dur:xs": {
         "k": 1,
-        "d": 4.874
+        "d": 14.58
       },
       "filter:lowpass": {
         "k": 0,
-        "d": 0
+        "d": 7.896
       },
       "noise:y": {
         "k": 0,
         "d": 2.1
       },
       "pitch:lo": {
-        "k": 0,
-        "d": 3.13
+        "k": 1,
+        "d": 12.381
+      },
+      "filter:highpass": {
+        "k": 1,
+        "d": 0
       }
     },
     "deleted": [
@@ -35143,6 +34938,1956 @@
               }
             ],
             "gain": 0.1
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 568.493
+            },
+            "envelope": {
+              "attack": 0.00646098783840406,
+              "decay": 0.074654545438543,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.14
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 851.777
+            },
+            "envelope": {
+              "attack": 0.004693878040396457,
+              "decay": 0.4575795649274688,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.136,
+            "delay": 0.091
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1072.864
+            },
+            "envelope": {
+              "attack": 0.0019570515263997996,
+              "decay": 0.017773651321228857,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.175,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.15942566451089155,
+                "feedback": 0.36452558315616723,
+                "wet": 0.12169820187385337,
+                "lowpass": 5385.412918924609
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 706.188
+            },
+            "envelope": {
+              "attack": 0.0012018712760926962,
+              "decay": 0.06456167870313961,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.134,
+            "delay": 0.064,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.15942566451089155,
+                "feedback": 0.36452558315616723,
+                "wet": 0.12169820187385337,
+                "lowpass": 5385.412918924609
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1244.444
+            },
+            "envelope": {
+              "attack": 0.0005417661704862192,
+              "decay": 0.06203177195689876,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.125,
+            "delay": 0.129,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.15942566451089155,
+                "feedback": 0.36452558315616723,
+                "wet": 0.12169820187385337,
+                "lowpass": 5385.412918924609
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 523
+            },
+            "envelope": {
+              "attack": 0,
+              "decay": 0.015,
+              "sustain": 0,
+              "release": 0.005,
+              "curve": "ramp"
+            },
+            "gain": 0.14
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 784
+            },
+            "envelope": {
+              "attack": 0,
+              "decay": 0.015,
+              "sustain": 0,
+              "release": 0.005,
+              "curve": "ramp"
+            },
+            "delay": 0.04,
+            "gain": 0.12
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 796.503,
+              "fm": {
+                "depth": 123,
+                "ratio": 2.895
+              }
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.031,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.179
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 596.704
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.057,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.164,
+            "delay": 0.1,
+            "filter": {
+              "type": "lowpass",
+              "frequency": 272,
+              "Q": 3.797,
+              "envelope": {
+                "attack": 0.016,
+                "peak": 1979,
+                "decay": 0.292
+              }
+            }
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 796.503
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.15,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.123,
+            "delay": 0.201
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 587.3
+            },
+            "envelope": {
+              "attack": 0.022434117525814763,
+              "decay": 0.30632352668482377,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.18
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1175
+            },
+            "envelope": {
+              "attack": 0.00396215201988906,
+              "decay": 0.2873726975860022,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.027,
+            "delay": 0.079
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 1291.54
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.039,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.173
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 1935.124
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.038,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.085,
+            "delay": 0.029
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 2583.081
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.028,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.077,
+            "delay": 0.058
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 325.581
+            },
+            "envelope": {
+              "attack": 0.0024303853996177,
+              "decay": 0.10966800808747716,
+              "sustain": 0,
+              "release": 0.013,
+              "curve": "ramp"
+            },
+            "gain": 0.174,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.221,
+                "damping": 0.505,
+                "mix": 0.127
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 325.581
+            },
+            "envelope": {
+              "attack": 0.0024194058319479896,
+              "decay": 0.1160917259018122,
+              "sustain": 0,
+              "release": 0.018,
+              "curve": "ramp"
+            },
+            "gain": 0.186,
+            "delay": 0.151,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.221,
+                "damping": 0.505,
+                "mix": 0.127
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1006.333
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.043,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.073
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1129.571
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.171,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.194,
+            "delay": 0.039
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 645.77
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.039,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.173
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 967.562
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.038,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.085,
+            "delay": 0.029
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 1291.541
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.028,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.077,
+            "delay": 0.058
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 893.384
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.031,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.075,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.11220475342790112,
+                "feedback": 0.3110583561146082,
+                "wet": 0.18183425803847586,
+                "lowpass": 5247.914513826253
+              }
+            ],
+            "filter": {
+              "type": "lowpass",
+              "frequency": 1511.1787102798953,
+              "Q": 2.2786953219949604
+            }
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1002.79
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.219,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.169,
+            "delay": 0.052,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.11220475342790112,
+                "feedback": 0.3110583561146082,
+                "wet": 0.18183425803847586,
+                "lowpass": 5247.914513826253
+              }
+            ],
+            "filter": {
+              "type": "lowpass",
+              "frequency": 1506.9737406110153,
+              "Q": 2.4947162502576705
+            }
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 243.425
+            },
+            "envelope": {
+              "attack": 0.0005360332752772084,
+              "decay": 0.1168411264549412,
+              "sustain": 0,
+              "release": 0.021,
+              "curve": "ramp"
+            },
+            "gain": 0.175,
+            "filter": {
+              "type": "lowpass",
+              "frequency": 1655
+            },
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.085,
+                "feedback": 0.193,
+                "wet": 0.225,
+                "lowpass": 2012
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 243.425
+            },
+            "envelope": {
+              "attack": 0.0005576450274428364,
+              "decay": 0.12203502115345218,
+              "sustain": 0,
+              "release": 0.015,
+              "curve": "ramp"
+            },
+            "gain": 0.18,
+            "filter": {
+              "type": "lowpass",
+              "frequency": 1655
+            },
+            "delay": 0.09,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.085,
+                "feedback": 0.193,
+                "wet": 0.225,
+                "lowpass": 2012
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 243.425
+            },
+            "envelope": {
+              "attack": 0.0003010364689986582,
+              "decay": 0.2639749520212252,
+              "sustain": 0,
+              "release": 0.036,
+              "curve": "ramp"
+            },
+            "gain": 0.145,
+            "filter": {
+              "type": "lowpass",
+              "frequency": 1655
+            },
+            "delay": 0.181,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.085,
+                "feedback": 0.193,
+                "wet": 0.225,
+                "lowpass": 2012
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 493.924
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.222,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.159
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 987.848
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.16,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.111,
+            "delay": 0.096
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1480.1
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.146,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.054,
+            "delay": 0.084
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 532.54
+            },
+            "envelope": {
+              "attack": 0.015055157156159935,
+              "decay": 0.21377702602398335,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.15,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.10187986471988747,
+                "feedback": 0.32606894405626013,
+                "wet": 0.10958233406892515,
+                "lowpass": 4150.967848485405
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 710.855
+            },
+            "envelope": {
+              "attack": 0.0024107449025574878,
+              "decay": 0.24229550472586298,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.141,
+            "delay": 0.083,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.10187986471988747,
+                "feedback": 0.32606894405626013,
+                "wet": 0.10958233406892515,
+                "lowpass": 4150.967848485405
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 601.992
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.038,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.135,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.535,
+                "mix": 0.172
+              },
+              {
+                "type": "delay",
+                "delay": 0.1477187487893681,
+                "feedback": 0.20745710935800496,
+                "wet": 0.16381065672761874,
+                "lowpass": 3754.796712529829
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 601.992
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.057,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.141,
+            "delay": 0.126,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.535,
+                "mix": 0.172
+              },
+              {
+                "type": "delay",
+                "delay": 0.1477187487893681,
+                "feedback": 0.20745710935800496,
+                "wet": 0.16381065672761874,
+                "lowpass": 3754.796712529829
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 601.992
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.254,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.101,
+            "delay": 0.236,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.535,
+                "mix": 0.172
+              },
+              {
+                "type": "delay",
+                "delay": 0.1477187487893681,
+                "feedback": 0.20745710935800496,
+                "wet": 0.16381065672761874,
+                "lowpass": 3754.796712529829
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1500,
+              "fm": {
+                "ratio": 1.5,
+                "depth": 120
+              }
+            },
+            "envelope": {
+              "attack": 0,
+              "decay": 0.15,
+              "sustain": 0,
+              "release": 0.05
+            },
+            "gain": 0.18,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.08391259779582878,
+                "feedback": 0.217452232405857,
+                "wet": 0.16675875031390144,
+                "lowpass": 3539.0166122439787
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1500,
+              "fm": {
+                "ratio": 1.5,
+                "depth": 100
+              }
+            },
+            "envelope": {
+              "attack": 0,
+              "decay": 0.12,
+              "sustain": 0,
+              "release": 0.04
+            },
+            "delay": 0.08,
+            "gain": 0.15,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.08391259779582878,
+                "feedback": 0.217452232405857,
+                "wet": 0.16675875031390144,
+                "lowpass": 3539.0166122439787
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 784.5
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.136,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.75,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.11955383890025009,
+                "feedback": 0.3644254110944063,
+                "wet": 0.17287779028800251,
+                "lowpass": 2717.72612607098
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1176
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.206,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.75,
+            "delay": 0.117,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.11955383890025009,
+                "feedback": 0.3644254110944063,
+                "wet": 0.17287779028800251,
+                "lowpass": 2717.72612607098
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 651.163
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.064,
+              "sustain": 0,
+              "release": 0.013,
+              "curve": "ramp"
+            },
+            "gain": 0.174,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.221,
+                "damping": 0.505,
+                "mix": 0.127
+              },
+              {
+                "type": "delay",
+                "delay": 0.12530751201606033,
+                "feedback": 0.22250490728656647,
+                "wet": 0.13713006615689566,
+                "lowpass": 3819.394455761356
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 651.163
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.09,
+              "sustain": 0,
+              "release": 0.018,
+              "curve": "ramp"
+            },
+            "gain": 0.186,
+            "delay": 0.064,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.221,
+                "damping": 0.505,
+                "mix": 0.127
+              },
+              {
+                "type": "delay",
+                "delay": 0.12530751201606033,
+                "feedback": 0.22250490728656647,
+                "wet": 0.13713006615689566,
+                "lowpass": 3819.394455761356
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 601.992
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.038,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.135,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.535,
+                "mix": 0.172
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 601.992
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.057,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.141,
+            "delay": 0.1,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.535,
+                "mix": 0.172
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 601.992
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.254,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.101,
+            "delay": 0.173,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.535,
+                "mix": 0.172
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 417.568
+            },
+            "envelope": {
+              "attack": 0.0035221567593783807,
+              "decay": 0.12029562959779556,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.188,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.08492031278540277,
+                "feedback": 0.21279759012003768,
+                "wet": 0.19913469031536163,
+                "lowpass": 3833.8701771917094
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 625.646
+            },
+            "envelope": {
+              "attack": 0.004338127998364262,
+              "decay": 0.1640343049693691,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.164,
+            "delay": 0.084,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.08492031278540277,
+                "feedback": 0.21279759012003768,
+                "wet": 0.19913469031536163,
+                "lowpass": 3833.8701771917094
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 835.137
+            },
+            "envelope": {
+              "attack": 0.0018979964548963425,
+              "decay": 0.299514210736627,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.13,
+            "delay": 0.168,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.08492031278540277,
+                "feedback": 0.21279759012003768,
+                "wet": 0.19913469031536163,
+                "lowpass": 3833.8701771917094
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 755.792
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.123,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.132
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1132.409
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.127,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.174,
+            "delay": 0.047
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1500
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.322,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.129,
+            "delay": 0.195
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 528
+            },
+            "envelope": {
+              "attack": 0.06,
+              "decay": 0.32,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.03,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.07517952709354071,
+                "feedback": 0.2365871454605445,
+                "wet": 0.10621797423030761,
+                "lowpass": 4312.979585670125
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 528,
+              "detune": 12
+            },
+            "envelope": {
+              "attack": 0.06,
+              "decay": 0.34,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.025,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.07517952709354071,
+                "feedback": 0.2365871454605445,
+                "wet": 0.10621797423030761,
+                "lowpass": 4312.979585670125
+              }
+            ],
+            "delay": 0.035
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 2101.932
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.052,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.189
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1574.669
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.06,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.117,
+            "delay": 0.088
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 3149.34
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.045,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.129,
+            "delay": 0.177
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 528
+            },
+            "envelope": {
+              "attack": 0.06,
+              "decay": 0.32,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.03,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.10888870726411211,
+                "feedback": 0.20296614080590447,
+                "wet": 0.2061779150813865,
+                "lowpass": 4034.2175679658462
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 528,
+              "detune": 12
+            },
+            "envelope": {
+              "attack": 0.06,
+              "decay": 0.34,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.025,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.10888870726411211,
+                "feedback": 0.20296614080590447,
+                "wet": 0.2061779150813865,
+                "lowpass": 4034.2175679658462
+              }
+            ],
+            "delay": 0.085
+          }
+        ]
+      },
+      {
+        "source": {
+          "type": "sine",
+          "frequency": 880,
+          "fm": {
+            "ratio": 2,
+            "depth": 100
+          }
+        },
+        "envelope": {
+          "attack": 0,
+          "decay": 0.16699694020672617,
+          "sustain": 0,
+          "release": 0.035
+        },
+        "gain": 0.15,
+        "effects": [
+          {
+            "type": "delay",
+            "delay": 0.07031958775427935,
+            "feedback": 0.21930807458221185,
+            "wet": 0.19561716730149786,
+            "lowpass": 4214.465140413769
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 523,
+              "fm": {
+                "ratio": 3,
+                "depth": 250
+              }
+            },
+            "envelope": {
+              "attack": 0,
+              "decay": 0.37675950683640236,
+              "sustain": 0.03,
+              "release": 0.2
+            },
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.7,
+                "damping": 0.4,
+                "mix": 0.12
+              },
+              {
+                "type": "delay",
+                "delay": 0.10966461400725755,
+                "feedback": 0.3567801839827199,
+                "wet": 0.20386154870130813,
+                "lowpass": 4589.741778893489
+              }
+            ],
+            "gain": 0.12
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 659,
+              "fm": {
+                "ratio": 3,
+                "depth": 220
+              }
+            },
+            "envelope": {
+              "attack": 0,
+              "decay": 0.5261494009870906,
+              "sustain": 0.02,
+              "release": 0.18
+            },
+            "delay": 0.1,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.7,
+                "damping": 0.4,
+                "mix": 0.12
+              },
+              {
+                "type": "delay",
+                "delay": 0.10966461400725755,
+                "feedback": 0.3567801839827199,
+                "wet": 0.20386154870130813,
+                "lowpass": 4589.741778893489
+              }
+            ],
+            "gain": 0.1
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 784,
+              "fm": {
+                "ratio": 3,
+                "depth": 200
+              }
+            },
+            "envelope": {
+              "attack": 0,
+              "decay": 0.5158563401402827,
+              "sustain": 0.02,
+              "release": 0.18
+            },
+            "delay": 0.2,
+            "effects": [
+              {
+                "type": "reverb",
+                "decay": 0.7,
+                "damping": 0.4,
+                "mix": 0.12
+              },
+              {
+                "type": "delay",
+                "delay": 0.10966461400725755,
+                "feedback": 0.3567801839827199,
+                "wet": 0.20386154870130813,
+                "lowpass": 4589.741778893489
+              }
+            ],
+            "gain": 0.09
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 205.532
+            },
+            "envelope": {
+              "attack": 0.0015245131191266444,
+              "decay": 0.09956090624544199,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.218
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 795.196
+            },
+            "envelope": {
+              "attack": 0.005352997458578358,
+              "decay": 0.1368920534978823,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.093,
+            "delay": 0.056
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 624.493
+            },
+            "envelope": {
+              "attack": 0.017477021263621738,
+              "decay": 0.40548239767834143,
+              "sustain": 0.04,
+              "release": 0.1
+            },
+            "gain": 0.171
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 796.543
+            },
+            "envelope": {
+              "attack": 0.004893810070780655,
+              "decay": 0.21023740724555975,
+              "sustain": 0.03,
+              "release": 0.1
+            },
+            "gain": 0.146,
+            "delay": 0.1
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1039.49
+            },
+            "envelope": {
+              "attack": 0.012284713965440818,
+              "decay": 0.3593070148571103,
+              "sustain": 0.03,
+              "release": 0.1
+            },
+            "gain": 0.122,
+            "delay": 0.2
+          }
+        ]
+      },
+      {
+        "source": {
+          "type": "sine",
+          "frequency": 854.273
+        },
+        "envelope": {
+          "attack": 0.003,
+          "decay": 0.105,
+          "sustain": 0,
+          "release": 0
+        },
+        "gain": 0.168,
+        "effects": [
+          {
+            "type": "delay",
+            "delay": 0.08655496752923338,
+            "feedback": 0.3644799461684134,
+            "wet": 0.10794320769922466,
+            "lowpass": 3164.8519949896563
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 2145.727
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.016,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.175
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1412.376
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.051,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.134,
+            "delay": 0.064
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 2488.889
+            },
+            "envelope": {
+              "attack": 0.001,
+              "decay": 0.056,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.125,
+            "delay": 0.129
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1760
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.09,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.0225,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.07,
+                "feedback": 0.35,
+                "wet": 0.22,
+                "lowpass": 6000
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 2217
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.09,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.02,
+            "delay": 0.08,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.07,
+                "feedback": 0.35,
+                "wet": 0.22,
+                "lowpass": 6000
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 2637
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.1,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.019,
+            "delay": 0.23,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.07,
+                "feedback": 0.35,
+                "wet": 0.22,
+                "lowpass": 6000
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 3500
+            },
+            "envelope": {
+              "attack": 0.003,
+              "decay": 0.12,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.016,
+            "delay": 0.133,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.07,
+                "feedback": 0.35,
+                "wet": 0.22,
+                "lowpass": 6000
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1358.897
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.07536051901279688,
+              "sustain": 0,
+              "release": 0.004
+            },
+            "gain": 0.3,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.09516633250289683,
+                "feedback": 0.3447318492801601,
+                "wet": 0.11079208109899688,
+                "lowpass": 3775.625763257371
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1439.711
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.09593800770245825,
+              "sustain": 0,
+              "release": 0.004
+            },
+            "gain": 0.3,
+            "delay": 0.034,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.09516633250289683,
+                "feedback": 0.3447318492801601,
+                "wet": 0.11079208109899688,
+                "lowpass": 3775.625763257371
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 2029.218
+            },
+            "envelope": {
+              "attack": 0.011506601638556711,
+              "decay": 0.08209927062406921,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.148,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.15643543204748628,
+                "feedback": 0.2889930560635008,
+                "wet": 0.14660968403126726,
+                "lowpass": 4911.260835120816
+              }
+            ]
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 1500
+            },
+            "envelope": {
+              "attack": 0.004165756180715918,
+              "decay": 0.15055491281444486,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.161,
+            "delay": 0.086,
+            "effects": [
+              {
+                "type": "delay",
+                "delay": 0.15643543204748628,
+                "feedback": 0.2889930560635008,
+                "wet": 0.14660968403126726,
+                "lowpass": 4911.260835120816
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 242.281
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.035,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.14
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 242.281
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.023,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.128,
+            "delay": 0.056
+          },
+          {
+            "source": {
+              "type": "triangle",
+              "frequency": 242.281
+            },
+            "envelope": {
+              "attack": 0.002,
+              "decay": 0.043,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.153,
+            "delay": 0.111
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 479.635
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.189,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.116
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 604.302
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.106,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.093
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 538.372
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.124,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.146,
+            "delay": 0.044
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 640.236
+            },
+            "envelope": {
+              "attack": 0.005,
+              "decay": 0.119,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.156,
+            "delay": 0.088
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 806.646
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.273,
+              "sustain": 0,
+              "release": 0
+            },
+            "gain": 0.133,
+            "delay": 0.131
+          }
+        ]
+      },
+      {
+        "source": {
+          "type": "sine",
+          "frequency": 891.03
+        },
+        "envelope": {
+          "attack": 0.013,
+          "decay": 0.149,
+          "sustain": 0,
+          "release": 0
+        },
+        "gain": 0.177,
+        "effects": [
+          {
+            "type": "delay",
+            "delay": 0.16,
+            "feedback": 0.398,
+            "wet": 0.236,
+            "lowpass": 3265
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 349.241
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.183,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.139
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 523.27
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.219,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.157,
+            "delay": 0.01
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 698.482
+            },
+            "envelope": {
+              "attack": 0.004,
+              "decay": 0.244,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.155,
+            "delay": 0.021
+          }
+        ]
+      },
+      {
+        "layers": [
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 613.615
+            },
+            "envelope": {
+              "attack": 0.074,
+              "decay": 0.335,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.185
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 613.615,
+              "detune": 8
+            },
+            "envelope": {
+              "attack": 0.049,
+              "decay": 0.354,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.189
+          },
+          {
+            "source": {
+              "type": "sine",
+              "frequency": 920.422
+            },
+            "envelope": {
+              "attack": 0.071,
+              "decay": 0.344,
+              "sustain": 0,
+              "release": 0,
+              "curve": "ramp"
+            },
+            "gain": 0.075
           }
         ]
       }

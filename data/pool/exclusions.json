@@ -119,7 +119,8 @@
   ],
   "core/save": [
     "tap",
-    "success"
+    "success",
+    "notification"
   ],
   "seed-f/glass-switch": [
     "tap",
@@ -1593,10 +1594,12 @@
     "tap"
   ],
   "core/receive": [
-    "tap"
+    "tap",
+    "notification"
   ],
   "playful/info": [
-    "tap"
+    "tap",
+    "notification"
   ],
   "seed-d/tick": [
     "tap"
@@ -2348,5 +2351,8 @@
   ],
   "crisp/tab-switch": [
     "transition"
+  ],
+  "soft/success": [
+    "notification"
   ]
 }
